@@ -41,7 +41,7 @@ export function generateMetadata({ params }: Params): Metadata {
   const image = campusImageUrl(project);
   return {
     // The project title alone runs to 64 characters; " — Final Year Project"
-    // and the root layout's " | Yaseen Khatib" took it past 100, so Google cut
+    // and the root layout's " | DefendIt" took it past 100, so Google cut
     // it mid-word. Budgeted against both suffixes now.
     title: seoTitle(project.title, " — Final Year Project"),
     description: seoDescription(project.summary),
@@ -54,7 +54,7 @@ export function generateMetadata({ params }: Params): Metadata {
       title: seoTitle(project.title, " | Final Year Project"),
       description: seoDescription(project.summary),
       url,
-      siteName: "Final Year Projects by Yaseen Khatib",
+      siteName: "DefendIt",
       images: [image],
     },
     twitter: {

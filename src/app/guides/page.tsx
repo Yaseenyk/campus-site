@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/guides/` },
   openGraph: {
     type: "website",
-    title: "Final Year Project Guides | Yaseen Khatib",
+    title: "Final Year Project Guides | DefendIt",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/guides/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/guides.jpg`],
   },
 };

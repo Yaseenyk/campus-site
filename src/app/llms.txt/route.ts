@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 
 /** /llms.txt (llmstxt.org): a curated markdown map of the site for LLM crawlers. */
 export function GET() {
-  const md = `# Final Year Projects — built and explained, by Yaseen Khatib
+  const md = `# DefendIt — final year projects, built and explained, by Yaseen Khatib
 
 > Final year projects for Indian students (BCA, MCA, B.Tech, B.Sc IT, M.Tech,
 > diploma), built end to end — code, database, report, diagrams, deck and

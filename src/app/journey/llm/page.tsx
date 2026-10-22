@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 5 — What an LLM Is, and How One Is Built",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/llm/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-llm.jpg`],
   },
 };

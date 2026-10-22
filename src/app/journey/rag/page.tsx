@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 10 — RAG: Answers Grounded in Your Own Documents",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/rag/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-rag.jpg`],
   },
 };

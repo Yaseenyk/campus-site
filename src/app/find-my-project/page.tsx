@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Find Your Final Year Project",
     description: seoDescription(DESCRIPTION),
     url: URL,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/find-my-project.jpg`],
   },
 };

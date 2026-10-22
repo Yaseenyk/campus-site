@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Final Year Project Report & Synopsis Templates",
     description: seoDescription(DESCRIPTION),
     url: URL,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: ["/og/campus/templates.jpg"],
   },
   twitter: {

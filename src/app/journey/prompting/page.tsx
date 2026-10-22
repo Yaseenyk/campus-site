@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 7 — Prompting That Works",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/prompting/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-prompting.jpg`],
   },
 };

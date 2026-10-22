@@ -35,15 +35,16 @@ const DESCRIPTION =
   "Final year projects for BCA, MCA and B.Tech students, built for you end to end — code, report, diagrams and deployment — or your own idea built from scratch. Daily live Google Meet sessions explain the code line by line so you can defend it in your viva. Direct payment in monthly installments.";
 
 export const metadata: Metadata = {
-  title: "Final Year Projects, Built and Explained",
+  // The layout template does not apply to the root page itself.
+  title: { absolute: "Final Year Projects, Built and Explained | DefendIt" },
   description: seoDescription(DESCRIPTION),
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     type: "website",
-    title: "Final Year Projects | Yaseen Khatib",
+    title: "Final Year Projects | DefendIt",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/hub.jpg`],
   },
 };

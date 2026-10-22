@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Chapter 16 — Fine-Tuning, and the Road Ahead",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/fine-tuning/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-finetuning.jpg`],
   },
 };

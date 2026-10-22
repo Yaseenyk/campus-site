@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 8 — Embeddings: Turning Meaning Into Numbers",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/embeddings/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-embeddings.jpg`],
   },
 };

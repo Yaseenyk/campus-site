@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "The 16-Day AI Engineering Journey",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/guides.jpg`],
   },
 };

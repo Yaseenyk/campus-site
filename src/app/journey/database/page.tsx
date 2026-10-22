@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Chapter 4 — The Database, with Claude Code",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/database/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-database.jpg`],
   },
 };

@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import PulseDot from "./PulseDot";
 import { PORTFOLIO_URL } from "@/lib/site";
 
 interface NavLeaf {
@@ -210,11 +209,12 @@ export default function Navbar() {
         onMouseLeave={scheduleClose}
       >
         <div className="flex items-center gap-2 rounded-full border border-zinc-800/50 bg-zinc-950/60 px-5 py-3 shadow-2xl shadow-cyan-900/20 backdrop-blur-md">
-          <Link href="/" className="flex items-center gap-2 pr-1">
+          <Link href="/" className="flex items-center gap-2 pr-1" aria-label="DefendIt home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icon.svg" alt="" width={20} height={20} className="h-5 w-5" />
             <span className="whitespace-nowrap text-sm font-bold tracking-tight text-zinc-50">
-              Final Year Projects
+              DefendIt
             </span>
-            <PulseDot />
           </Link>
 
           <span className="hidden h-4 w-px bg-zinc-800 md:block" />

@@ -13,13 +13,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 const firaCode = Fira_Code({ subsets: ["latin"], display: "swap", variable: "--font-mono" });
 
-const TITLE_DEFAULT = "Final Year Projects, Built and Explained";
+const TITLE_DEFAULT = "DefendIt — Final Year Projects, Built and Explained";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: TITLE_DEFAULT,
-    template: "%s | Final Year Projects",
+    template: "%s | DefendIt",
   },
   description: SITE_DESCRIPTION,
   authors: [{ name: "Yaseen Khatib", url: PORTFOLIO_URL }],
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     title: TITLE_DEFAULT,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    siteName: "Final Year Projects by Yaseen Khatib",
+    siteName: "DefendIt",
     locale: "en_IN",
-    images: [{ url: `${SITE_URL}/og-lockup.png`, alt: "Final Year Projects by Yaseen Khatib" }],
+    images: [{ url: `${SITE_URL}/og-lockup.png`, alt: "DefendIt — final year projects, built and explained" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <footer className="mx-auto mt-24 w-full max-w-6xl border-t border-zinc-800/60 px-6 py-10 text-sm text-zinc-500">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <p>
-                © {new Date().getFullYear()} Final Year Projects. Built and taught by{" "}
+                © {new Date().getFullYear()} DefendIt. Built and taught by{" "}
                 <a href={PORTFOLIO_URL + "/"} className="text-zinc-300 underline-offset-4 hover:text-cyan hover:underline">
                   Yaseen Khatib
                 </a>

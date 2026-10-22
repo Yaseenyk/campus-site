@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Final Year Project Viva Question Bank",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/question-bank/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/question-bank.jpg`],
   },
 };

@@ -103,10 +103,10 @@ export function generateMetadata({ params }: Params): Metadata {
     robots: { index: false, follow: true },
     openGraph: {
       type: "website",
-      title: `${copy.h1} | Yaseen Khatib`,
+      title: `${copy.h1} | DefendIt`,
       description,
       url,
-      siteName: "Yaseen Khatib",
+      siteName: "DefendIt",
       images: [`${SITE_URL}/og/campus/hub.jpg`],
     },
   };

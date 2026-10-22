@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Chapter 15 — Scaling & Real-Time AI",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/scaling/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-scaling.jpg`],
   },
 };

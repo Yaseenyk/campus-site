@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Final Year Project Timeline Planner",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/planner/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/planner.jpg`],
   },
 };

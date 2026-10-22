@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "For Colleges | Final Year Project Mentoring",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/colleges/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/social/colleges-wide.jpg`],
   },
   twitter: {

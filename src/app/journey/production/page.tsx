@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 12 — Guardrails, Production & the Capstone",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/production/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-production.jpg`],
   },
 };

@@ -46,7 +46,7 @@ export function generateMetadata({ params }: Params): Metadata {
       title: seoTitle(meta.title),
       description: seoDescription(meta.description),
       url,
-      siteName: "Yaseen Khatib",
+      siteName: "DefendIt",
       publishedTime: meta.publishedAt,
       authors: [PERSON.name],
       images,

@@ -3,7 +3,7 @@
  * cuts the rest mid-word. An audit on 2026-10-01 found 76 of 127 indexable
  * pages with truncated titles and 105 with over-long descriptions — the campus
  * pages worst, where a 64-character project title picked up " — Final Year
- * Project" and then " | Yaseen Khatib" and arrived at 101.
+ * Project" and then " | DefendIt" and arrived at 101.
  *
  * These trim at a word boundary so the snippet ends on a whole thought rather
  * than Google's ellipsis.
@@ -23,11 +23,11 @@ function trimToWord(text: string, max: number): string {
 }
 
 /**
- * A title that still fits once the root layout appends " | Yaseen Khatib".
+ * A title that still fits once the root layout appends " | DefendIt".
  * Pass the suffix the page template adds so the budget accounts for it.
  */
 export function seoTitle(title: string, suffix = ""): string {
-  const ROOT_SUFFIX = " | Yaseen Khatib".length;
+  const ROOT_SUFFIX = " | DefendIt".length;
   const budget = TITLE_MAX - ROOT_SUFFIX - suffix.length;
   return trimToWord(title, Math.max(20, budget)) + suffix;
 }

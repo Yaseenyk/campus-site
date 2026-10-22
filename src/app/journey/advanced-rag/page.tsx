@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Chapter 13 — Advanced RAG",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/advanced-rag/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-advanced-rag.jpg`],
   },
 };

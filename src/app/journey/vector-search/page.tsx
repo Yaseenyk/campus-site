@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 9 — Vector Search: Finding by Meaning at Scale",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/vector-search/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-vector-search.jpg`],
   },
 };

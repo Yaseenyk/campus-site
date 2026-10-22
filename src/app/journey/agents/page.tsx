@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 11 — AI Agents: Models That Act, Not Just Answer",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/agents/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-agents.jpg`],
   },
 };

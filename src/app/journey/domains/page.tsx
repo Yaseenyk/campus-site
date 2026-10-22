@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 1 — Domains",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/domains/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-domains.jpg`],
   },
 };

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Chapter 6 — Using an LLM: The Knobs and the Wire",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/using-llms/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-llm-using.jpg`],
   },
 };

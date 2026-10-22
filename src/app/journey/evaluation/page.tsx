@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Chapter 14 — Evaluating AI Systems",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/journey/evaluation/`,
-    siteName: "Yaseen Khatib",
+    siteName: "DefendIt",
     images: [`${SITE_URL}/og/campus/journey-evaluation.jpg`],
   },
 };
