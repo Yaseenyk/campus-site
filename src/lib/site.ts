@@ -19,7 +19,7 @@ export const SITE_DESCRIPTION =
  * then rebuild — empty strings are omitted from the page entirely.
  */
 export const VERIFICATION = {
-  google: "",
+  google: "OG5PRiRPw3I5jB5p-G7nDzf_mlxdiZzrpLaFYCZ0p1M",
   bing: "",
 };
 
