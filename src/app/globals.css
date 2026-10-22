@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-zinc-100 antialiased;
+    /* Never let a wide widget push the whole page into horizontal scroll on
+       mobile — the usual cause of "broken on mobile". Wide content scrolls
+       inside its own container instead. */
+    overflow-x: hidden;
+    background-color: #05070a;
+    background-image:
+      radial-gradient(
+        55rem 40rem at 50% -12%,
+        rgba(34, 211, 238, 0.08),
+        transparent 60%
+      ),
+      radial-gradient(
+        48rem 38rem at 100% 8%,
+        rgba(168, 85, 247, 0.07),
+        transparent 60%
+      );
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-cyan text-ink;
+  }
+
+  /* Honor the OS "reduce motion" setting for CSS-driven animation
+     (framer-motion is handled separately via MotionConfig reducedMotion). */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Animated Cyan→Purple gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan via-purple to-cyan bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+}
+
+@layer components {
+  /* Terminal code-block syntax-highlight tokens */
+  .tok-key {
+    color: #22d3ee;
+  }
+  .tok-fn {
+    color: #a855f7;
+  }
+  .tok-str {
+    color: #86efac;
+  }
+  .tok-num {
+    color: #67e8f9;
+  }
+  .tok-com {
+    color: #52525b;
+    font-style: italic;
+  }
+  .tok-punc {
+    color: #71717a;
+  }
+}
+
+/* Print — used by the student agreement's "Save as PDF" button. The site
+   chrome (floating nav island, WhatsApp bubble, grid background) is noise on
+   paper, and the dark theme burns ink, so print falls back to black on white. */
+@media print {
+  nav,
+  footer,
+  [data-print="hide"] {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* Keep a clause and its heading on the same page. */
+  section,
+  li {
+    break-inside: avoid;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555;
+  }
+}
+
+/* Presentation mode — a journey chapter rendered as full-screen slides.
+   Type is sized for a projected screen and the column is centred: a slide
+   is read across a room, not down a reading column. */
+.present-slide {
+  animation: present-in 320ms cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+  margin: 0 auto;
+  /* Narrower than the frame on purpose: a centred column reads far better
+     across a room than text pinned to the left of a 16:9 screen. */
+  max-width: min(1120px, 78vw);
+}
+@keyframes present-in {
+  from { opacity: 0; transform: translateX(var(--enter, 36px)); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .present-slide { animation: none; }
+}
+
+.present-title {
+  margin: 0 0 clamp(18px, 2.2vh, 30px);
+  font-size: clamp(28px, 3.6vw, 54px);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+/* A continuation slide keeps the heading for orientation, but as an eyebrow
+   rather than a second title — two lines of grey sentence-case above the
+   body read as stray text, not as a label. */
+.present-title--cont {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, monospace);
+  font-size: clamp(11px, 0.78vw, 15px);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8b8b96;
+  max-width: none;
+  margin-bottom: clamp(20px, 2.4vh, 34px);
+}
+.present-title--cont::before {
+  content: "";
+  flex: none;
+  width: clamp(26px, 2.2vw, 44px);
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #22d3ee, #a855f7);
+}
+
+/* max-height, never height: a short slide must collapse so the flex parent
+   can centre it, otherwise it hangs from the top of a tall empty box. */
+.present-stage {
+  max-height: 72vh;
+  overflow: hidden;
+}
+
+.present-body {
+  font-size: clamp(20px, 2.05vw, 40px);
+  line-height: 1.45;
+  color: #e4e4e7;
+}
+/* Each block arrives a beat after the one above it, so a slide reveals
+   rather than appearing all at once. */
+.present-body > * { animation: present-block 420ms cubic-bezier(0.21, 0.47, 0.32, 0.98) both; }
+.present-body > *:nth-child(2) { animation-delay: 90ms; }
+.present-body > *:nth-child(3) { animation-delay: 180ms; }
+.present-body > *:nth-child(4) { animation-delay: 270ms; }
+.present-body > *:nth-child(n + 5) { animation-delay: 340ms; }
+@keyframes present-block {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .present-body > * { animation: none; }
+}
+.present-body > * { margin-top: 0.8em; }
+.present-body > *:first-child { margin-top: 0; }
+.present-body p {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  max-width: 42ch;
+}
+/* Bold alone barely separates from body white at projector distance — an
+   underline in brand cyan is what the eye actually catches. */
+.present-body strong {
+  color: #fff;
+  font-weight: 600;
+  box-shadow: inset 0 -0.12em 0 rgba(34, 211, 238, 0.55);
+}
+.present-body em { color: #f4f4f5; font-style: italic; }
+.present-body code {
+  font-size: 0.82em;
+  padding: 0.1em 0.34em;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #a5f3fc;
+}
+.present-body li { font-size: inherit; line-height: 1.45; }
+.present-body ul, .present-body ol { max-width: 44ch; }
+.present-body li + li { margin-top: 0.6em; }
+.present-body svg { max-width: 100%; max-height: 58vh; height: auto; }
+/* The interactive figures keep animating — the sentence they build grows a
+   line at a time — so no one-off fit converges. Bound them instead. */
+.present-body figure { margin: 0; max-height: 66vh; overflow: hidden; }
+.present-body pre { font-size: 0.55em; line-height: 1.5; max-height: 58vh; overflow: auto; }
+.present-body img { max-height: 56vh; width: auto; object-fit: contain; }
+/* A table carries the article's own type sizes — `text-sm` on the table,
+   `text-[10px]` on the headers — so on a slide it rendered at a fraction of
+   the body size and could not be read across a room. Force the slide's scale
+   back onto it, and let the slide widen, since a two-column table wastes the
+   frame at the prose measure. */
+.present-slide:has(table) {
+  max-width: min(1600px, 94vw);
+}
+.present-body table {
+  width: 100%;
+  min-width: 0 !important;
+  border-collapse: collapse;
+  /* Sized off the slide body. Putting the fraction on the cells instead
+     compounds it against the table's own `text-sm` and lands at 8px. */
+  font-size: 0.62em !important;
+}
+.present-body th,
+.present-body td {
+  font-size: 1em !important;
+  line-height: 1.35;
+  padding: 0.55em 0.7em;
+}
+.present-body th {
+  letter-spacing: 0.12em !important;
+  color: #a1a1aa !important;
+}
+.present-body td:first-child {
+  color: #fafafa;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Phone and tablet. A column sized for a projected screen wastes a fifth of a
+   390px one, and the table 0.62em lands at 12px there — small enough that
+   the slide is useless on the device most students will open it on. */
+@media (max-width: 1100px) {
+  .present-slide,
+  .present-slide:has(table) {
+    max-width: 100%;
+  }
+  .present-stage {
+    max-height: 76vh;
+  }
+  .present-body p {
+    max-width: none;
+  }
+  .present-body table {
+    font-size: 0.82em !important;
+  }
+  .present-body th,
+  .present-body td {
+    padding: 0.45em 0.5em;
+  }
+  /* Wrapping beats a table that scrolls sideways inside a slide. */
+  .present-body td:first-child {
+    white-space: normal;
+  }
+}
+
+/* The article's own vertical rhythm fights the slide's — neutralise it. */
+.present-body [class*="mt-1"],
+.present-body [class*="mt-2"],
+.present-body [class*="mt-3"] { margin-top: 0.8em !important; }
+
+/* Opening slide: prose and the chapter illustration side by side, so the
+   frame is used rather than leaving two-thirds of it empty. */
+.present-slide--title .present-body:has(img) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 3vw, 56px);
+  align-items: center;
+}
+.present-slide--title .present-body:has(img) > p { max-width: 46ch; }
+.present-slide--title .present-body:has(img) > figure,
+.present-slide--title .present-body:has(img) > div { grid-row: span 3; }
+.present-slide--title .present-body img { max-height: 52vh; border-radius: 14px; }
