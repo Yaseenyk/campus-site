@@ -64,3 +64,37 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Tell Bing / IndexNow engines about new and changed pages the moment they
+  # deploy instead of waiting for a recrawl. The key is public by design: it
+  # is served at /<key>.txt. Manual runs submit every sitemap URL; pushes
+  # submit the home page plus any route whose source changed.
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    env:
+      SITE: https://campus.streamerosai.com
+      KEY: 76e83cfb7ffc7cf035cdc734e71755ca
+    steps:
+      - name: Checkout (with parent commit for the diff)
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - name: Submit URLs to IndexNow
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            mapfile -t urls < <(curl -s "$SITE/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+')
+          else
+            urls=("$SITE/")
+            for f in $(git diff --name-only HEAD^ HEAD -- src/app 2>/dev/null); do
+              case "$f" in */page.tsx) ;; *) continue;; esac
+              route=$(dirname "${f#src/app}")
+              case "$route" in *"["*|/agreement*) continue;; esac
+              [ "$route" = "/" ] && continue
+              urls+=("$SITE$route/")
+            done
+          fi
+          printf 'submitting %s urls\n' "${#urls[@]}"
+          json=$(printf '"%s",' "${urls[@]}"); json="[${json%,}]"
+          curl -sS -X POST "https://api.indexnow.org/indexnow"             -H "Content-Type: application/json; charset=utf-8"             -d "{\"host\":\"campus.streamerosai.com\",\"key\":\"$KEY\",\"keyLocation\":\"$SITE/$KEY.txt\",\"urlList\":$json}"             -w "\nHTTP %{http_code}\n" || true
