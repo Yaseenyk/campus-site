@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PERSON } from "@/lib/site";
 import {
-  CAMPUS_FAQ,
   CAMPUS_PROJECTS,
   DEGREE_SLUGS,
   PAYMENT_POLICY,
@@ -17,7 +16,6 @@ import {
 import type { CampusProject } from "@/lib/campus";
 import { PERSON_ID, breadcrumbJsonLd, faqPageJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import CampusFaq from "@/components/campus/CampusFaq";
 import CampusLeadForm from "@/components/campus/CampusLeadForm";
 import EarlyBirdBand from "@/components/campus/EarlyBirdBand";
 import StickyActionBar from "@/components/campus/StickyActionBar";
@@ -124,7 +122,7 @@ export default function CampusProjectPage({ params }: Params) {
       <JsonLd
         data={[
           serviceJsonLd,
-          faqPageJsonLd(CAMPUS_FAQ),
+          faqPageJsonLd(project.deepDive.viva),
           breadcrumbJsonLd([
             { name: "Final Year Projects", path: "/" },
             { name: project.title, path: `/${project.slug}` },
@@ -246,6 +244,50 @@ export default function CampusProjectPage({ params }: Params) {
 
       <section className="mt-20">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-50 sm:text-3xl">
+          How it works
+        </h2>
+        <div className="mt-6 max-w-3xl space-y-4 leading-relaxed text-zinc-400">
+          {project.deepDive.howItWorks.map((para) => (
+            <p key={para}>{para}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-50">The data</h2>
+        <p className="mt-5 max-w-3xl leading-relaxed text-zinc-400">{project.deepDive.data}</p>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-50">
+          The hard parts examiners ask about
+        </h2>
+        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+          {project.deepDive.hardParts.map((h) => (
+            <div key={h.title} className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
+              <h3 className="text-sm font-medium text-zinc-100">{h.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-400">{h.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-50">
+          Viva questions on this project
+        </h2>
+        <dl className="mt-6 space-y-5">
+          {project.deepDive.viva.map((v) => (
+            <div key={v.question} className="max-w-3xl">
+              <dt className="text-sm font-medium text-zinc-100">{v.question}</dt>
+              <dd className="mt-1.5 text-sm leading-relaxed text-zinc-400">{v.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="mt-20">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-50 sm:text-3xl">
           Pick what you need
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
@@ -339,7 +381,14 @@ export default function CampusProjectPage({ params }: Params) {
       )}
 
       <div className="mt-20">
-        <CampusFaq items={CAMPUS_FAQ} />
+        {/* The general FAQ lives on the home page; repeating it here made the
+            eleven project pages near-duplicates of each other. */}
+        <Link
+          href="/#faq"
+          className="text-sm text-ice underline-offset-4 hover:underline"
+        >
+          Source code, payment, sessions and other questions →
+        </Link>
       </div>
 
       <StickyActionBar context={project.title} />

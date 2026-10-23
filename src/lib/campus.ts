@@ -6,6 +6,7 @@
 // runtime value from here would create an import cycle and hit a TDZ error
 // during the static export.
 import { SITE_URL } from "@/lib/site";
+import type { FaqItem } from "@/lib/seo";
 import { aiCollegeAssistant } from "@/content/campus/ai-college-assistant";
 import { hospitalManagementMern } from "@/content/campus/hospital-management-mern";
 import { expenseTrackerMobile } from "@/content/campus/expense-tracker-mobile";
@@ -56,6 +57,14 @@ export interface CampusProject {
   features: string[];
   /** Code modules walked through in the sessions. */
   modules: string[];
+  /** Project-specific technical walkthrough — what makes each page its own. */
+  deepDive: {
+    howItWorks: string[];
+    /** Datasets and data model. */
+    data: string;
+    hardParts: { title: string; body: string }[];
+    viva: FaqItem[];
+  };
   difficulty: Difficulty;
   /** Live sessions included in the Mentored tier. */
   sessionCount: number;
@@ -146,9 +155,22 @@ export const CAMPUS_PROJECTS: CampusProject[] = [
  * 64-70% identical to each other (shared template text), which is the
  * near-duplicate pattern Google declines and holds against the whole site.
  * Each stays noindex and out of the sitemap until its page carries content
- * genuinely its own; add the slug here when it does.
+ * genuinely its own; add the slug here when it does. With deepDive content
+ * all eleven measured under 0.30 (5-word shingle Jaccard), max 0.286.
  */
-export const INDEXABLE_PROJECTS = new Set<string>([]);
+export const INDEXABLE_PROJECTS = new Set<string>([
+  "ai-college-assistant",
+  "blood-bank-management",
+  "ecommerce-mern",
+  "expense-tracker-mobile",
+  "face-recognition-attendance",
+  "fake-news-detection-ml",
+  "hospital-management-mern",
+  "plant-disease-detection",
+  "realtime-chat-mern",
+  "recommendation-system-ml",
+  "resume-screening-ml",
+]);
 
 export function isIndexableProject(slug: string): boolean {
   return INDEXABLE_PROJECTS.has(slug);

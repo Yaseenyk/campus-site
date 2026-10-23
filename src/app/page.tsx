@@ -414,7 +414,7 @@ export default function FinalYearProjectsPage() {
         <ReferralBand />
       </div>
 
-      <div className="mt-24">
+      <div id="faq" className="mt-24 scroll-mt-24">
         <CampusFaq items={CAMPUS_FAQ} />
       </div>
 
