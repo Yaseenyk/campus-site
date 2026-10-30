@@ -1,17 +1,22 @@
 import Link from "next/link";
 import type { GuideMeta } from "@/lib/guides";
+import { CAMPUS_PROJECTS } from "@/lib/campus";
+import { HUBS } from "@/lib/hubs";
 import TopicTable, { type Topic } from "@/components/campus/TopicTable";
+import BuiltProjectList from "@/components/campus/BuiltProjectList";
+import ServiceBrief from "@/components/campus/ServiceBrief";
 
 export const meta: GuideMeta = {
   slug: "mca-final-year-project-topics",
-  title: "MCA Final Year Project Topics (2026–27) With Stack And Difficulty",
-  h1: "MCA final year project topics, with the stack and the honest difficulty",
+  title: "MCA Final Year Project Topics 2026 With Code",
+  h1: "MCA final year project topics for 2026, with the stack and the honest difficulty",
   description:
-    "Twenty MCA final year project ideas grouped by domain, each with the stack it needs, how hard it really is, and the viva question it will attract. Written by an engineer who builds these systems professionally.",
-  tldr: "Good MCA final year projects are moderately sized systems you can defend in depth — a RAG document assistant, resume screening, sales forecasting, or a well-architected full-stack app — each paired with a stack you actually know. MCA vivas push into design decisions, so pick by the depth of questions a project attracts, not by the title.",
+    "MCA final year project topics for 2026: the ten MCA projects already built with source code and report, then twenty more ideas by domain with the stack, real difficulty and the viva question each attracts. Includes a free MCA final year project PDF sample report.",
+  tldr: "Good MCA final year projects are moderately sized systems you can defend in depth — a RAG document assistant, resume screening, a recommender, or a well-architected full-stack app — each paired with a stack you actually know. MCA vivas push into design decisions, so pick by the depth of questions a project attracts, not by the title. Ten such projects are built and listed below with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
-  readingMinutes: 12,
+  updatedAt: "2026-10-30",
+  readingMinutes: 13,
   ogImage: "/social/mca-topics-wide.jpg",
   degrees: ["MCA", "M.Tech"],
   faq: [
@@ -24,6 +29,16 @@ export const meta: GuideMeta = {
       question: "Is a machine learning project better than a web project for MCA?",
       answer:
         "Not automatically. An ML project scores well only if you can discuss your dataset, your metric, and where the model fails. A well-architected full-stack system with real design decisions behind it will beat a machine learning project you cannot evaluate.",
+    },
+    {
+      question: "Is there an MCA final year project PDF I can download?",
+      answer:
+        "Yes. A complete sample project report for the Hospital Management System — abstract through conclusion, with the requirements specification, design diagrams, implementation detail and test cases — is published as a free PDF on the sample project report page. It shows the depth an MCA report is expected to reach.",
+    },
+    {
+      question: "Do MCA projects here come with source code and documentation?",
+      answer:
+        "Every project on the built list ships with full source code, the project report and synopsis, diagrams, a presentation deck and a working deployment, then live sessions that walk through the code line by line. Source is included on every tier.",
     },
   ],
 };
@@ -177,6 +192,9 @@ const MOBILE_TOPICS: Topic[] = [
 ];
 
 export function Body() {
+  const hub = HUBS.find((h) => h.slug === meta.slug)!;
+  const built = CAMPUS_PROJECTS.filter(hub.includes);
+
   return (
     <>
       <p>
@@ -193,7 +211,19 @@ export function Body() {
         pick a different topic — that is the entire point of this list.
       </p>
 
-      <h2>AI and machine learning</h2>
+      <h2>MCA final year projects already built, with source code</h2>
+      <p>
+        These {built.length} suit MCA. Each is a complete system with the source
+        code, the full project report, diagrams and a working deployment, and each
+        comes with live sessions that go into the design decisions an MCA panel
+        asks about — schema, auth boundary, the metric, the failure case. Prices
+        shown are the starting tier.
+      </p>
+      <BuiltProjectList projects={built} />
+
+      <ServiceBrief context="MCA final year project topics" />
+
+      <h2>More MCA project topics: AI and machine learning</h2>
       <p>
         The highest-scoring category and the easiest to get wrong. An ML project
         only earns its marks if you can discuss your dataset, defend your metric,
@@ -231,6 +261,20 @@ export function Body() {
       </p>
       <TopicTable topics={MOBILE_TOPICS} />
 
+      <h2>MCA final year project PDF: read a finished report first</h2>
+      <p>
+        An MCA report is expected to justify its design, not just describe it. The{" "}
+        <Link href="/sample-project-report/">sample project report</Link> is a
+        complete report for the Hospital Management System on the built list —
+        abstract, requirements specification, architecture and data model with
+        diagrams, implementation with the conflict-detection code, test cases,
+        conclusion — as a free PDF. Read it before you write, and read the{" "}
+        <Link href="/guides/final-year-project-report-format/">
+          chapter-by-chapter format guide
+        </Link>{" "}
+        alongside it.
+      </p>
+
       <h2>How to actually choose from this list</h2>
       <ol>
         <li>
@@ -254,16 +298,20 @@ export function Body() {
       <hr />
 
       <p>
-        Several of these are already built and available with the source, the
-        report, and daily sessions that walk you through the code —{" "}
-        <Link href="/">see the catalog</Link>. Anything on this
-        list that is not there can be{" "}
-        <Link href="/custom/">built to your problem statement</Link>
-        . And before your viva, read{" "}
+        Everything on the built list comes with the source, the report, and daily
+        sessions that walk you through the code —{" "}
+        <Link href="/for/mca/">see the MCA projects</Link>. Anything on this list
+        that is not there can be{" "}
+        <Link href="/custom/">built to your problem statement</Link>. And before
+        your viva, read{" "}
         <Link href="/guides/final-year-project-viva-questions/">
           the questions panels actually ask
         </Link>
-        .
+        . For B.Tech CSE batches, the{" "}
+        <Link href="/guides/btech-cse-final-year-project-topics/">
+          B.Tech CSE final year projects
+        </Link>{" "}
+        list covers team splits and review panels.
       </p>
     </>
   );

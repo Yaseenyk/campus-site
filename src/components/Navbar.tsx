@@ -37,6 +37,11 @@ const GROUPS: NavGroup[] = [
       { divider: true },
       { href: "/cost-estimator/", label: "Cost estimator" },
       { href: "/templates/", label: "Report and PPT templates" },
+      { href: "/sample-project-report/", label: "Sample project report (PDF)" },
+      { divider: true },
+      { href: "/guides/bca-final-year-project-topics/", label: "BCA project topics" },
+      { href: "/guides/mca-final-year-project-topics/", label: "MCA project topics" },
+      { href: "/guides/btech-cse-final-year-project-topics/", label: "B.Tech CSE projects" },
     ],
   },
   {

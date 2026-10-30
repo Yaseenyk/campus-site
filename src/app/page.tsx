@@ -18,6 +18,8 @@ import {
   type Degree,
 } from "@/lib/campus";
 import { GUIDES } from "@/lib/guides";
+import { HUBS, hubUrl } from "@/lib/hubs";
+import { SAMPLE_REPORT } from "@/lib/sampleReport";
 import { VIVA_QUESTIONS } from "@/lib/vivaQuestions";
 import { breadcrumbJsonLd, faqPageJsonLd, personRef } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
@@ -36,12 +38,15 @@ const DESCRIPTION =
 
 export const metadata: Metadata = {
   // The layout template does not apply to the root page itself.
-  title: { absolute: "Final Year Projects, Built and Explained | DefendIt" },
+  title: {
+    absolute:
+      "BCA, MCA and B.Tech Final Year Projects, Built and Explained | DefendIt",
+  },
   description: seoDescription(DESCRIPTION),
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     type: "website",
-    title: "Final Year Projects | DefendIt",
+    title: "BCA, MCA and B.Tech Final Year Projects | DefendIt",
     description: seoDescription(DESCRIPTION),
     url: `${SITE_URL}/`,
     siteName: "DefendIt",
@@ -222,6 +227,29 @@ export default function FinalYearProjectsPage() {
         </div>
       </nav>
 
+      <nav aria-label="Topic lists" className="mt-8">
+        <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-600">
+          Topic lists
+        </h2>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {HUBS.map((h) => (
+            <Link
+              key={h.slug}
+              href={hubUrl(h)}
+              className="rounded-full border border-white/10 px-4 py-1.5 text-sm text-zinc-400 transition-colors duration-200 hover:border-cyan/60 hover:text-zinc-50"
+            >
+              {h.label}
+            </Link>
+          ))}
+          <Link
+            href="/sample-project-report/"
+            className="rounded-full border border-white/10 px-4 py-1.5 text-sm text-zinc-400 transition-colors duration-200 hover:border-cyan/60 hover:text-zinc-50"
+          >
+            Sample report PDF
+          </Link>
+        </div>
+      </nav>
+
       <CampusIndex
         projects={CAMPUS_PROJECTS}
         degrees={allDegrees()}
@@ -372,6 +400,24 @@ export default function FinalYearProjectsPage() {
             </p>
             <span className="mt-auto pt-5 text-xs text-ice transition-transform duration-300 group-hover:translate-x-0.5">
               Get the templates →
+            </span>
+          </Link>
+          <Link
+            href="/sample-project-report/"
+            className="group flex h-full flex-col bg-ink p-6 transition-colors duration-300 hover:bg-white/[0.03]"
+          >
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan">
+              Sample report PDF
+            </span>
+            <h3 className="mt-3 text-lg font-medium text-zinc-50">
+              A complete project report to read
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+              The {SAMPLE_REPORT.projectTitle} report, abstract to appendix, as a
+              free PDF — so you know what a finished report looks like.
+            </p>
+            <span className="mt-auto pt-5 text-xs text-ice transition-transform duration-300 group-hover:translate-x-0.5">
+              Read the sample →
             </span>
           </Link>
         </div>

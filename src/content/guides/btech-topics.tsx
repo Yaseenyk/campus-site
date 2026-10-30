@@ -1,17 +1,22 @@
 import Link from "next/link";
 import type { GuideMeta } from "@/lib/guides";
+import { CAMPUS_PROJECTS } from "@/lib/campus";
+import { HUBS } from "@/lib/hubs";
 import TopicTable, { type Topic } from "@/components/campus/TopicTable";
+import BuiltProjectList from "@/components/campus/BuiltProjectList";
+import ServiceBrief from "@/components/campus/ServiceBrief";
 
 export const meta: GuideMeta = {
   slug: "btech-cse-final-year-project-topics",
-  title: "B.Tech CSE Final Year Project Topics That Survive Review Panels",
-  h1: "B.Tech CSE final year project topics that survive a review panel",
+  title: "B.Tech CSE Final Year Projects 2026 With Code",
+  h1: "B.Tech CSE final year projects for 2026: ideas that survive a review panel",
   description:
-    "B.Tech final year project ideas chosen for team work and staged reviews — each with the stack, honest difficulty, how to split it across a team, and the question the panel will open with.",
-  tldr: "Strong B.Tech CSE projects survive staged review panels and split cleanly across a team — a distributed task queue, an API gateway with rate limiting, a real-time collaborative editor, a container-based CI runner. Give each member a vertical slice they can defend end to end, and pick something presentable early with visible room to grow.",
+    "B.Tech CSE final year projects for 2026: ten built CSE final year projects with source code and report, plus final year project ideas for CSE teams — each with the stack, honest difficulty, how to split it across a team, and the question the panel will open with.",
+  tldr: "Strong B.Tech CSE final year projects survive staged review panels and split cleanly across a team — a RAG assistant, a recommender with a cold-start answer, a real-time chat with delivery guarantees, a CNN tested on real photos. Give each member a vertical slice they can defend end to end, and pick something presentable early with visible room to grow. Ten such projects are built and listed below with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
-  readingMinutes: 10,
+  updatedAt: "2026-10-30",
+  readingMinutes: 12,
   ogImage: "/social/btech-topics-wide.jpg",
   degrees: ["B.Tech", "M.Tech"],
   faq: [
@@ -24,6 +29,16 @@ export const meta: GuideMeta = {
       question: "What do B.Tech review panels look for?",
       answer:
         "Progress against the previous review, a clear problem statement, and evidence that design decisions were made rather than defaulted into. Panels reward a project that is presentable early and still has visible room to grow between checkpoints.",
+    },
+    {
+      question: "Which CSE final year projects come with source code here?",
+      answer:
+        "The ten on the built list: the e-commerce platform, real-time chat, hospital management system, recommendation system, fake news detection, plant disease detection, AI college assistant, expense tracker app, resume screening and face recognition attendance. Each ships with full source, the report, diagrams, deployment and live code-walkthrough sessions.",
+    },
+    {
+      question: "Are AI projects good final year project ideas for CSE?",
+      answer:
+        "Yes, if the evaluation is honest. Panels have seen many 99%-accuracy claims; a project that reports a confusion matrix, shows a failure case and explains what the model keys on outscores one that only shows a clean demo. The built AI projects here are designed around that evaluation.",
     },
   ],
 };
@@ -122,22 +137,38 @@ const APPLIED_TOPICS: Topic[] = [
 ];
 
 export function Body() {
+  const hub = HUBS.find((h) => h.slug === meta.slug)!;
+  const built = CAMPUS_PROJECTS.filter(hub.includes);
+
   return (
     <>
       <p>
-        B.Tech projects differ from BCA and MCA in two ways that should change what
-        you pick. They are usually built by a team, and they are judged across two
-        or three review checkpoints rather than one final demonstration. That means
-        the project has to be presentable early and still have visible room to grow
-        between reviews.
+        CSE final year projects differ from BCA and MCA in two ways that should
+        change what you pick. They are usually built by a team, and they are judged
+        across two or three review checkpoints rather than one final demonstration.
+        That means the project has to be presentable early and still have visible
+        room to grow between reviews.
       </p>
       <p>
         A project that is either finished in week three or unshowable until week
         twelve will be marked down at some review, regardless of quality. Pick
-        something with a natural staging.
+        something with a natural staging. The list below starts with the B.Tech CSE
+        final year projects that are already built, then goes into further final
+        year project ideas for CSE teams by category.
       </p>
 
-      <h2>Systems and infrastructure</h2>
+      <h2>B.Tech CSE final year projects already built, with source code</h2>
+      <p>
+        These {built.length} suit B.Tech CSE and IT. Each is modular enough to
+        split across a team, ships with the source code, the report, diagrams and a
+        working deployment, and the sessions cover each module separately so every
+        member can answer for their part. Prices shown are the starting tier.
+      </p>
+      <BuiltProjectList projects={built} />
+
+      <ServiceBrief context="B.Tech CSE final year projects" />
+
+      <h2>Final year project ideas for CSE: systems and infrastructure</h2>
       <p>
         The rarest category in any batch, and panels notice. If your department
         leans theoretical, this is where you differentiate — nobody else will be
@@ -197,8 +228,7 @@ export function Body() {
       <p>
         Projects in several of these areas are already built, with source, report
         and daily sessions walking through the code —{" "}
-        <Link href="/for/btech/">see the B.Tech projects</Link>,
-        or{" "}
+        <Link href="/for/btech/">see the B.Tech projects</Link>, or{" "}
         <Link href="/custom/">
           have your team&rsquo;s problem statement built to spec
         </Link>
@@ -206,7 +236,13 @@ export function Body() {
         <Link href="/guides/final-year-project-viva-questions/">
           the questions panels actually ask
         </Link>
-        .
+        , and see what a finished report looks like in the{" "}
+        <Link href="/sample-project-report/">sample project report PDF</Link>.
+        Leaning AI? The{" "}
+        <Link href="/guides/ai-ml-final-year-projects/">
+          AI projects for final year students
+        </Link>{" "}
+        list goes deeper on evaluation.
       </p>
     </>
   );
