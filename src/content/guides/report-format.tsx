@@ -247,7 +247,9 @@ export function Body() {
       <p>
         Every project on this site ships with the report, the synopsis, the diagrams
         and the deck already written to match the code — because a report that
-        matches the code is exactly the thing students run out of time to do.{" "}
+        matches the code is exactly the thing students run out of time to do.
+        To see this structure filled in for a real project, read the{" "}
+        <Link href="/sample-project-report/">sample project report PDF</Link>.{" "}
         <Link href="/">See the projects</Link>, or read{" "}
         <Link href="/guides/final-year-project-viva-questions/">
           the viva questions panels actually ask

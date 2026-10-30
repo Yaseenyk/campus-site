@@ -14,6 +14,8 @@ import {
   isIndexableProject,
 } from "@/lib/campus";
 import type { CampusProject } from "@/lib/campus";
+import { hubUrl, hubsForProject } from "@/lib/hubs";
+import { SAMPLE_REPORT } from "@/lib/sampleReport";
 import { PERSON_ID, breadcrumbJsonLd, faqPageJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import CampusLeadForm from "@/components/campus/CampusLeadForm";
@@ -82,6 +84,8 @@ export default function CampusProjectPage({ params }: Params) {
 
   const image = campusImageUrl(project);
   const provider = { "@type": "Person", "@id": PERSON_ID, name: PERSON.name };
+  const hubs = hubsForProject(project);
+  const hasSampleReport = project.slug === SAMPLE_REPORT.projectSlug;
 
   // Modeled as a Service, not Product/Course. Those are Google rich-result
   // types whose recommended review/aggregateRating fields we cannot fill
@@ -192,6 +196,14 @@ export default function CampusProjectPage({ params }: Params) {
             >
               See it running →
             </a>
+          )}
+          {hasSampleReport && (
+            <Link
+              href="/sample-project-report/"
+              className="rounded-lg border border-white/10 px-6 py-3 text-sm text-zinc-300 transition-colors duration-200 hover:border-cyan/60 hover:text-zinc-50"
+            >
+              Read the sample report (PDF) →
+            </Link>
           )}
         </div>
       </header>
@@ -377,6 +389,25 @@ export default function CampusProjectPage({ params }: Params) {
               </li>
             ))}
           </ul>
+        </nav>
+      )}
+
+      {hubs.length > 0 && (
+        <nav aria-label="Topic lists featuring this project" className="mt-12">
+          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-600">
+            Listed in
+          </h2>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {hubs.map((h) => (
+              <Link
+                key={h.slug}
+                href={hubUrl(h)}
+                className="rounded-full border border-white/10 px-4 py-1.5 text-sm text-zinc-400 transition-colors duration-200 hover:border-cyan/60 hover:text-zinc-50"
+              >
+                {h.label}
+              </Link>
+            ))}
+          </div>
         </nav>
       )}
 

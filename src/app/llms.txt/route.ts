@@ -27,6 +27,7 @@ export function GET() {
 - [Terms — payment, delivery, cancellation](${SITE_URL}/terms/)
 - [16-day AI engineering journey](${SITE_URL}/journey/)
 - [Free tool: timeline planner](${SITE_URL}/planner/)
+- [Sample final year project report (PDF) — Hospital Management System, abstract to appendix](${SITE_URL}/sample-project-report/)
 - [Free tool: viva question bank — ${VIVA_QUESTIONS.length} questions, with what each one tests](${SITE_URL}/question-bank/)
 
 ## Free guides

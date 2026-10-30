@@ -128,6 +128,17 @@ export default function TemplatesPage() {
           ships with the report, synopsis, diagrams and deck already written to
           match the code — then walked through line by line so you can defend it.
         </p>
+        <p className="mt-4 leading-relaxed text-zinc-400">
+          Want to see the template filled in? The{" "}
+          <Link
+            href="/sample-project-report/"
+            className="text-cyan underline-offset-4 hover:underline"
+          >
+            sample project report
+          </Link>{" "}
+          is a complete report for one of the projects here, abstract to
+          appendix, as a free PDF.
+        </p>
       </section>
 
       <section className="mt-16 border-t border-white/5 pt-12">
