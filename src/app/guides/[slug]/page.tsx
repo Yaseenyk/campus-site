@@ -48,6 +48,7 @@ export function generateMetadata({ params }: Params): Metadata {
       url,
       siteName: "DefendIt",
       publishedTime: meta.publishedAt,
+      ...(meta.updatedAt ? { modifiedTime: meta.updatedAt } : {}),
       authors: [PERSON.name],
       images,
     },
@@ -94,7 +95,7 @@ export default function GuidePage({ params }: Params) {
     description: seoDescription(meta.description),
     url: guideUrl(meta.slug),
     datePublished: meta.publishedAt,
-    dateModified: meta.publishedAt,
+    dateModified: meta.updatedAt ?? meta.publishedAt,
     image: [
       meta.ogImage ? `${SITE_URL}${meta.ogImage}` : `${SITE_URL}/og-lockup.png`,
     ],

@@ -30,6 +30,9 @@ import { meta as diplomaMeta, Body as DiplomaBody } from "@/content/guides/diplo
 import { meta as oneMonthMeta, Body as OneMonthBody } from "@/content/guides/final-year-project-in-one-month";
 import { meta as stuckMeta, Body as StuckBody } from "@/content/guides/stuck-on-final-year-project";
 import { meta as explainVivaMeta, Body as ExplainVivaBody } from "@/content/guides/how-to-explain-your-project-in-the-viva";
+import { meta as mernMeta, Body as MernBody } from "@/content/guides/mern-stack-project-ideas-with-source-code";
+import { meta as uniqueMeta, Body as UniqueBody } from "@/content/guides/unique-project-ideas-for-final-year-students";
+import { meta as csListMeta, Body as CsListBody } from "@/content/guides/list-of-projects-for-computer-science-students";
 
 export interface GuideMeta {
   slug: string;
@@ -47,6 +50,12 @@ export interface GuideMeta {
   /** Mono eyebrow, e.g. "Viva prep". */
   category: string;
   publishedAt: string;
+  /**
+   * Last substantive revision. Feeds the sitemap lastmod and Article
+   * dateModified so a rewritten guide announces itself without faking its
+   * publication date. Omit until the guide has actually been revised.
+   */
+  updatedAt?: string;
   readingMinutes: number;
   /** Drives the "read this next" links on course pages. */
   degrees?: Degree[];
@@ -71,6 +80,15 @@ export interface Guide {
 /** Newest / highest-intent first — this is the order the index renders. */
 export const GUIDES: Guide[] = [
   { meta: vivaMeta, Body: VivaBody },
+  // Degree hubs and listicles: the pages that list the built projects for a
+  // search phrase (see lib/hubs.ts). High intent, so they sit near the top.
+  { meta: bcaMeta, Body: BcaBody },
+  { meta: mcaMeta, Body: McaBody },
+  { meta: btechMeta, Body: BtechBody },
+  { meta: mernMeta, Body: MernBody },
+  { meta: aiMlMeta, Body: AiMlBody },
+  { meta: csListMeta, Body: CsListBody },
+  { meta: uniqueMeta, Body: UniqueBody },
   { meta: synopsisMeta, Body: SynopsisBody },
   { meta: pptMeta, Body: PptBody },
   { meta: deployMeta, Body: DeployBody },
@@ -78,11 +96,7 @@ export const GUIDES: Guide[] = [
   { meta: oneMonthMeta, Body: OneMonthBody },
   { meta: stuckMeta, Body: StuckBody },
   { meta: explainVivaMeta, Body: ExplainVivaBody },
-  { meta: aiMlMeta, Body: AiMlBody },
   { meta: webDevMeta, Body: WebDevBody },
-  { meta: mcaMeta, Body: McaBody },
-  { meta: bcaMeta, Body: BcaBody },
-  { meta: btechMeta, Body: BtechBody },
   { meta: bscItMeta, Body: BscItBody },
   { meta: mtechMeta, Body: MtechBody },
   { meta: diplomaMeta, Body: DiplomaBody },

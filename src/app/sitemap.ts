@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...GUIDES.map((g) => ({
       url: `${SITE_URL}/guides/${g.meta.slug}/`,
-      lastModified: g.meta.publishedAt,
+      lastModified: g.meta.updatedAt ?? g.meta.publishedAt,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
