@@ -3,16 +3,22 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "final-year-project-viva-questions",
-  title: "Final Year Project Viva Questions With Answers",
+  title: "What Is a Viva? Final Year Project Viva Questions With Answers",
   h1: "Final year project viva questions — and how to actually answer them",
   description:
     "The questions panels really ask in a final year project viva, grouped by what they are testing, with the reasoning behind a good answer. Written by an engineer who builds these systems for a living.",
-  tldr: "A project viva is where the panel checks you actually built the project, not just described it. Expect four kinds of question: what it does, why you made each design choice, what breaks when something goes wrong, and what you would change if you rebuilt it.",
+  updatedAt: "2026-11-04",
+  tldr: "A viva (viva voce, Latin for by word of mouth) is a spoken exam. In a final year project viva the panel checks you actually built the project, not just described it. Expect four kinds of question: what it does, why you made each design choice, what breaks when something goes wrong, and what you would change if you rebuilt it.",
   category: "Viva prep",
   publishedAt: "2026-07-27",
   readingMinutes: 11,
   ogImage: "/social/viva-questions-wide.jpg",
   faq: [
+    {
+      question: "What is a viva?",
+      answer:
+        "A viva, short for viva voce (Latin for by word of mouth), is an oral exam. A teacher or panel asks you questions out loud and marks the answers. In a final year project it is the spoken part of the evaluation, held after you submit the report, where the panel tests whether you understand and built what you submitted.",
+    },
     {
       question: "What is asked in a final year project viva?",
       answer:
@@ -34,6 +40,22 @@ export const meta: GuideMeta = {
 export function Body() {
   return (
     <>
+      <h2>What is a viva?</h2>
+      <p>
+        A viva is a spoken exam. The full name is <em>viva voce</em>, Latin for
+        &ldquo;by word of mouth&rdquo;. Instead of writing answers, you sit in front
+        of one or more examiners, they ask questions, and you answer out loud. In a
+        final year project it comes after you submit the report: usually an internal
+        examiner from your department and often an external one, who see your demo
+        and then question you on it. Colleges also run vivas for practicals and
+        lab work, and the idea is the same: they cannot fake what you say on the spot.
+      </p>
+      <p>
+        The format differs by college and university, so check your own
+        department&apos;s scheme for how many marks the viva carries and how long it
+        runs. What does not change is the purpose, which is below.
+      </p>
+
       <p>
         Most students prepare for a viva by rehearsing what their project does.
         Panels already know what it does — it is written on the front of your
