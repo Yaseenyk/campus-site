@@ -2,7 +2,7 @@
 
 Final year projects for Indian students, built and explained until the
 student can defend them in the viva. The student-projects business, split out
-of the portfolio (yaseenkhatib.streamerosai.com) so each site is judged by
+of the portfolio (yk.streamerosai.com) so each site is judged by
 search engines on one purpose.
 
 Next.js 14 App Router, static export, Tailwind, Framer Motion. Deployed to

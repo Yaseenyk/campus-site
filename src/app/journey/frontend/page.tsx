@@ -451,7 +451,7 @@ claude mcp add playwright -- npx @playwright/mcp@latest
           version of this workflow — where it scales to full products — is
           written up in{" "}
           <Link
-            href="https://yaseenkhatib.streamerosai.com/blog/one-architect-claude-mcp-full-squad/"
+            href="https://yk.streamerosai.com/blog/one-architect-claude-mcp-full-squad/"
             className="text-ice underline decoration-cyan/30 underline-offset-4 hover:decoration-cyan"
           >
             One Architect + Claude + MCP = A Full Engineering Squad

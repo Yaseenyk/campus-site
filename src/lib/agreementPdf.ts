@@ -56,7 +56,7 @@ export async function buildAgreementPdf(
   const doc = await PDFDocument.create();
   doc.setTitle(`Student agreement — ${record.name}`);
   doc.setSubject(`Agreement v${record.version}`);
-  doc.setProducer("yaseenkhatib.streamerosai.com");
+  doc.setProducer("yk.streamerosai.com");
 
   const regular = await doc.embedFont(StandardFonts.Helvetica);
   const bold = await doc.embedFont(StandardFonts.HelveticaBold);
@@ -144,12 +144,12 @@ export async function buildAgreementPdf(
   gap(0.6);
 
   write(
-    "This record was generated at the moment consent was given on yaseenkhatib.streamerosai.com/agreement. The full clause text for this version is published on that page.",
+    "This record was generated at the moment consent was given on yk.streamerosai.com/agreement. The full clause text for this version is published on that page.",
     { color: muted },
   );
   gap(0.4);
   write(
-    "It sits alongside the public terms at yaseenkhatib.streamerosai.com/terms. Where anything differs, whatever was agreed in writing over email or WhatsApp holds.",
+    "It sits alongside the public terms at yk.streamerosai.com/terms. Where anything differs, whatever was agreed in writing over email or WhatsApp holds.",
     { color: muted },
   );
 

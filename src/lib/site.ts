@@ -4,7 +4,7 @@ export const SITE_URL =
 
 /** The author's portfolio. A separate site: this one is the student business,
  *  that one is the engineer. Links between them are deliberate and few. */
-export const PORTFOLIO_URL = "https://yaseenkhatib.streamerosai.com";
+export const PORTFOLIO_URL = "https://yk.streamerosai.com";
 
 /** Registrable domain, for Google Preferred Sources (subdomains can't register). */
 export const PREFERRED_SOURCE_DOMAIN = "streamerosai.com";
