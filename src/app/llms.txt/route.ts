@@ -41,6 +41,7 @@ ${CAMPUS_PROJECTS.map(
     `- [${p.title}](${SITE_URL}/${p.slug}/): ${p.summary} Suits ${p.degrees.join(", ")}. Stack: ${p.stack.join(", ")}. From ${formatInr(p.prices.source)}.`,
 ).join("\n")}
 
+- [Full text of every page, one file](${SITE_URL}/llms-full.txt)
 - [Sitemap](${SITE_URL}/sitemap.xml)
 `;
   return new Response(md, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
