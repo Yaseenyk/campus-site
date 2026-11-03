@@ -54,6 +54,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${firaCode.variable}`}>
+      <head>
+        {/* Google tag (GA4). A plain tag in the server-rendered head so Google's tag checker finds it
+            in the HTML; next/script would inject it client-side and the checker misses it. */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRVEYT4M1Z" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MRVEYT4M1Z');",
+          }}
+        />
+      </head>
       <body className="font-sans">
         <JsonLd data={siteGraphJsonLd} />
         <MotionProvider>
