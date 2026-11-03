@@ -3,7 +3,7 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "final-year-project-viva-questions",
-  title: "Final Year Project Viva Questions (And How To Answer Them)",
+  title: "Final Year Project Viva Questions With Answers",
   h1: "Final year project viva questions — and how to actually answer them",
   description:
     "The questions panels really ask in a final year project viva, grouped by what they are testing, with the reasoning behind a good answer. Written by an engineer who builds these systems for a living.",

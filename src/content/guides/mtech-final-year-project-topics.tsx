@@ -4,7 +4,7 @@ import TopicTable, { type Topic } from "@/components/campus/TopicTable";
 
 export const meta: GuideMeta = {
   slug: "mtech-final-year-project-topics",
-  title: "M.Tech Final Year Project Topics (With Source Code)",
+  title: "M.Tech Final Year Project Topics (Paper-Ready)",
   h1: "M.Tech final year project topics with a research angle",
   description:
     "M.Tech project ideas that carry a novelty angle a paper can be built on, each with the contribution to defend and the stack it needs. Full source code included on every tier.",

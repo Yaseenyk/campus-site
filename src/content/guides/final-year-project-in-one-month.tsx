@@ -6,7 +6,8 @@ export const meta: GuideMeta = {
   title: "Final Year Project in 1 Month (A Realistic Plan)",
   h1: "Final year project in one month, a realistic plan",
   description:
-    "An honest four-week plan to build, document and defend a final year project when a month is all you have left — what that timeline can and cannot produce, week by week.",
+    
+    "A realistic four-week plan to build, document and defend a final year project when a month is all you have. Week by week, with the free report template.",
   tldr: "A month is enough for a focused project if you cut scope hard: lock a small synopsis in week one, build one core feature in week two, test and write the report in week three, and keep week four as buffer plus viva prep. It is not enough for an ambitious multi-module or research build.",
   category: "Crunch time",
   publishedAt: "2026-07-27",

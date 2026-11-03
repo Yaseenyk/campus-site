@@ -3,10 +3,11 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "final-year-project-synopsis-format",
-  title: "Final Year Project Synopsis Format — Section By Section",
+  title: "Final Year Project Synopsis Format, Free Template",
   h1: "Final year project synopsis format, section by section",
   description:
-    "How to write a final year project synopsis that gets approved: what each section needs, the standard structure, the right length, and the mistakes that get a synopsis sent back.",
+    
+    "The final year project synopsis format section by section, the right length, the mistakes that get it rejected, and a free synopsis template to download.",
   tldr: "A synopsis is the short document you submit for approval before you build: title, problem statement, numbered objectives, scope, proposed system, tools, modules, feasibility, timeline, and references. Most colleges expect 8 to 15 pages, and because it gates approval it must be specific rather than padded.",
   category: "Documentation",
   publishedAt: "2026-07-27",

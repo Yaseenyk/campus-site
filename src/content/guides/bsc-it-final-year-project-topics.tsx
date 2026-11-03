@@ -4,7 +4,7 @@ import TopicTable, { type Topic } from "@/components/campus/TopicTable";
 
 export const meta: GuideMeta = {
   slug: "bsc-it-final-year-project-topics",
-  title: "B.Sc IT Final Year Project Topics (With Source Code)",
+  title: "B.Sc IT Final Year Project Topics 2026 With Code",
   h1: "B.Sc IT final year project topics with source code",
   description:
     "Practical B.Sc IT final year project ideas across web, data and mobile, each with the stack it needs and the viva question it attracts. Full source code included on every tier.",

@@ -11,7 +11,8 @@ export const meta: GuideMeta = {
   title: "BCA Final Year Project Topics 2026 With Code",
   h1: "BCA final year project topics for 2026: a list you can actually finish",
   description:
-    "A BCA project topics list for 2026: final year project ideas for BCA students with the stack, an honest difficulty rating and the viva question each attracts, plus the BCA final year projects already built with source code, report and sessions.",
+    
+    "BCA final year project topics for 2026 with source code and report, plus more ideas with stack, honest difficulty and the viva question each attracts.",
   tldr: "The best BCA final year project is one you can finish and fully document in the time you have — a hospital, blood bank or e-commerce system, an expense tracker, a chat app — built as a clean full-stack application with a database design that matches the code. A complete moderate project scores better than a half-built ambitious one. Seven such projects are already built and listed below, with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",

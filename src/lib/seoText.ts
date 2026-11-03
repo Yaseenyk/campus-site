@@ -19,7 +19,9 @@ function trimToWord(text: string, max: number): string {
   if (clean.length <= max) return clean;
   const cut = clean.slice(0, max);
   const lastSpace = cut.lastIndexOf(" ");
-  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).replace(/[\s,;:—-]+$/, "");
+  const word = lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut;
+  // Drop a dangling open bracket and whatever it started ("(With Source").
+  return word.replace(/\s*[(\[][^)\]]*$/, "").replace(/[\s,;:—-]+$/, "");
 }
 
 /**

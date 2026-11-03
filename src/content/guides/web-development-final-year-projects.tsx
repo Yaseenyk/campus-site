@@ -3,10 +3,11 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "web-development-final-year-projects",
-  title: "Web Development Final Year Projects (With Source Code)",
+  title: "Web Development Final Year Projects + Source Code",
   h1: "Web development final year projects that hold up in the viva",
   description:
-    "Web development final year projects with source code for Indian students — the safe high-marks categories, the viva trap each hides, and the real full-stack projects we build.",
+    
+    "Web development final year projects with source code, report and viva prep. Start with the free report template and real sample report, then pick yours.",
   tldr: "The safest high-marks web development projects are complete full-stack applications with a clean database and one piece of real logic — a stock-consistent cart, a booking system that refuses double-bookings, ordered messaging. Each comes with full source code, the report, diagrams, and a working deployment.",
   category: "Project ideas",
   publishedAt: "2026-07-27",
@@ -58,7 +59,10 @@ export function Body() {
       <p>
         Below are the categories that score well, the viva angle each one opens
         up, and then the real full-stack projects we build with source code and
-        line-by-line sessions.
+        line-by-line sessions. If you want the free parts first, the{" "}
+        <Link href="/templates/">report and synopsis templates</Link> and the{" "}
+        <Link href="/sample-project-report/">sample project report</Link> are
+        a click away, no sign-up.
       </p>
 
       <h2>E-commerce and marketplaces</h2>

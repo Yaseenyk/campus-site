@@ -12,7 +12,8 @@ export const meta: GuideMeta = {
   title: "MERN Stack Project Ideas With Source Code",
   h1: "MERN stack project ideas with source code, and what each one has to get right",
   description:
-    "MERN stack projects with source code for final year: four built MERN projects — e-commerce, real-time chat, hospital management, blood bank — with report, diagrams and deployment, plus more MERN stack project ideas and an honest answer on GitHub.",
+    
+    "MERN stack projects with source code for final year: e-commerce, chat, hospital and blood bank management, each with report and viva prep, plus more ideas.",
   tldr: "A MERN stack final year project is a React front end, an Express and Node API, and MongoDB behind it. The four MERN stack projects here come with full source code, the project report, diagrams and a working deployment: an e-commerce platform with a real cart and stock, a Socket.IO chat with presence, a hospital management system with slot-conflict detection, and a blood bank system with donor matching. Source is delivered on purchase, not published on GitHub, and the reason is explained below.",
   category: "Project ideas",
   publishedAt: "2026-10-30",

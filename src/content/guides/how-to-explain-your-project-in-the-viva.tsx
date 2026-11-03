@@ -3,10 +3,11 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "how-to-explain-your-project-in-the-viva",
-  title: "How to Explain Your Final Year Project in the Viva",
+  title: "How to Explain Your Final Year Project in a Viva",
   h1: "How to explain your final year project in the viva",
   description:
-    "How to confidently walk a panel through your own project: the two-minute overview, narrating your architecture and ER diagram, defending your choices, and what to say when you do not know.",
+    
+    "How to walk a panel through your project: the two-minute overview, narrating the architecture and ER diagram, defending choices, handling hard questions.",
   tldr: "Explain your project by leading the panel rather than waiting to be quizzed: open with a rehearsed two-minute overview — problem, what you built, stack, core flow, one honest limitation — then narrate your architecture and ER diagram and defend each choice. When you do not know something, say so and reason out loud instead of bluffing.",
   category: "Viva prep",
   publishedAt: "2026-07-27",

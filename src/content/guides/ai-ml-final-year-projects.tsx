@@ -8,7 +8,8 @@ export const meta: GuideMeta = {
   title: "AI Projects for Final Year Students (2026)",
   h1: "AI projects for final year students that survive the viva",
   description:
-    "AI projects for final year students in 2026: the sub-areas that work, twelve AI and machine learning project ideas with stack and honest difficulty, the one viva question each attracts, and the six AI projects already built with source code.",
+    
+    "Twelve AI and machine learning final year projects for 2026, each with the stack, an honest difficulty rating and the viva question it attracts.",
   tldr: "The strongest AI projects for final year students are ones you can fully defend — a classifier, recommender, NLP, RAG or computer-vision system on a clean dataset where you understand the data, the metric, and what the model gets wrong. Six such projects are built and listed below; full source code, the report, and the training notebook come with each.",
   category: "Project ideas",
   publishedAt: "2026-07-27",

@@ -10,7 +10,8 @@ export const meta: GuideMeta = {
   title: "Unique Project Ideas for Final Year Students",
   h1: "Unique project ideas for final year students (that are not another library system)",
   description:
-    "Unique project ideas for final year students in BCA, MCA and B.Tech: what makes a project unique to a panel, eighteen ideas that are rarely duplicated in a batch, with stack and honest difficulty, and the built projects whose one distinctive mechanism is already in place.",
+    
+    "Unique project ideas for final year students in BCA, MCA and B.Tech: what makes a project unique to a panel, and eighteen ideas rarely duplicated.",
   tldr: "A final year project is unique to a panel not because of its title but because of one mechanism they have not seen handled properly: a cart that cannot oversell, a chatbot that cites its source, a classifier that admits when it is unsure. Pick a topic that is rarely duplicated in your batch, then build the one piece of logic that makes it yours. Eighteen such ideas are below, with the built projects that already carry a distinctive mechanism.",
   category: "Project ideas",
   publishedAt: "2026-10-30",

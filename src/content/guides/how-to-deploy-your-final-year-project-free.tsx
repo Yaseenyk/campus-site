@@ -3,10 +3,11 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "how-to-deploy-your-final-year-project-free",
-  title: "How To Deploy Your Final Year Project For Free (Live In The Viva)",
+  title: "Deploy a Final Year Project Free (Live in Viva)",
   h1: "How to deploy your final year project for free",
   description:
-    "Get your final year project live on a real URL for free — frontend on Vercel or Netlify, backend on Render, MongoDB Atlas, secrets done right, and a localhost fallback if the wifi dies.",
+    
+    "Put your final year project on a real URL for free: Vercel or Netlify frontend, Render backend, MongoDB Atlas, secrets done right. Demo-ready for the viva.",
   tldr: "You can deploy a final year project for free by putting the database on MongoDB Atlas, the backend on Render or Railway, and the frontend on Vercel, Netlify or GitHub Pages, wired together with environment variables and CORS. Free backends cold-start after inactivity, so open your link a few minutes before the viva and keep a localhost fallback.",
   category: "Deployment",
   publishedAt: "2026-07-27",

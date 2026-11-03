@@ -3,10 +3,11 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "final-year-project-report-format",
-  title: "Final Year Project Report Format — Chapter By Chapter",
+  title: "Final Year Project Report Format + Free Template",
   h1: "Final year project report format, chapter by chapter",
   description:
-    "The standard structure of a final year project report for BCA, MCA and B.Tech, what belongs in each chapter, the diagrams you need, and the mistakes that cost marks at submission.",
+    
+    "The final year project report format chapter by chapter for BCA, MCA and B.Tech, the diagrams you need, common mistakes, and a free template to download.",
   tldr: "A final year project report opens with front matter, then eight chapters — introduction, literature survey, system analysis, design, implementation, testing, results, and conclusion — followed by references and appendices. System design carries the most marks, and every diagram must match the code you submit.",
   category: "Documentation",
   publishedAt: "2026-07-27",

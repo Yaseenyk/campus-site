@@ -10,7 +10,8 @@ export const meta: GuideMeta = {
   title: "List of Projects for Computer Science Students",
   h1: "A list of projects for computer science students, by domain and difficulty",
   description:
-    "A list of projects for computer science students — BCA, B.Sc CS, MCA, B.Tech CSE — organised by domain with stack and honest difficulty: the top 10 projects in computer science for a final year, web, AI, mobile, systems and data ideas, and the eleven already built with source code.",
+    
+    "A list of projects for computer science students, BCA to B.Tech CSE, by domain with stack and honest difficulty. Top 10 first, then the full list.",
   tldr: "The best projects for computer science students are complete systems with one piece of logic a panel can probe: a web app that handles two users at once, an ML model that reports where it fails, a mobile app that works offline, a systems project that survives a crash. This page lists the top 10 projects in computer science for a final year, then more ideas by domain, then the eleven projects already built with source code.",
   category: "Project ideas",
   publishedAt: "2026-10-30",

@@ -4,7 +4,7 @@ import TopicTable, { type Topic } from "@/components/campus/TopicTable";
 
 export const meta: GuideMeta = {
   slug: "diploma-final-year-project-topics",
-  title: "Diploma Final Year Project Topics (With Source Code)",
+  title: "Diploma Final Year Project Topics 2026 With Code",
   h1: "Diploma final year project topics you can actually finish",
   description:
     "Simple, genuinely finishable diploma final year project ideas, each with the stack it needs and the viva question it attracts. Full source code included on every tier.",

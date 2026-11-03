@@ -3,10 +3,11 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "bca-vs-mca-vs-btech-final-year-projects",
-  title: "BCA vs MCA vs B.Tech Final Year Projects — What Examiners Expect",
+  title: "BCA vs MCA vs B.Tech Final Year Projects Compared",
   h1: "BCA vs MCA vs B.Tech final year projects: what changes with the degree",
   description:
-    "How final year project expectations differ across BCA, MCA and B.Tech, plus B.Sc IT, Diploma and M.Tech — the depth panels want, whether you need a research angle, and how to pick.",
+    
+    "What examiners expect from a BCA, MCA or B.Tech final year project and how deep each has to go. Includes B.Sc IT, Diploma and M.Tech. Pick the right size.",
   tldr: "BCA and Diploma projects are judged on a complete, well-documented application you can defend; MCA and M.Tech expect a literature survey and a genuine research contribution; B.Tech sits between, with panels probing the engineering. Match the depth to what your level's examiners expect, not to the topic.",
   category: "Choosing",
   publishedAt: "2026-07-27",

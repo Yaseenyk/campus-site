@@ -11,7 +11,8 @@ export const meta: GuideMeta = {
   title: "MCA Final Year Project Topics 2026 With Code",
   h1: "MCA final year project topics for 2026, with the stack and the honest difficulty",
   description:
-    "MCA final year project topics for 2026: the ten MCA projects already built with source code and report, then twenty more ideas by domain with the stack, real difficulty and the viva question each attracts. Includes a free MCA final year project PDF sample report.",
+    
+    "MCA final year project topics for 2026: ten built MCA projects with source code and report, then twenty more ideas by domain with stack and difficulty.",
   tldr: "Good MCA final year projects are moderately sized systems you can defend in depth — a RAG document assistant, resume screening, a recommender, or a well-architected full-stack app — each paired with a stack you actually know. MCA vivas push into design decisions, so pick by the depth of questions a project attracts, not by the title. Ten such projects are built and listed below with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",

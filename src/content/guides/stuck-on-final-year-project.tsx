@@ -3,10 +3,11 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "stuck-on-final-year-project",
-  title: "Stuck on Your Final Year Project? Here's the Honest Fix",
+  title: "Stuck on Your Final Year Project? The Honest Fix",
   h1: "Stuck on your final year project? Here is the honest fix",
   description:
-    "The three real reasons students get stuck on a final year project — no idea, an idea you cannot build, or a build you cannot explain — and the honest way out of each.",
+    
+    "The three real reasons students get stuck on a final year project: no idea, an idea you cannot build, or one you cannot explain. The honest fix for each.",
   tldr: "Being stuck on a final year project is almost always one of three specific problems, not a motivation issue: you have no idea what to build, you picked something you cannot build, or you built something you cannot explain. Name which one you are in first, because each has a different fix.",
   category: "Getting unstuck",
   publishedAt: "2026-07-27",

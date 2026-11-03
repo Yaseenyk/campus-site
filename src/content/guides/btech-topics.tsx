@@ -11,7 +11,8 @@ export const meta: GuideMeta = {
   title: "B.Tech CSE Final Year Projects 2026 With Code",
   h1: "B.Tech CSE final year projects for 2026: ideas that survive a review panel",
   description:
-    "B.Tech CSE final year projects for 2026: ten built CSE final year projects with source code and report, plus final year project ideas for CSE teams — each with the stack, honest difficulty, how to split it across a team, and the question the panel will open with.",
+    
+    "Ten built B.Tech CSE final year projects with source code and report, plus more ideas for CSE teams with the stack and the viva question each one attracts.",
   tldr: "Strong B.Tech CSE final year projects survive staged review panels and split cleanly across a team — a RAG assistant, a recommender with a cold-start answer, a real-time chat with delivery guarantees, a CNN tested on real photos. Give each member a vertical slice they can defend end to end, and pick something presentable early with visible room to grow. Ten such projects are built and listed below with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",

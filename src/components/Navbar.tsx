@@ -10,6 +10,8 @@ interface NavLeaf {
   label: string;
   /** One line shown under the label in the dropdown. */
   desc?: string;
+  /** Small pill after the label, e.g. "Free". */
+  badge?: string;
   external?: boolean;
 }
 
@@ -35,13 +37,13 @@ const GROUPS: NavGroup[] = [
       { href: "/find-my-project/", label: "Find my project", desc: "Answer four questions" },
       { href: "/custom/", label: "Get your idea built", desc: "Any stack, any domain" },
       { divider: true },
-      { href: "/cost-estimator/", label: "Cost estimator" },
-      { href: "/templates/", label: "Report and PPT templates" },
-      { href: "/sample-project-report/", label: "Sample project report (PDF)" },
+      { href: "/cost-estimator/", label: "Cost estimator", desc: "Price your project in a minute" },
+      { href: "/templates/", label: "Report and synopsis templates", desc: "Download, edit, submit", badge: "Free" },
+      { href: "/sample-project-report/", label: "Sample project report", desc: "A full report to copy the structure from", badge: "Free PDF" },
       { divider: true },
-      { href: "/guides/bca-final-year-project-topics/", label: "BCA project topics" },
-      { href: "/guides/mca-final-year-project-topics/", label: "MCA project topics" },
-      { href: "/guides/btech-cse-final-year-project-topics/", label: "B.Tech CSE projects" },
+      { href: "/guides/bca-final-year-project-topics/", label: "BCA project topics", desc: "Ideas with stack and viva questions" },
+      { href: "/guides/mca-final-year-project-topics/", label: "MCA project topics", desc: "Ten built, twenty more ideas" },
+      { href: "/guides/btech-cse-final-year-project-topics/", label: "B.Tech CSE projects", desc: "Built projects with source code" },
     ],
   },
   {
@@ -50,9 +52,9 @@ const GROUPS: NavGroup[] = [
     items: [
       { href: "/journey/", label: "AI engineering journey", desc: "16 days · 4 hours a day, live" },
       { divider: true },
-      { href: "/guides/", label: "Free guides" },
-      { href: "/question-bank/", label: "Viva question bank" },
-      { href: "/planner/", label: "Timeline planner" },
+      { href: "/guides/", label: "Free guides", desc: "Reports, synopsis, viva, deployment", badge: "Free" },
+      { href: "/question-bank/", label: "Viva question bank", desc: "What panels actually ask" },
+      { href: "/planner/", label: "Timeline planner", desc: "Work back from your submission date" },
     ],
   },
   {
@@ -60,7 +62,7 @@ const GROUPS: NavGroup[] = [
     href: "/colleges/",
     items: [
       { href: "/colleges/", label: "For colleges", desc: "Workshops and partnerships" },
-      { href: "/terms/", label: "Terms" },
+      { href: "/terms/", label: "Terms", desc: "Terms of service" },
       { divider: true },
       { href: PORTFOLIO_URL + "/", label: "Who builds these", desc: "Yaseen Khatib, senior engineer", external: true },
     ],
@@ -135,8 +137,13 @@ function LeafLink({
 }) {
   const body = (
     <>
-      <span className="block text-sm text-zinc-200 transition-colors group-hover/leaf:text-zinc-50">
+      <span className="flex items-center gap-2 text-sm text-zinc-200 transition-colors group-hover/leaf:text-zinc-50">
         {leaf.label}
+        {leaf.badge && (
+          <span className="rounded-full border border-cyan/30 bg-cyan/10 px-1.5 py-px font-mono text-[9px] uppercase tracking-wider text-cyan">
+            {leaf.badge}
+          </span>
+        )}
       </span>
       {leaf.desc && (
         <span className="mt-0.5 block text-xs leading-snug text-zinc-500">
@@ -286,13 +293,13 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -6 }}
               transition={{ duration: 0.18, ease: EASE }}
               onMouseEnter={cancelClose}
-              className="absolute left-1/2 top-full hidden w-[min(90vw,22rem)] -translate-x-1/2 pt-3 md:block"
+              className="absolute left-1/2 top-full hidden w-[min(90vw,23rem)] -translate-x-1/2 pt-3 md:block"
             >
-              <div className="rounded-2xl border border-zinc-800/60 bg-zinc-950/95 p-2 shadow-2xl shadow-cyan-900/20 backdrop-blur-md">
+              <div className="rounded-2xl border border-zinc-700/60 bg-zinc-950 p-2 shadow-2xl shadow-black/60">
                 <Link
                   href={activeGroup.href}
                   onClick={() => setOpen(null)}
-                  className="block px-3 pb-2 pt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 transition-colors hover:text-cyan"
+                  className="mb-1 block rounded-lg px-3 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-cyan/80 transition-colors hover:bg-zinc-800/60 hover:text-cyan"
                 >
                   {activeGroup.label} overview →
                 </Link>
