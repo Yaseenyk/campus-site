@@ -34,6 +34,12 @@ import { meta as mernMeta, Body as MernBody } from "@/content/guides/mern-stack-
 import { meta as uniqueMeta, Body as UniqueBody } from "@/content/guides/unique-project-ideas-for-final-year-students";
 import { meta as csListMeta, Body as CsListBody } from "@/content/guides/list-of-projects-for-computer-science-students";
 
+import { meta as hospitalStoryMeta, Body as HospitalStoryBody } from "@/content/guides/hospital-management-system-project";
+import { meta as faceStoryMeta, Body as FaceStoryBody } from "@/content/guides/face-recognition-attendance-system-project";
+import { meta as plantStoryMeta, Body as PlantStoryBody } from "@/content/guides/plant-disease-detection-using-machine-learning";
+import { meta as vivaStoryMeta, Body as VivaStoryBody } from "@/content/guides/project-viva-questions";
+import { meta as reportStoryMeta, Body as ReportStoryBody } from "@/content/guides/final-year-project-report-sample";
+
 export interface GuideMeta {
   slug: string;
   /** Metadata title — written for the SERP, so it carries the query. */
@@ -80,6 +86,13 @@ export interface Guide {
 /** Newest / highest-intent first — this is the order the index renders. */
 export const GUIDES: Guide[] = [
   { meta: vivaMeta, Body: VivaBody },
+  // Project stories (first person, one real project or artifact each, written
+  // to rank for a single keyword). Added 2026-11-04.
+  { meta: hospitalStoryMeta, Body: HospitalStoryBody },
+  { meta: faceStoryMeta, Body: FaceStoryBody },
+  { meta: plantStoryMeta, Body: PlantStoryBody },
+  { meta: vivaStoryMeta, Body: VivaStoryBody },
+  { meta: reportStoryMeta, Body: ReportStoryBody },
   // Degree hubs and listicles: the pages that list the built projects for a
   // search phrase (see lib/hubs.ts). High intent, so they sit near the top.
   { meta: bcaMeta, Body: BcaBody },
