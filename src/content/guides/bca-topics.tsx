@@ -16,8 +16,8 @@ export const meta: GuideMeta = {
   tldr: "The best BCA final year project is one you can finish and fully document in the time you have — a hospital, blood bank or e-commerce system, an expense tracker, a chat app — built as a clean full-stack application with a database design that matches the code. A complete moderate project scores better than a half-built ambitious one. Seven such projects are already built and listed below, with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
-  updatedAt: "2026-10-30",
-  readingMinutes: 11,
+  updatedAt: "2026-11-03",
+  readingMinutes: 14,
   ogImage: "/social/bca-topics-wide.jpg",
   degrees: ["BCA", "B.Sc IT", "Diploma"],
   faq: [
@@ -40,6 +40,21 @@ export const meta: GuideMeta = {
       question: "Is there a BCA final year project PDF I can download?",
       answer:
         "Yes. A complete sample project report for the Hospital Management System — abstract, introduction, SRS, design, implementation, testing, conclusion — is published as a free PDF on the sample project report page, so you can see what a finished BCA report looks like before you write yours.",
+    },
+    {
+      question: "Which language is best for a BCA final year project?",
+      answer:
+        "The one you can explain line by line. PHP with MySQL, Python with Flask or Django, Java, and the MERN stack are all accepted by panels, so choose on what you already know and what the topic needs, then check your college's rules. A stack you half-know produces code you cannot defend in the viva, which costs more marks than an older stack would.",
+    },
+    {
+      question: "How many modules should a BCA project have?",
+      answer:
+        "Enough to show one complete flow from login to a finished result, which usually means four to eight modules. The synopsis format guide uses the same range. Fewer than four tends to look like a form with a database, and more than eight is how a project ends up half-built at the deadline.",
+    },
+    {
+      question: "Can I use a template or open-source code for my BCA project?",
+      answer:
+        "Many students start from existing code, and the risk is the viva, not the rule. A panel will ask which parts you wrote and why, so anything you reuse has to be code you can explain, with your own changes you can point to. If you cannot walk through a module, rewrite it or leave it out.",
     },
   ],
 };
@@ -93,6 +108,34 @@ const WEB_TOPICS: Topic[] = [
     difficulty: "Moderate",
     why: "Common topic, but a cart that survives refresh and stock that cannot go negative is uncommon execution.",
     question: "Two people buy the last unit at the same moment. Who gets it?",
+  },
+  {
+    title: "Online quiz or exam system with timer and result analysis",
+    stack: "PHP + MySQL, or Node",
+    difficulty: "Moderate",
+    why: "A timer, randomised questions and per-topic results give you three separate pieces of logic to explain.",
+    question: "What happens to an attempt if the browser closes halfway?",
+  },
+  {
+    title: "Job portal with application tracking",
+    stack: "MERN, or Django",
+    difficulty: "Moderate",
+    why: "Two roles, a status pipeline and search. Plenty of report material without needing anything exotic.",
+    question: "Who can see a candidate's application, and how is that enforced?",
+  },
+  {
+    title: "Hostel or room allocation system",
+    stack: "PHP + MySQL",
+    difficulty: "Easy",
+    why: "Rules such as capacity, year and preference make allocation a real problem instead of a form.",
+    question: "What happens when two students are allotted the last bed?",
+  },
+  {
+    title: "Placement and internship tracker for a college",
+    stack: "Django or Node, PostgreSQL",
+    difficulty: "Easy",
+    why: "Genuinely useful to a college, simple schema, and the eligibility rules are easy to defend.",
+    question: "How do you decide which students are eligible for a drive?",
   },
 ];
 
@@ -243,6 +286,91 @@ export function Body() {
       <h2>More final year project ideas for BCA students</h2>
       <TopicTable topics={MISC_TOPICS} />
 
+      <h2>Pick the stack you can explain, then the topic</h2>
+      <p>
+        Students usually choose the topic first and discover the stack problem in
+        week six. Reverse it. Decide what you can already read and debug, then pick
+        from the topics that fit. The table below maps the common choices to the
+        lists above. None of these is wrong; the risk is always the same, a stack
+        you cannot explain in the viva.
+      </p>
+      <div className="not-prose my-6 overflow-x-auto rounded-xl border border-white/10">
+        <table className="w-full min-w-[34rem] text-left text-sm">
+          <thead className="bg-white/[0.03] text-zinc-300">
+            <tr>
+              <th className="px-4 py-3 font-medium">Stack</th>
+              <th className="px-4 py-3 font-medium">Fits best</th>
+              <th className="px-4 py-3 font-medium">Where the viva pushes</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-white/5 text-zinc-400">
+            <tr>
+              <td className="px-4 py-3 text-zinc-200">PHP + MySQL</td>
+              <td className="px-4 py-3">Management systems, portals, anything form-and-report heavy</td>
+              <td className="px-4 py-3">Normalisation, SQL injection, how sessions work</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-3 text-zinc-200">Python (Flask or Django)</td>
+              <td className="px-4 py-3">Dashboards, data topics, the one defensible ML project</td>
+              <td className="px-4 py-3">Why this library, how the data was cleaned, what the model gets wrong</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-3 text-zinc-200">MERN</td>
+              <td className="px-4 py-3">Marketplaces, chat, anything with live updates or two roles</td>
+              <td className="px-4 py-3">Authentication, API design, where state lives</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-3 text-zinc-200">Flutter or React Native</td>
+              <td className="px-4 py-3">Mobile topics an examiner can install on their own phone</td>
+              <td className="px-4 py-3">Offline behaviour, permissions, what runs on the device</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Not sure which of these you can finish? The{" "}
+        <Link href="/find-my-project/">find my project quiz</Link> asks four
+        questions (your degree, the area you enjoy, the time you have and your
+        goal) and suggests the built projects that fit, and the{" "}
+        <Link href="/cost-estimator/">cost estimator</Link> prices a build if you
+        would rather have one done properly.
+      </p>
+
+      <h2>Work backwards from the submission date</h2>
+      <p>
+        Most half-finished BCA projects were not too hard. They started late and
+        spent the first half of the time choosing. Count the weeks until your
+        submission, subtract exams and the weeks you know you will lose, and divide
+        what is left into four blocks in this order.
+      </p>
+      <ol>
+        <li>
+          <strong>Topic and synopsis.</strong> Get approval early. Your synopsis
+          fixes the scope, which protects you from adding features at the end.
+        </li>
+        <li>
+          <strong>Database and one complete flow.</strong> Login, one record
+          created, one record shown. If this works, the rest is repetition.
+        </li>
+        <li>
+          <strong>Remaining modules and validation.</strong> Handle the empty form,
+          the wrong type and the duplicate entry as you go, not afterwards.
+        </li>
+        <li>
+          <strong>Testing, report and viva practice.</strong> Leave real time for
+          this block. A finished project with a rushed report loses the marks it
+          earned.
+        </li>
+      </ol>
+      <p>
+        The <Link href="/planner/">timeline planner</Link> does the division for
+        your dates. If you have only a month left,{" "}
+        <Link href="/guides/final-year-project-in-one-month/">
+          the one-month plan
+        </Link>{" "}
+        is the realistic version of the same idea.
+      </p>
+
       <h2>Three mistakes that cost BCA students marks</h2>
       <ol>
         <li>
@@ -260,6 +388,52 @@ export function Body() {
           actually have, subtract exams, and be honest. Finished beats impressive.
         </li>
       </ol>
+
+      <h2>The documents a BCA project needs, and where to get them free</h2>
+      <p>
+        Searching for a BCA final year project PDF usually means you want the
+        paperwork, not only the code. Colleges differ on the exact set, so check
+        your format sheet first. The usual ones, with a free starting point for
+        each, are below.
+      </p>
+      <ul>
+        <li>
+          <strong>Synopsis.</strong> The approval document. Follow the{" "}
+          <Link href="/guides/final-year-project-synopsis-format/">
+            synopsis format
+          </Link>{" "}
+          and start from the free synopsis template on the{" "}
+          <Link href="/templates/">templates page</Link>.
+        </li>
+        <li>
+          <strong>Project report.</strong> The main document, with chapters from
+          introduction to conclusion. The free report template is on the same
+          templates page, and the{" "}
+          <Link href="/guides/final-year-project-report-format/">
+            report format guide
+          </Link>{" "}
+          explains each chapter.
+        </li>
+        <li>
+          <strong>Presentation.</strong> Slides for the viva, covered slide by slide
+          in the{" "}
+          <Link href="/guides/final-year-project-presentation-ppt/">
+            project PPT guide
+          </Link>
+          .
+        </li>
+        <li>
+          <strong>Source code and a working demo.</strong> Deploy it if you can; the{" "}
+          <Link href="/guides/how-to-deploy-your-final-year-project-free/">
+            free deployment guide
+          </Link>{" "}
+          shows how.
+        </li>
+        <li>
+          <strong>Test cases and a short user manual.</strong> Often asked for as
+          appendices. The report template has a testing chapter you can reuse.
+        </li>
+      </ul>
 
       <h2>What a finished BCA project report looks like</h2>
       <p>
