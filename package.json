@@ -34,5 +34,10 @@
     "firefox >= 100",
     "safari >= 15.4",
     "ios_saf >= 15.4"
-  ]
+  ],
+  "overrides": {
+    "next": {
+      "postcss": "^8.5.23"
+    }
+  }
 }
