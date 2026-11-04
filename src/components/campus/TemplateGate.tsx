@@ -36,6 +36,7 @@ export default function TemplateGate() {
   if (!unlocked) {
     return (
       <form
+        data-clarity-mask="true"
         onSubmit={(e: FormEvent) => {
           e.preventDefault();
           if (ready) {

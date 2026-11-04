@@ -353,6 +353,7 @@ export default function ConsentForm() {
   return (
     <form
       onSubmit={handleSubmit}
+      data-clarity-mask="true"
       id="consent"
       className="scroll-mt-28 rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-10"
     >
