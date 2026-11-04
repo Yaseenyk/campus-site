@@ -125,7 +125,12 @@ export default function FinalYearProjectsPage() {
           Then, {SESSION_POLICY.cadence.toLowerCase()} after{" "}
           {SESSION_POLICY.startsAfter}, we sit on a call and I walk you through the
           code I wrote — line by line — until you can explain it without me. A
-          working project is half the marks. The viva is the other half.
+          working project is half the marks. The viva is the other half, so start
+          with the{" "}
+          <Link href="/guides/final-year-project-viva-questions/" className="text-cyan underline-offset-4 hover:underline">
+            viva questions
+          </Link>{" "}
+          panels actually ask.
         </p>
 
         {/* Price anchor — students filter on price before anything else. */}

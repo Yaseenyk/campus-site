@@ -81,7 +81,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </p>
               <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer">
                 <Link href="/guides/" className="hover:text-zinc-200">Guides</Link>
-                <Link href="/question-bank/" className="hover:text-zinc-200">Viva questions</Link>
+                <Link href="/guides/final-year-project-viva-questions/" className="hover:text-zinc-200">Viva questions</Link>
+                <Link href="/question-bank/" className="hover:text-zinc-200">Question bank</Link>
                 <Link href="/journey/" className="hover:text-zinc-200">AI journey</Link>
                 <Link href="/colleges/" className="hover:text-zinc-200">For colleges</Link>
                 <Link href="/terms/" className="hover:text-zinc-200">Terms</Link>

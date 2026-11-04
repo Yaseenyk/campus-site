@@ -3,7 +3,7 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "project-viva-questions",
-  title: "Project Viva Questions and What Examiners Test",
+  title: "What Examiners Test in a Project Viva",
   h1: "Project viva questions: what the examiner is really testing",
   description:
     "Project viva questions grouped by what the panel is really checking: running it, failure handling, security, your own code. Based on 83 questions.",
@@ -41,7 +41,9 @@ export function Body() {
   return (
     <>
       <p>
-        The most useful line in our viva question bank is not a question. It is
+        For the full guide to answering them, see our{" "}
+        <Link href="/guides/final-year-project-viva-questions/">viva questions</Link>{" "}
+        guide. The most useful line in our viva question bank is not a question. It is
         the short note printed under each one, saying what the examiner is
         actually testing. When I set the bank up, I decided that every entry had
         to carry one, because a list of questions is only half a tool. The

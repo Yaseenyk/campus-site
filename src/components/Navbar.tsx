@@ -53,6 +53,7 @@ const GROUPS: NavGroup[] = [
       { href: "/journey/", label: "AI engineering journey", desc: "16 days · 4 hours a day, live" },
       { divider: true },
       { href: "/guides/", label: "Free guides", desc: "Reports, synopsis, viva, deployment", badge: "Free" },
+      { href: "/guides/final-year-project-viva-questions/", label: "Viva questions", desc: "What panels ask and how to answer" },
       { href: "/question-bank/", label: "Viva question bank", desc: "What panels actually ask" },
       { href: "/planner/", label: "Timeline planner", desc: "Work back from your submission date" },
     ],

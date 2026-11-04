@@ -13,7 +13,7 @@ const COUNT = VIVA_QUESTIONS.length;
 const DESCRIPTION = `${COUNT} real final year project viva questions, filterable by category and project type, each showing what the examiner is actually testing. Tick them off as you prepare — your progress is saved in the browser.`;
 
 export const metadata: Metadata = {
-  title: `${COUNT} Final Year Project Viva Questions`,
+  title: `Viva Question Bank: Browse ${COUNT} Project Questions`,
   description: seoDescription(DESCRIPTION),
   alternates: { canonical: `${SITE_URL}/question-bank/` },
   openGraph: {
@@ -87,7 +87,12 @@ export default function QuestionBankPage() {
         <p className="mt-6 text-lg leading-relaxed text-zinc-400">
           Filter to your project type, then work through them. Each one shows what
           the examiner is actually testing, because the follow-up question is always
-          aimed at that rather than at what they literally asked.
+          aimed at that rather than at what they literally asked. New to this? Start
+          with the guide to{" "}
+          <Link href="/guides/final-year-project-viva-questions/" className="text-cyan underline-offset-4 hover:underline">
+            viva questions
+          </Link>{" "}
+          and how to answer them.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-zinc-500">
           Tick a question once you can answer it out loud, in full sentences,

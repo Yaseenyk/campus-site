@@ -3,10 +3,10 @@ import type { GuideMeta } from "@/lib/guides";
 
 export const meta: GuideMeta = {
   slug: "final-year-project-viva-questions",
-  title: "What Is a Viva? Final Year Project Viva Questions With Answers",
+  title: "Final Year Project Viva Questions With Answers",
   h1: "Final year project viva questions — and how to actually answer them",
   description:
-    "The questions panels really ask in a final year project viva, grouped by what they are testing, with the reasoning behind a good answer. Written by an engineer who builds these systems for a living.",
+    "Viva questions for a final year project, grouped by what the panel is testing, with the reasoning behind a good answer. Starts with what a viva is.",
   updatedAt: "2026-11-04",
   tldr: "A viva (viva voce, Latin for by word of mouth) is a spoken exam. In a final year project viva the panel checks you actually built the project, not just described it. Expect four kinds of question: what it does, why you made each design choice, what breaks when something goes wrong, and what you would change if you rebuilt it.",
   category: "Viva prep",
@@ -40,6 +40,11 @@ export const meta: GuideMeta = {
 export function Body() {
   return (
     <>
+      <p>
+        These are the viva questions final year project panels actually ask,
+        grouped by what each one is testing, with the reasoning behind a good
+        answer. First, what a viva is.
+      </p>
       <h2>What is a viva?</h2>
       <p>
         A viva is a spoken exam. The full name is <em>viva voce</em>, Latin for
