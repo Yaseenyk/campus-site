@@ -17,6 +17,7 @@ import { guidesForDegree } from "@/lib/guides";
 import { breadcrumbJsonLd, faqPageJsonLd, personRef } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import ProjectCard from "@/components/campus/ProjectCard";
+import { toCard } from "@/lib/cards";
 import CampusFaq from "@/components/campus/CampusFaq";
 import EarlyBirdBand from "@/components/campus/EarlyBirdBand";
 import StickyActionBar from "@/components/campus/StickyActionBar";
@@ -202,7 +203,7 @@ export default function DegreePage({ params }: Params) {
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
-            <ProjectCard key={p.slug} project={p} index={i} />
+            <ProjectCard key={p.slug} project={toCard(p)} index={i} />
           ))}
         </div>
       </section>

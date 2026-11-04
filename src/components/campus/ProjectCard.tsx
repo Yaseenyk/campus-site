@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useHydrated } from "@/lib/useHydrated";
-import { formatInr, lowestPrice, type CampusProject } from "@/lib/campus";
+import { formatInr } from "@/lib/campus";
+import type { CardProject } from "@/lib/cards";
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 
@@ -12,14 +13,14 @@ export default function ProjectCard({
   project,
   index,
 }: {
-  project: CampusProject;
+  project: CardProject;
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const hydrated = useHydrated();
   const inView = useInView(ref, { once: true, margin: "-60px" });
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={false}
       animate={
@@ -41,7 +42,7 @@ export default function ProjectCard({
         <p className="mt-2 text-sm leading-relaxed text-zinc-400">{project.tagline}</p>
 
         <div className="mt-4 flex flex-wrap gap-1.5">
-          {project.stack.slice(0, 5).map((t) => (
+          {project.stack.map((t) => (
             <span
               key={t}
               className="rounded-full border border-white/10 px-2.5 py-0.5 text-[11px] text-zinc-400"
@@ -57,7 +58,7 @@ export default function ProjectCard({
               From
             </p>
             <p className="mt-1 text-lg font-semibold text-zinc-50">
-              {formatInr(lowestPrice(project))}
+              {formatInr(project.from)}
             </p>
           </div>
           <div className="text-right">
@@ -68,6 +69,6 @@ export default function ProjectCard({
           </div>
         </div>
       </Link>
-    </motion.div>
+    </m.div>
   );
 }

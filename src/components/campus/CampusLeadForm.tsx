@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { m } from "framer-motion";
 import { EMAILJS, OWNER_NAME } from "@/lib/emailjs";
 import type { CampusTier, Degree } from "@/lib/campus";
 import { formatInr, whatsappHref } from "@/lib/campus";
@@ -124,7 +123,7 @@ export default function CampusLeadForm({
         .filter(Boolean)
         .join("\n");
 
-      await emailjs.send(
+      await (await import("@emailjs/browser")).default.send(
         EMAILJS_SERVICE,
         EMAILJS_TEMPLATE,
         {
@@ -266,7 +265,7 @@ export default function CampusLeadForm({
         </div>
 
         <div className="mt-8 flex flex-wrap items-center gap-5">
-          <motion.button
+          <m.button
             type="submit"
             disabled={isSending}
             whileHover={isSending ? undefined : { scale: 1.03 }}
@@ -274,7 +273,7 @@ export default function CampusLeadForm({
             className="rounded-lg bg-gradient-to-r from-cyan to-purple px-6 py-3 text-sm font-medium text-ink shadow-[0_0_24px_-4px_rgba(34,211,238,0.5)] transition-shadow duration-300 hover:shadow-[0_0_32px_0_rgba(168,85,247,0.5)] disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSending ? "Sending…" : status === "sent" ? "Enquiry Sent" : "Send Enquiry"}
-          </motion.button>
+          </m.button>
 
           <a
             href={whatsappLink}
@@ -287,7 +286,7 @@ export default function CampusLeadForm({
           </a>
 
           {(status === "sent" || status === "error") && (
-            <motion.p
+            <m.p
               role="status"
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
@@ -297,7 +296,7 @@ export default function CampusLeadForm({
               {status === "error" && errorDetail && (
                 <span className="mt-1 block text-xs text-red-400/70">{errorDetail}</span>
               )}
-            </motion.p>
+            </m.p>
           )}
         </div>
       </form>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { PORTFOLIO_URL } from "@/lib/site";
 
 interface NavLeaf {
@@ -81,14 +81,14 @@ function MenuToggle({ open, onClick }: { open: boolean; onClick: () => void }) {
       className="flex h-6 w-6 items-center justify-center text-zinc-300 transition-colors hover:text-zinc-50 md:hidden"
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <motion.path
+        <m.path
           stroke="currentColor"
           strokeWidth="1.7"
           strokeLinecap="round"
           animate={open ? { d: "M4 4 L16 16" } : { d: "M3 6 L17 6" }}
           transition={{ duration: 0.25 }}
         />
-        <motion.path
+        <m.path
           d="M3 10 L17 10"
           stroke="currentColor"
           strokeWidth="1.7"
@@ -96,7 +96,7 @@ function MenuToggle({ open, onClick }: { open: boolean; onClick: () => void }) {
           animate={{ opacity: open ? 0 : 1 }}
           transition={{ duration: 0.2 }}
         />
-        <motion.path
+        <m.path
           stroke="currentColor"
           strokeWidth="1.7"
           strokeLinecap="round"
@@ -213,7 +213,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
+      <m.nav
         initial={false}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: EASE }}
@@ -255,7 +255,7 @@ export default function Navbar() {
                   className="relative flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-sm"
                 >
                   {open === group.label && (
-                    <motion.span
+                    <m.span
                       layoutId="nav-pill"
                       className="absolute inset-0 rounded-full bg-zinc-800/50"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
@@ -287,7 +287,7 @@ export default function Navbar() {
             travel from trigger to panel without leaving the hover region. */}
         <AnimatePresence>
           {activeGroup && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -6 }}
@@ -318,17 +318,17 @@ export default function Navbar() {
                   ),
                 )}
               </div>
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
-      </motion.nav>
+      </m.nav>
 
       {/* Mobile menu — a sibling of the nav (not a child) so its `fixed`
           positioning resolves against the viewport. The nav's -translate-x-1/2
           transform would otherwise become the containing block and clip it. */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -352,7 +352,7 @@ export default function Navbar() {
                   </button>
                   <AnimatePresence initial={false}>
                     {expanded && (
-                      <motion.div
+                      <m.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -380,13 +380,13 @@ export default function Navbar() {
                             />
                           ),
                         )}
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </div>
               );
             })}
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 interface PulseDotProps {
   className?: string;
@@ -12,7 +12,7 @@ interface PulseDotProps {
 export default function PulseDot({ className = "", color = "bg-ice" }: PulseDotProps) {
   return (
     <span className={`relative inline-flex h-2.5 w-2.5 ${className}`}>
-      <motion.span
+      <m.span
         className={`absolute inline-flex h-full w-full rounded-full ${color}`}
         animate={{ scale: [1, 2.2], opacity: [0.6, 0] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: "easeOut" }}

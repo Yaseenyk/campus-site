@@ -24,6 +24,7 @@ import { VIVA_QUESTIONS } from "@/lib/vivaQuestions";
 import { breadcrumbJsonLd, faqPageJsonLd, personRef } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import CampusIndex from "@/components/campus/CampusIndex";
+import { toCard } from "@/lib/cards";
 import CampusFaq from "@/components/campus/CampusFaq";
 import EarlyBirdBand from "@/components/campus/EarlyBirdBand";
 import ReferralBand from "@/components/campus/ReferralBand";
@@ -113,7 +114,7 @@ export default function FinalYearProjectsPage() {
           <br />
           You learn it.
           <br />
-          <span className="text-gradient animate-gradient">You defend it.</span>
+          <span className="text-gradient">You defend it.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-300">
           Pick a project below or tell me the one you want — either way I build the
@@ -251,7 +252,7 @@ export default function FinalYearProjectsPage() {
       </nav>
 
       <CampusIndex
-        projects={CAMPUS_PROJECTS}
+        projects={CAMPUS_PROJECTS.map(toCard)}
         degrees={allDegrees()}
         domains={allDomains()}
       />

@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { m } from "framer-motion";
 import { AGREEMENT_VERSION, CONSENTS, OWNER_COMMITMENTS } from "@/lib/agreement";
 import { track } from "@/lib/analytics";
 import { recordLead } from "@/lib/leads";
@@ -187,7 +186,7 @@ export default function ConsentForm() {
     const ownerBody = withLink(body);
 
     try {
-      await emailjs.send(
+      await (await import("@emailjs/browser")).default.send(
         EMAILJS.service,
         EMAILJS.template,
         {
@@ -207,7 +206,7 @@ export default function ConsentForm() {
       // but failing to deliver their copy must not invalidate consent that has
       // already been captured.
       try {
-        await emailjs.send(
+        await (await import("@emailjs/browser")).default.send(
           EMAILJS.service,
           EMAILJS.template,
           {
@@ -454,7 +453,7 @@ export default function ConsentForm() {
       </ul>
 
       <div className="mt-10 flex flex-wrap items-center gap-5">
-        <motion.button
+        <m.button
           type="submit"
           disabled={!allTicked || status === "sending"}
           whileHover={allTicked && status !== "sending" ? { scale: 1.02 } : undefined}
@@ -462,7 +461,7 @@ export default function ConsentForm() {
           className="rounded-xl bg-gradient-to-r from-cyan to-purple px-7 py-3.5 text-sm font-medium text-ink shadow-[0_0_24px_-4px_rgba(34,211,238,0.5)] transition-shadow duration-300 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
         >
           {status === "sending" ? "Recording…" : "I consent to this agreement"}
-        </motion.button>
+        </m.button>
 
         {!allTicked && (
           <span className="text-sm text-zinc-500">

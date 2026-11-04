@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { whatsappHref } from "@/lib/campus";
 import type { Degree, Difficulty } from "@/lib/campus";
 import { track } from "@/lib/analytics";
@@ -120,7 +120,7 @@ export default function FindMyProject({ projects }: { projects: QuizProject[] })
       </div>
 
       {!done ? (
-        <motion.div
+        <m.div
           key={step}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -153,9 +153,9 @@ export default function FindMyProject({ projects }: { projects: QuizProject[] })
               ← Back
             </button>
           )}
-        </motion.div>
+        </m.div>
       ) : (
-        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
+        <m.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-cyan">
             Your best-fit projects
           </p>
@@ -224,7 +224,7 @@ export default function FindMyProject({ projects }: { projects: QuizProject[] })
             </Link>
             .
           </p>
-        </motion.div>
+        </m.div>
       )}
     </div>
   );

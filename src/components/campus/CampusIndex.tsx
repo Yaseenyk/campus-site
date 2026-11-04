@@ -2,11 +2,12 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import type { CampusProject, Degree } from "@/lib/campus";
+import type { Degree } from "@/lib/campus";
+import type { CardProject } from "@/lib/cards";
 import ProjectCard from "./ProjectCard";
 
 interface Props {
-  projects: CampusProject[];
+  projects: CardProject[];
   degrees: Degree[];
   domains: string[];
 }
@@ -22,7 +23,7 @@ export default function CampusIndex({ projects, degrees, domains }: Props) {
       if (degree !== "All" && !p.degrees.includes(degree)) return false;
       if (domain !== "All" && p.domain !== domain) return false;
       if (!q) return true;
-      return [p.title, p.tagline, p.summary, p.domain, ...p.stack]
+      return [p.title, p.tagline, p.category, p.domain, ...p.stack]
         .join(" ")
         .toLowerCase()
         .includes(q);
