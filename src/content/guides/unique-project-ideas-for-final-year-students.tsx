@@ -15,6 +15,7 @@ export const meta: GuideMeta = {
   tldr: "A final year project is unique to a panel not because of its title but because of one mechanism they have not seen handled properly: a cart that cannot oversell, a chatbot that cites its source, a classifier that admits when it is unsure. Pick a topic that is rarely duplicated in your batch, then build the one piece of logic that makes it yours. Eighteen such ideas are below, with the built projects that already carry a distinctive mechanism.",
   category: "Project ideas",
   publishedAt: "2026-10-30",
+  updatedAt: "2026-11-15",
   readingMinutes: 10,
   faq: [
     {
@@ -263,6 +264,9 @@ export function Body() {
         </Link>
         , or take the four-question{" "}
         <Link href="/find-my-project/">project matcher</Link>.
+      </p>
+      <p>
+        Early in the course? Start smaller with <Link href="/guides/mini-project-ideas/">mini project ideas</Link>, and use <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link> if you want the decision steps.
       </p>
     </>
   );

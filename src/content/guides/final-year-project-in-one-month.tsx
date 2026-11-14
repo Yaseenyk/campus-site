@@ -11,6 +11,7 @@ export const meta: GuideMeta = {
   tldr: "A month is enough for a focused project if you cut scope hard: lock a small synopsis in week one, build one core feature in week two, test and write the report in week three, and keep week four as buffer plus viva prep. It is not enough for an ambitious multi-module or research build.",
   category: "Crunch time",
   publishedAt: "2026-07-27",
+  updatedAt: "2026-11-15",
   readingMinutes: 10,
   ogImage: "/og/campus/planner.jpg",
   howTo: {
@@ -199,6 +200,9 @@ export function Body() {
         and{" "}
         <Link href="/realtime-chat-mern/">the real-time chat app</Link>{" "}
         — both have one clear core flow you can lock in week one.
+      </p>
+      <p>
+        For a smaller project with a 2 to 4 week scope, see <Link href="/guides/mini-project-ideas/">mini project ideas</Link>. For a 12-week plan, see <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link>.
       </p>
     </>
   );

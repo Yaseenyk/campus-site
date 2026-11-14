@@ -15,6 +15,7 @@ export const meta: GuideMeta = {
   tldr: "The best projects for computer science students are complete systems with one piece of logic a panel can probe: a web app that handles two users at once, an ML model that reports where it fails, a mobile app that works offline, a systems project that survives a crash. This page lists the top 10 projects in computer science for a final year, then more ideas by domain, then the eleven projects already built with source code.",
   category: "Project ideas",
   publishedAt: "2026-10-30",
+  updatedAt: "2026-11-15",
   readingMinutes: 11,
   faq: [
     {
@@ -306,6 +307,9 @@ export function Body() {
           the questions panels actually ask
         </Link>
         .
+      </p>
+      <p>
+        Smaller ideas for the first three years are in <Link href="/guides/mini-project-ideas/">mini project ideas</Link>, and a step-by-step BCA decision guide is in <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link>.
       </p>
     </>
   );

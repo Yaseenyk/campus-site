@@ -11,6 +11,7 @@ export const meta: GuideMeta = {
   tldr: "Choose a final year project by first counting the weeks you truly have after exams, placements and a four-week buffer, then picking the hardest idea you can finish inside them. Pick one goal — marks, a job, or higher study — take three options to your guide, and write the scope down before you build.",
   category: "Getting started",
   publishedAt: "2026-07-27",
+  updatedAt: "2026-11-15",
   readingMinutes: 8,
   ogImage: "/social/how-to-choose-wide.jpg",
   howTo: {
@@ -203,6 +204,9 @@ export function Body() {
           B.Tech
         </Link>
         .
+      </p>
+      <p>
+        Degree-specific versions: <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link>, and for practice before the final year, <Link href="/guides/mini-project-ideas/">mini project ideas</Link>.
       </p>
     </>
   );

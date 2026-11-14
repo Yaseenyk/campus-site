@@ -11,6 +11,7 @@ export const meta: GuideMeta = {
   tldr: "An MCA project synopsis is a short proposal, usually 5 to 15 pages depending on the university, that your guide or committee approves before you build. It normally has a title, problem statement, objectives, scope, methodology, technology stack, hardware and software requirements, expected outcome, timeline and references. Approval depends on being specific and finishable in one semester; a complete worked sample and a copy-ready template are below, and your university's own synopsis format overrides both.",
   category: "Documentation",
   publishedAt: "2026-11-15",
+  updatedAt: "2026-11-15",
   readingMinutes: 10,
   ogImage: "/og/campus/templates.jpg",
   degrees: ["MCA"],
@@ -321,6 +322,9 @@ Student signature: ______   Guide signature: ______`}</code>
         and the <Link href="/templates/">free templates</Link>. Not sure which
         topic fits you? Try the{" "}
         <Link href="/find-my-project/">find-my-project quiz</Link>.
+      </p>
+      <p>
+        Studying BCA instead? See <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link>, points to the general synopsis format. For practice projects before the final year, see <Link href="/guides/mini-project-ideas/">mini project ideas</Link>.
       </p>
     </>
   );

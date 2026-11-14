@@ -11,6 +11,7 @@ export const meta: GuideMeta = {
   tldr: "An MCA project report is usually front matter (title page, certificate, declaration, acknowledgement, abstract, contents), then chapters for introduction, literature survey and feasibility, requirements (SRS), design (ER, DFD, UML), implementation, testing, results, and conclusion with future scope, followed by references and appendices. Typical length is 60 to 120 pages, 12 pt Times New Roman with 1.5 line spacing, but page counts, fonts and margins are set by your university, so your own university's template always overrides this guide.",
   category: "Documentation",
   publishedAt: "2026-11-15",
+  updatedAt: "2026-11-15",
   readingMinutes: 11,
   ogImage: "/og/campus/templates.jpg",
   degrees: ["MCA"],
@@ -352,6 +353,9 @@ APPENDICES  A. Source code excerpts  B. User manual`}</code>
           MCA final year project topics
         </Link>
         .
+      </p>
+      <p>
+        The BCA-level documents and a 12-week plan are in <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link>. For smaller projects earlier in the course, see <Link href="/guides/mini-project-ideas/">mini project ideas</Link>.
       </p>
     </>
   );

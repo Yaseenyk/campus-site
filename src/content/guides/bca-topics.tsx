@@ -16,7 +16,7 @@ export const meta: GuideMeta = {
   tldr: "The best BCA final year project is one you can finish and fully document in the time you have — a hospital, blood bank or e-commerce system, an expense tracker, a chat app — built as a clean full-stack application with a database design that matches the code. A complete moderate project scores better than a half-built ambitious one. Seven such projects are already built and listed below, with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
-  updatedAt: "2026-11-03",
+  updatedAt: "2026-11-15",
   readingMinutes: 14,
   ogImage: "/social/bca-topics-wide.jpg",
   degrees: ["BCA", "B.Sc IT", "Diploma"],
@@ -466,6 +466,9 @@ export function Body() {
           MCA final year project topics
         </Link>{" "}
         list goes deeper on design questions.
+      </p>
+      <p>
+        Need a way to decide rather than a list? Read <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link>, which covers skill level, weeks available, stack and a 12-week plan. Earlier in the course, start with <Link href="/guides/mini-project-ideas/">mini project ideas</Link>.
       </p>
     </>
   );

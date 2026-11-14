@@ -43,6 +43,8 @@ import { meta as reportStoryMeta, Body as ReportStoryBody } from "@/content/guid
 import { meta as mcaReportMeta, Body as McaReportBody } from "@/content/guides/mca-final-year-project-report-format";
 import { meta as mcaSynopsisMeta, Body as McaSynopsisBody } from "@/content/guides/mca-project-synopsis-format-and-sample";
 import { meta as mcaSourceMeta, Body as McaSourceBody } from "@/content/guides/mca-projects-with-source-code";
+import { meta as bcaProjectMeta, Body as BcaProjectBody } from "@/content/guides/bca-final-year-project";
+import { meta as miniMeta, Body as MiniBody } from "@/content/guides/mini-project-ideas";
 
 export interface GuideMeta {
   slug: string;
@@ -105,6 +107,9 @@ export const GUIDES: Guide[] = [
   { meta: mcaReportMeta, Body: McaReportBody },
   { meta: mcaSynopsisMeta, Body: McaSynopsisBody },
   { meta: mcaSourceMeta, Body: McaSourceBody },
+  // Added 2026-11-15 from keyword research: BCA decision guide and mini projects.
+  { meta: bcaProjectMeta, Body: BcaProjectBody },
+  { meta: miniMeta, Body: MiniBody },
   { meta: btechMeta, Body: BtechBody },
   { meta: mernMeta, Body: MernBody },
   { meta: aiMlMeta, Body: AiMlBody },

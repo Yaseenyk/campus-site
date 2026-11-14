@@ -13,6 +13,7 @@ export const meta: GuideMeta = {
   tldr: "A source-code project is a legitimate starting point only if you can run it, explain every module, change something meaningful, and credit what is not yours. Submitting someone else's code unchanged is academic misconduct at most universities and fails in the viva within minutes. Pick a project you can read, modify at least one module with your own data or feature, cite the origin, and keep a clean repo with a README, tests and a demo. Ten MCA projects with source are listed below; this guide does not link to free downloads of other people's work.",
   category: "Project code",
   publishedAt: "2026-11-15",
+  updatedAt: "2026-11-15",
   readingMinutes: 10,
   ogImage: "/og/campus/hub.jpg",
   degrees: ["MCA"],
@@ -233,6 +234,9 @@ export function Body() {
         </Link>
         . If you would rather have a project built to your own problem statement,
         see <Link href="/custom/">custom builds</Link>.
+      </p>
+      <p>
+        Looking for a smaller starting point? See <Link href="/guides/mini-project-ideas/">mini project ideas</Link>, or <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link> if you are comparing degree levels.
       </p>
     </>
   );

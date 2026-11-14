@@ -332,6 +332,9 @@ export function Body() {
         </Link>{" "}
         list covers team splits and review panels.
       </p>
+      <p>
+        Smaller practice projects for earlier years are in <Link href="/guides/mini-project-ideas/">mini project ideas</Link>, and the decision framework for the BCA level is in <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link>.
+      </p>
     </>
   );
 }
