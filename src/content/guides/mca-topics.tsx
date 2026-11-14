@@ -16,7 +16,7 @@ export const meta: GuideMeta = {
   tldr: "Good MCA final year projects are moderately sized systems you can defend in depth — a RAG document assistant, resume screening, a recommender, or a well-architected full-stack app — each paired with a stack you actually know. MCA vivas push into design decisions, so pick by the depth of questions a project attracts, not by the title. Ten such projects are built and listed below with source code.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
-  updatedAt: "2026-10-30",
+  updatedAt: "2026-11-15",
   readingMinutes: 13,
   ogImage: "/social/mca-topics-wide.jpg",
   degrees: ["MCA", "M.Tech"],
@@ -274,6 +274,24 @@ export function Body() {
           chapter-by-chapter format guide
         </Link>{" "}
         alongside it.
+      </p>
+
+      <h2>Once you have a topic: synopsis, source code and report</h2>
+      <p>
+        Three MCA-specific guides cover the documents and code that follow a topic.
+        Start with the{" "}
+        <Link href="/guides/mca-project-synopsis-format-and-sample/">
+          MCA project synopsis format, with a full worked sample
+        </Link>{" "}
+        you submit for approval. If you plan to start from working code, read{" "}
+        <Link href="/guides/mca-projects-with-source-code/">
+          MCA projects with source code, and how to use them honestly
+        </Link>
+        . Then plan the write-up with the{" "}
+        <Link href="/guides/mca-final-year-project-report-format/">
+          MCA project report format, chapters and sample contents page
+        </Link>
+        .
       </p>
 
       <h2>How to actually choose from this list</h2>

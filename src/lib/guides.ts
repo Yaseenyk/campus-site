@@ -40,6 +40,10 @@ import { meta as plantStoryMeta, Body as PlantStoryBody } from "@/content/guides
 import { meta as vivaStoryMeta, Body as VivaStoryBody } from "@/content/guides/project-viva-questions";
 import { meta as reportStoryMeta, Body as ReportStoryBody } from "@/content/guides/final-year-project-report-sample";
 
+import { meta as mcaReportMeta, Body as McaReportBody } from "@/content/guides/mca-final-year-project-report-format";
+import { meta as mcaSynopsisMeta, Body as McaSynopsisBody } from "@/content/guides/mca-project-synopsis-format-and-sample";
+import { meta as mcaSourceMeta, Body as McaSourceBody } from "@/content/guides/mca-projects-with-source-code";
+
 export interface GuideMeta {
   slug: string;
   /** Metadata title — written for the SERP, so it carries the query. */
@@ -97,6 +101,10 @@ export const GUIDES: Guide[] = [
   // search phrase (see lib/hubs.ts). High intent, so they sit near the top.
   { meta: bcaMeta, Body: BcaBody },
   { meta: mcaMeta, Body: McaBody },
+  // MCA cluster, added 2026-11-15: report format, synopsis, source-code projects.
+  { meta: mcaReportMeta, Body: McaReportBody },
+  { meta: mcaSynopsisMeta, Body: McaSynopsisBody },
+  { meta: mcaSourceMeta, Body: McaSourceBody },
   { meta: btechMeta, Body: BtechBody },
   { meta: mernMeta, Body: MernBody },
   { meta: aiMlMeta, Body: AiMlBody },
