@@ -4,10 +4,10 @@ import GuideTable from "@/components/campus/GuideTable";
 
 export const meta: GuideMeta = {
   slug: "mca-project-synopsis-format-and-sample",
-  title: "MCA Project Synopsis: Format, Sample and Template",
-  h1: "MCA project synopsis: the format, a full worked sample and a template you can copy",
+  title: "Project Synopsis Format: MCA Sample + Template",
+  h1: "Project synopsis format for MCA: a full worked sample and a template you can copy",
   description:
-    "MCA project synopsis explained: the sections, a complete sample for a real project, a copy-ready one-page template, and why synopses get rejected.",
+    "Project synopsis format for MCA: the sections, a complete sample for a real project, a one-page template to copy, and why synopses get rejected. Fits BCA too.",
   tldr: "An MCA project synopsis is a short proposal, usually 5 to 15 pages depending on the university, that your guide or committee approves before you build. It normally has a title, problem statement, objectives, scope, methodology, technology stack, hardware and software requirements, expected outcome, timeline and references. Approval depends on being specific and finishable in one semester; a complete worked sample and a copy-ready template are below, and your university's own synopsis format overrides both.",
   category: "Documentation",
   publishedAt: "2026-11-15",
