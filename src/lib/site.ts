@@ -33,7 +33,7 @@ export const SOCIALS = {
 
 export const PERSON = {
   name: "Yaseen Nurmahammad Khatib",
-  jobTitle: "Senior Full-Stack AI Engineer",
+  jobTitle: "Full Stack AI Developer",
   email: "contact@streamerosai.com",
   locality: "Hyderabad",
   country: "India",

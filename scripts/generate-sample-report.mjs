@@ -522,7 +522,7 @@ function titlePage(r) {
   y -= 30;
   const meta = [
     ["Document", "Sample project report, published as a free download"],
-    ["Prepared by", "Yaseen Nurmahammad Khatib, Senior Full-Stack AI Engineer"],
+    ["Prepared by", "Yaseen Nurmahammad Khatib, Full Stack AI Developer"],
     ["Published at", "DefendIt — campus.streamerosai.com/sample-project-report/"],
     ["Project page", "campus.streamerosai.com/hospital-management-mern/"],
     ["Stack", "React, Node.js, Express, MongoDB, Mongoose, JWT, Tailwind CSS"],

@@ -343,6 +343,6 @@ export const CAMPUS_FAQ = [
   {
     question: "Who actually builds and teaches this?",
     answer:
-      "Yaseen Khatib — a Senior Full-Stack AI Engineer. The same person writes the code and runs the sessions, so every answer in your viva prep comes from whoever wrote the line you are asked about.",
+      "Yaseen Khatib — a Full Stack AI Developer. The same person writes the code and runs the sessions, so every answer in your viva prep comes from whoever wrote the line you are asked about.",
   },
 ];

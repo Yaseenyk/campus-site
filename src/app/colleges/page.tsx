@@ -9,7 +9,7 @@ import CampusLeadForm from "@/components/campus/CampusLeadForm";
 import TrustStrip from "@/components/campus/TrustStrip";
 
 const DESCRIPTION =
-  "For HODs and placement cells: a free workshop for your final year students, batch mentoring, and distinct projects across a cohort so no two submissions collide. Run by a working Senior Full-Stack AI Engineer.";
+  "For HODs and placement cells: a free workshop for your final year students, batch mentoring, and distinct projects across a cohort so no two submissions collide. Run by a working Full Stack AI Developer.";
 
 export const metadata: Metadata = {
   title: "Final Year Project Mentoring for Colleges",
