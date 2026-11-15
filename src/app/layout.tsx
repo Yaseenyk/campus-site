@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href={PORTFOLIO_URL + "/"} className="text-zinc-300 underline-offset-4 hover:text-cyan hover:underline">
                   Yaseen Khatib
                 </a>
-                , senior full-stack AI engineer.
+                , Full Stack AI Developer.
               </p>
               <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer">
                 <Link href="/guides/" className="hover:text-zinc-200">Guides</Link>
@@ -86,6 +86,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/question-bank/" className="hover:text-zinc-200">Question bank</Link>
                 <Link href="/journey/" className="hover:text-zinc-200">AI journey</Link>
                 <Link href="/colleges/" className="hover:text-zinc-200">For colleges</Link>
+                <Link href="/about/" className="hover:text-zinc-200">About</Link>
+                <Link href="/contact/" className="hover:text-zinc-200">Contact</Link>
                 <Link href="/terms/" className="hover:text-zinc-200">Terms</Link>
                 <Link href="/privacy/" className="hover:text-zinc-200">Privacy</Link>
               </nav>

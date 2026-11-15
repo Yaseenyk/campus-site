@@ -11,7 +11,7 @@ export function GET() {
 
 > Final year projects for Indian students (BCA, MCA, B.Tech, B.Sc IT, M.Tech,
 > diploma), built end to end — code, database, report, diagrams, deck and
-> deployment — by a working senior full-stack AI engineer. Any idea can be
+> deployment — by a working Full Stack AI Developer. Any idea can be
 > commissioned, in any stack, quoted ${formatInr(CUSTOM_BUILD_RANGE.min)}–${formatInr(CUSTOM_BUILD_RANGE.max)} by scope.
 > After delivery there are ${SESSION_POLICY.cadence.toLowerCase()} live
 > ${SESSION_POLICY.platform} sessions after ${SESSION_POLICY.startsAfter} where the
