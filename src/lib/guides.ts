@@ -46,6 +46,9 @@ import { meta as mcaSourceMeta, Body as McaSourceBody } from "@/content/guides/m
 import { meta as bcaProjectMeta, Body as BcaProjectBody } from "@/content/guides/bca-final-year-project";
 import { meta as miniMeta, Body as MiniBody } from "@/content/guides/mini-project-ideas";
 
+// Guides written ahead with a future publishedAt; hidden until that day (UTC).
+import { SCHEDULED } from "@/content/scheduled";
+
 export interface GuideMeta {
   slug: string;
   /** Metadata title — written for the SERP, so it carries the query. */
@@ -90,7 +93,7 @@ export interface Guide {
 }
 
 /** Newest / highest-intent first — this is the order the index renders. */
-export const GUIDES: Guide[] = [
+const CORE_GUIDES: Guide[] = [
   { meta: vivaMeta, Body: VivaBody },
   // Project stories (first person, one real project or artifact each, written
   // to rank for a single keyword). Added 2026-11-04.
@@ -129,6 +132,40 @@ export const GUIDES: Guide[] = [
   { meta: reportMeta, Body: ReportBody },
   { meta: chooseMeta, Body: ChooseBody },
 ];
+
+/**
+ * Today in UTC (YYYY-MM-DD). `POSTS_NOW=2026-12-31 npm run build` previews the
+ * site as it will be on a later day, with every guide due by then released.
+ */
+export function today(): string {
+  return process.env.POSTS_NOW ?? new Date().toISOString().slice(0, 10);
+}
+
+/** A guide is live once its publishedAt day (UTC) has come. */
+export function isReleased(meta: GuideMeta, on: string = today()): boolean {
+  return meta.publishedAt <= on;
+}
+
+for (const g of SCHEDULED) {
+  if (CORE_GUIDES.some((c) => c.meta.slug === g.meta.slug)) {
+    throw new Error(`Scheduled guide "${g.meta.slug}" reuses the slug of an existing guide.`);
+  }
+}
+
+/**
+ * Every guide that is live today: the hand-written core list, then the
+ * scheduled guides (src/content/scheduled/) whose release day has come, in
+ * release order. A guide not yet due is absent from every page, list, the
+ * sitemap, llms.txt and the related links, and its page is not generated. The
+ * daily deploy at 00:17 UTC releases the next one without a commit.
+ *
+ * Scheduled guides are appended rather than prepended so a release does not
+ * reshuffle the home page's first three guides.
+ */
+export const GUIDES: Guide[] = [
+  ...CORE_GUIDES,
+  ...[...SCHEDULED].sort((a, b) => a.meta.publishedAt.localeCompare(b.meta.publishedAt)),
+].filter((g) => isReleased(g.meta));
 
 export function getGuide(slug: string): Guide | undefined {
   return GUIDES.find((g) => g.meta.slug === slug);

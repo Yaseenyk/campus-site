@@ -3,6 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Scheduled guides (src/content/scheduled) carry a release day (publishedAt, UTC) and stay hidden until it. A daily
+  # rebuild at 00:17 UTC (off the top of the hour, when GitHub delays scheduled runs) releases the one that is due,
+  # without a commit. A dropped run is caught up the next day: the build shows every guide whose day has passed.
+  schedule:
+    - cron: "17 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -100,6 +105,9 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             mapfile -t urls < <(curl -s "$SITE/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+')
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            # The daily rebuild changes nothing but the guides released today (added below) and the lists that show them.
+            urls=("$SITE/guides/")
           else
             urls=("$SITE/")
             for f in $(git diff --name-only HEAD^ HEAD -- src/app 2>/dev/null); do
@@ -109,6 +117,15 @@ jobs:
               [ "$route" = "/" ] && continue
               urls+=("$SITE$route/")
             done
+          fi
+          # Scheduled guides whose release day (UTC) is today went live in this deploy.
+          day=$(date -u +%Y-%m-%d)
+          for f in $(grep -l "publishedAt: \"$day\"" src/content/scheduled/*.tsx 2>/dev/null); do
+            slug=$(grep -oP '\bslug:\s*"\K[^"]+' "$f" | head -1)
+            [ -n "$slug" ] && urls+=("$SITE/guides/$slug/")
+          done
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${#urls[@]}" -le 1 ]; then
+            echo "no guide released today; nothing to submit"; exit 0
           fi
           printf 'submitting %s urls\n' "${#urls[@]}"
           json=$(printf '"%s",' "${urls[@]}"); json="[${json%,}]"
