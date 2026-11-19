@@ -9,7 +9,7 @@ import StickyActionBar from "@/components/campus/StickyActionBar";
 
 const URL = `${SITE_URL}/cost-estimator/`;
 const DESCRIPTION =
-  "How much does a final year project cost? Pick your project type, complexity and timeline for an instant honest estimate, then lock the real quote on a free call. Built for you, paid in monthly installments.";
+  "How much does a final year project cost? Pick your project type, complexity and timeline for an instant honest estimate, then lock the real quote on a free call. Built together in live classes, paid in monthly installments.";
 
 export const metadata: Metadata = {
   title: "Final Year Project Cost — Instant Estimate",
@@ -35,7 +35,7 @@ const FAQ = [
   {
     question: "How much does a final year project cost in India?",
     answer:
-      "A ready project from the catalogue starts in the low thousands per tier; a fully custom build is quoted between the low tens of thousands depending on scope, stack and timeline. Everything is split into monthly installments, and the source code is included on every tier.",
+      "A project from the catalogue starts in the low thousands per tier; a custom project of your own is quoted in the low tens of thousands depending on scope, stack and timeline. Everything is split into monthly installments. Every tier includes a design and a starter repository, and the Mentored tier builds the project together with you in live classes.",
   },
   {
     question: "Is the estimate the final price?",
@@ -45,7 +45,7 @@ const FAQ = [
   {
     question: "Why does a custom project cost more than a ₹2,000 zip online?",
     answer:
-      "Because that zip is sold to hundreds of students and nobody explains it. Here the project is built for you, capped per college so it is not duplicated, and walked through line by line in live sessions so you can defend it in your viva.",
+      "Because that zip is someone else's work, sold to hundreds of students, and submitting it as your own is plagiarism at most universities. Here you pay for a working developer's time: the design, live classes where the project is built with you, and a review of everything you write, so you can defend it in your viva.",
   },
 ];
 

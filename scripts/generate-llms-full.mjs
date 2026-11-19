@@ -11,9 +11,10 @@ const OUT = join(process.cwd(), "out");
 const SITE = "https://campus.streamerosai.com";
 const HEADER = `# DefendIt — full site text
 
-> Final year projects for Indian students (BCA, MCA, B.Tech, B.Sc IT, M.Tech, diploma), built end to end and
-> explained until the student can defend them in the viva. Built and taught by Yaseen Khatib, a senior
-> full-stack AI engineer (https://yk.streamerosai.com/). This file is the readable text of every public page.
+> Final year project classes for Indian students (BCA, MCA, B.Tech, B.Sc IT, M.Tech, diploma): the project is
+> built together with the student in live classes, with the student writing part of every module and the
+> report, until they can defend it in the viva. Taught by Yaseen Khatib, a Full Stack AI Developer
+> (https://yk.streamerosai.com/). This file is the readable text of every public page.
 > The short map is at ${SITE}/llms.txt.
 `;
 

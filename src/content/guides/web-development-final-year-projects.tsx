@@ -7,8 +7,8 @@ export const meta: GuideMeta = {
   h1: "Web development final year projects that hold up in the viva",
   description:
     
-    "Web development final year projects with source code, report and viva prep. Start with the free report template and real sample report, then pick yours.",
-  tldr: "The safest high-marks web development projects are complete full-stack applications with a clean database and one piece of real logic — a stock-consistent cart, a booking system that refuses double-bookings, ordered messaging. Each comes with full source code, the report, diagrams, and a working deployment.",
+    "Web development final year projects with a starter repository, report review and viva prep. Start with the free report template and real sample report, then pick yours.",
+  tldr: "The safest high-marks web development projects are complete full-stack applications with a clean database and one piece of real logic — a stock-consistent cart, a booking system that refuses double-bookings, ordered messaging. The four listed below are project classes, built together.",
   category: "Project ideas",
   publishedAt: "2026-07-27",
   readingMinutes: 9,
@@ -22,7 +22,7 @@ export const meta: GuideMeta = {
     {
       question: "Do these web development final year projects include source code?",
       answer:
-        "Yes — full source code on every tier, along with the report, the diagrams, and a working deployment. Source being included is the starting point. What we add on top is line-by-line viva prep in live sessions, because a project you cannot explain loses marks no matter who wrote it.",
+        "Not finished code. Every tier includes a design document and a starter repository (setup, folder structure, login and one worked example module) with a module-by-module build plan. On Starter and Guided you write the rest from the starter; on Mentored we build it together in live classes on Google Meet, one module per class, with you writing part of each module, so you end with the complete project. You write the report yourself, and I review it, because a project you cannot explain loses marks no matter how it was built.",
     },
     {
       question: "What makes a web project stand out to the panel?",
@@ -58,8 +58,8 @@ export function Body() {
       </p>
       <p>
         Below are the categories that score well, the viva angle each one opens
-        up, and then the real full-stack projects we build with source code and
-        line-by-line sessions. If you want the free parts first, the{" "}
+        up, and then the full-stack projects offered as project classes, built
+        together. If you want the free parts first, the{" "}
         <Link href="/templates/">report and synopsis templates</Link> and the{" "}
         <Link href="/sample-project-report/">sample project report</Link> are
         a click away, no sign-up.
@@ -108,13 +108,18 @@ export function Body() {
         priority &mdash; is a spreadsheet with extra steps, and panels know it.
       </p>
 
-      <h2>The projects we actually build</h2>
+      <h2>The projects we build together</h2>
       <p>
-        Every project below ships with full source code on every tier, a report
-        and diagrams written to match the code, a working deployment, and live
-        sessions that walk you through it line by line. Seats are capped per
-        college, so two students at the same institution are not defending an
-        identical build in front of the same panel.
+        Every project below is a project class. Every tier starts with a design
+        document, a starter repository (setup, folder structure, login and one
+        worked example module), a module-by-module build plan, a setup guide and
+        a kickoff call. The Guided tier adds review of every module, report
+        chapter and diagram you write, plus a deployment walkthrough. The Mentored
+        tier adds live classes on Google Meet where we build the project together
+        on screen, one module per class, with you writing part of each module,
+        then viva prep and a mock viva. You take part in every module and write
+        the report yourself, and I review it. Check your college&rsquo;s rules on
+        outside help first.
       </p>
       <ul>
         <li>
@@ -154,10 +159,9 @@ export function Body() {
       <hr />
 
       <p>
-        Want something outside this list built to your college&rsquo;s exact
-        brief? We{" "}
-        <Link href="/custom/">build to a custom spec</Link>{" "}
-        with the same source, documentation, and viva sessions. If you are still
+        Want something outside this list, to your college&rsquo;s exact brief?{" "}
+        <Link href="/custom/">Bring your own idea and we build it together</Link>{" "}
+        with the same design document, starter, reviews and classes. If you are still
         deciding, read{" "}
         <Link href="/guides/how-to-choose-a-final-year-project/">
           how to choose a final year project

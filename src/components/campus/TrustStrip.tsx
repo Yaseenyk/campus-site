@@ -18,7 +18,7 @@ interface Proof {
  */
 const PROOF: Proof[] = [
   {
-    label: "Who builds it",
+    label: "Who teaches it",
     value: PERSON.jobTitle,
     detail: `${PERSON.locality}, ${PERSON.country}. Full background, work history and CV.`,
     href: `${PORTFOLIO_URL}/about/`,

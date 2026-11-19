@@ -171,11 +171,11 @@ export function Body() {
       <hr />
 
       <p>
-        If you would rather have the report written alongside a project built
-        for you, the Academic and Mentored tiers include a project report in
-        your department&rsquo;s format, and the build is walked through in daily
-        sessions until you can defend both. You can{" "}
-        <Link href="/custom/">start a custom build</Link> or browse the{" "}
+        If you want feedback while you write your own report, the Guided and
+        Mentored tiers include a report template and a review of each chapter you
+        write, alongside review of every module you write, so you can defend both.
+        You write the report yourself, and I review it. You can{" "}
+        <Link href="/custom/">bring your own idea and build it together</Link> or browse the{" "}
         <Link href="/">full project catalog</Link>.
       </p>
     </>

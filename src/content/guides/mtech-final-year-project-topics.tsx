@@ -7,8 +7,8 @@ export const meta: GuideMeta = {
   title: "M.Tech Final Year Project Topics (Paper-Ready)",
   h1: "M.Tech final year project topics with a research angle",
   description:
-    "M.Tech project ideas that carry a novelty angle a paper can be built on, each with the contribution to defend and the stack it needs. Full source code included on every tier.",
-  tldr: "A strong M.Tech project carries a defensible novelty angle — a new method, a new comparison, a new dataset, or a measurable improvement over a baseline — framed like a paper: problem, related work, method, results, limitations. Full source code, the trained model, and the evaluation scripts are included on every tier.",
+    "M.Tech project ideas that carry a novelty angle a paper can be built on, each with the contribution to defend and the stack it needs. Offered as project classes, built together.",
+  tldr: "A strong M.Tech project carries a defensible novelty angle — a new method, a new comparison, a new dataset, or a measurable improvement over a baseline — framed like a paper: problem, related work, method, results, limitations. Decide your baseline and the number you intend to move before anything else.",
   category: "Project ideas",
   publishedAt: "2026-07-27",
   readingMinutes: 11,
@@ -28,7 +28,7 @@ export const meta: GuideMeta = {
     {
       question: "Can I get the source code for an M.Tech project?",
       answer:
-        "Yes — full source code is included on every tier, along with the trained model, the dataset pipeline and the evaluation scripts that produce your metrics. The Mentored tier adds live sessions that walk through the method and the results so you can defend the contribution, not just run the code.",
+        "Not finished code. The projects here are project classes: every tier starts with a design document, a starter repository (setup, folder structure, login and one worked example module) and a module-by-module build plan. On Starter and Guided you write the rest from the starter; on Mentored we build it together in live classes on Google Meet, one module per class, where I write and explain part of each module and you write part of it yourself, so you end with the complete project and can defend the contribution. You write the thesis chapters yourself, and I review them.",
     },
   ],
 };
@@ -158,11 +158,14 @@ export function Body() {
       <hr />
 
       <p>
-        Every ML build on this site ships with the full source code, the trained
-        model, the dataset pipeline and the evaluation scripts that produce your
-        metrics &mdash; plus daily sessions that walk through the method and the
-        results line by line, so you defend the contribution and not just the syntax.
-        Start with{" "}
+        The ML projects on this site are project classes, built together. Every
+        tier starts with a design document, a starter repository and a
+        module-by-module build plan; the Guided tier adds review of every module,
+        chapter and diagram you write; the Mentored tier adds live classes on
+        Google Meet where we build the project together on screen, one module per
+        class, with you writing part of each module yourself, plus a mock viva.
+        You take part in every module and write the thesis yourself, and I review
+        it. Check your college&rsquo;s rules on outside help first. Start with{" "}
         <Link href="/for/mtech/">the M.Tech projects</Link>. The
         research-angle builds above map to{" "}
         <Link href="/recommendation-system-ml/">
@@ -188,13 +191,13 @@ export function Body() {
         <Link href="/face-recognition-attendance/">
           face recognition attendance
         </Link>
-        . Each is capped per college, and the Mentored tier varies a module &mdash;
-        the dataset or the domain &mdash; so your contribution is genuinely yours.
+        . The contribution &mdash; your baseline, your dataset or domain, your
+        evaluation &mdash; is the part you choose and defend.
       </p>
       <p>
         If your guide has already approved a specific novelty,{" "}
         <Link href="/custom/">
-          have it built and evaluated for you
+          bring it and we build it together
         </Link>
         . And frame the work early &mdash;{" "}
         <Link href="/guides/final-year-project-synopsis-format/">

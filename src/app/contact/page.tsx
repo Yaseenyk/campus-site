@@ -46,7 +46,7 @@ export default function ContactPage() {
       <h2 className={H2}>Project enquiries</h2>
       <p className={P}>
         If you are asking about building or mentoring a project, WhatsApp is faster:{" "}
-        <a className={A} href={whatsappHref("Hi, I have a question about a final year project.")} rel="noopener">message on WhatsApp</a>. You can also use the forms on the project pages and the <Link className={A} href="/custom/">custom build</Link> page. What is included, the price and the payment terms are written on the project pages and in the <Link className={A} href="/terms/">terms</Link>, so you can read them before you write.
+        <a className={A} href={whatsappHref("Hi, I have a question about a final year project.")} rel="noopener">message on WhatsApp</a>. You can also use the forms on the project pages and the <Link className={A} href="/custom/">custom project</Link> page. What is included, the price and the payment terms are written on the project pages and in the <Link className={A} href="/terms/">terms</Link>, so you can read them before you write.
       </p>
 
       <h2 className={H2}>Please do not send</h2>

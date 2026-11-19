@@ -82,6 +82,5 @@ export const plantDiseaseDetection: CampusProject = {
   difficulty: "Advanced",
   sessionCount: 8,
   prices: { source: 6000, academic: 11000, mentored: 18000 },
-  seatsPerCollege: 1,
   publishedAt: "2026-07-27",
 };

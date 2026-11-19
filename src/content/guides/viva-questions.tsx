@@ -221,14 +221,17 @@ export function Body() {
 
       <p>
         That last step is the one students cannot do alone, and it is exactly what
-        the sessions on this site exist for. Every project is built for you and
-        then walked through line by line, ending in a mock viva where these are the
-        questions you get asked — while there is still time to fix the answers.
+        the Mentored tier on this site exists for. The project is built together
+        in live classes on Google Meet, one module per class, with you writing
+        part of each module yourself, and it ends in viva prep and a mock viva
+        where these are the questions you get asked &mdash; while there is still
+        time to fix the answers. Check your college&rsquo;s rules on outside help
+        first.
       </p>
       <p>
         <Link href="/">See the projects</Link>, or{" "}
         <Link href="/custom/">
-          have your own idea built from scratch
+          bring your own idea and build it together
         </Link>
         .
       </p>

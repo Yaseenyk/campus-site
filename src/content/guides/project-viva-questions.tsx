@@ -168,11 +168,12 @@ export function Body() {
 
       <p>
         If your worry is that the project is not yours enough to answer these,
-        that is a real problem and a fixable one. Every project on DefendIt
-        comes with sessions that go through the code line by line and a mock
-        viva at the end. See the{" "}
-        <Link href="/custom/">custom build option</Link> if you want to talk
-        through it.
+        that is a real problem and a fixable one. On DefendIt&rsquo;s Mentored
+        tier the project is built together in live classes, one module per
+        class, with you writing part of each module yourself, and it ends with
+        viva prep and a mock viva. See the{" "}
+        <Link href="/custom/">custom project class</Link> if you want to talk
+        it through.
       </p>
     </>
   );

@@ -84,6 +84,5 @@ export const ecommerceMern: CampusProject = {
   difficulty: "Intermediate",
   sessionCount: 8,
   prices: { source: 5500, academic: 10000, mentored: 16000 },
-  seatsPerCollege: 2,
   publishedAt: "2026-07-27",
 };

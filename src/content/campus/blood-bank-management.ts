@@ -75,6 +75,5 @@ export const bloodBankManagement: CampusProject = {
   difficulty: "Beginner",
   sessionCount: 6,
   prices: { source: 4000, academic: 7500, mentored: 12000 },
-  seatsPerCollege: 3,
   publishedAt: "2026-07-27",
 };

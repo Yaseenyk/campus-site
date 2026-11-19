@@ -10,7 +10,7 @@ export const meta: GuideMeta = {
   description:
     
     "Twelve AI and machine learning final year projects for 2026, each with the stack, an honest difficulty rating and the viva question it attracts.",
-  tldr: "The strongest AI projects for final year students are ones you can fully defend — a classifier, recommender, NLP, RAG or computer-vision system on a clean dataset where you understand the data, the metric, and what the model gets wrong. Six such projects are built and listed below; full source code, the report, and the training notebook come with each.",
+  tldr: "The strongest AI projects for final year students are ones you can fully defend — a classifier, recommender, NLP, RAG or computer-vision system on a clean dataset where you understand the data, the metric, and what the model gets wrong. Six such projects are listed below as project classes, built together: a design document and starter repository on every tier, module reviews on Guided, and live build-together classes on Mentored.",
   category: "Project ideas",
   publishedAt: "2026-07-27",
   updatedAt: "2026-10-30",
@@ -25,7 +25,7 @@ export const meta: GuideMeta = {
     {
       question: "Do AI projects for final year students come with source code?",
       answer:
-        "The ones we build do — full source on every tier, plus the report, the diagrams, and the training notebook. Source code being included is the baseline, not an upsell. The thing students actually run out of time for is the viva prep, which is why we do that live.",
+        "The project classes on this site come with a design document and a starter repository (setup, folder structure, login and one worked example module), not finished code. On Starter and Guided you write the rest from the starter, including the training notebook, and Guided reviews every module you write. On Mentored we build it together in live classes on Google Meet, one module per class: I write and explain part of each module and you write part of it yourself, so you end with the complete project, then viva prep and a mock viva.",
     },
     {
       question: "Which AI project is easiest to defend in a viva?",
@@ -152,8 +152,8 @@ export function Body() {
       <p>
         Below are the sub-areas that work as AI projects for final year students,
         the one viva question each reliably attracts, a list of twelve project
-        ideas with honest difficulty, and then the six AI projects we have actually
-        built with source code and line-by-line viva sessions.
+        ideas with honest difficulty, and then six AI projects offered as project
+        classes, built together, with code review and viva prep.
       </p>
 
       <h2>Natural language processing (NLP)</h2>
@@ -214,18 +214,20 @@ export function Body() {
       <h2>Twelve AI project ideas for final year students</h2>
       <p>
         Ideas, with the stack each needs and an honest difficulty. The first six
-        are built and available below; the rest can be{" "}
-        <Link href="/custom/">built to your problem statement</Link>.
+        have project-class listings below; for the rest you can{" "}
+        <Link href="/custom/">bring your own problem statement and build it together</Link>.
       </p>
       <TopicTable topics={AI_IDEAS} />
 
-      <h2>The AI projects we actually build, with source code</h2>
+      <h2>AI projects we can build together</h2>
       <p>
-        Every project below ships with full source code on every tier, the report
-        and diagrams written to match the code, and live sessions that walk you
-        through it line by line so the viva questions above have real answers.
-        Seats are capped per college, so no two students at the same institution
-        get handed the same defence.
+        Each project below comes as a project class: a design document, a starter
+        repository and a module-by-module plan on every tier, review of every
+        module you write on Guided, and on Mentored live classes on Google Meet
+        where we build it together, one module per class, so the viva questions
+        above have real answers. Check your college&rsquo;s rules on outside help
+        first; you take part in every module and write the report yourself, and I
+        review it.
       </p>
       <ul>
         <li>
@@ -273,7 +275,7 @@ export function Body() {
             Face Recognition Attendance (CV)
           </Link>{" "}
           &mdash; the marks are in rejecting an unknown face rather than guessing
-          the nearest match, and that rejection path is built and explained.
+          the nearest match, and that rejection path is planned and explained.
           Intermediate; BCA, B.Tech, MCA, Diploma.
         </li>
       </ul>
@@ -283,9 +285,9 @@ export function Body() {
       <hr />
 
       <p>
-        If none of these fit your college&rsquo;s brief, we{" "}
-        <Link href="/custom/">build to a custom spec</Link>{" "}
-        with the same source, documentation, and viva sessions. Not sure ML is the
+        If none of these fit your college&rsquo;s brief,{" "}
+        <Link href="/custom/">bring your own idea and build it together</Link>{" "}
+        with the same design help, reviews, classes and viva prep. Not sure ML is the
         right call for your degree? Read{" "}
         <Link href="/guides/how-to-choose-a-final-year-project/">
           how to choose a final year project

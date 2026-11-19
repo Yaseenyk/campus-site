@@ -10,7 +10,7 @@ export const meta: GuideMeta = {
   h1: "MCA projects with source code: how to choose one, understand it and make it your own",
   description:
     "Use an MCA project with source code without failing the viva: what to check, how to make it your own, a good repo layout, and ten real projects.",
-  tldr: "A source-code project is a legitimate starting point only if you can run it, explain every module, change something meaningful, and credit what is not yours. Submitting someone else's code unchanged is academic misconduct at most universities and fails in the viva within minutes. Pick a project you can read, modify at least one module with your own data or feature, cite the origin, and keep a clean repo with a README, tests and a demo. Ten MCA projects with source are listed below; this guide does not link to free downloads of other people's work.",
+  tldr: "A source-code project is a legitimate starting point only if you can run it, explain every module, change something meaningful, and credit what is not yours. Submitting someone else's code unchanged is academic misconduct at most universities and fails in the viva within minutes. Pick a project you can read, modify at least one module with your own data or feature, cite the origin, and keep a clean repo with a README, tests and a demo. Ten MCA projects we can build together from a starter repository are listed below; this guide does not link to free downloads of other people's work.",
   category: "Project code",
   publishedAt: "2026-11-15",
   updatedAt: "2026-11-15",
@@ -36,7 +36,7 @@ export const meta: GuideMeta = {
     {
       question: "Do DefendIt projects include source code?",
       answer:
-        "Yes. Every listed project includes its full source code on every tier, with a local setup guide, and the project pages say exactly what each tier adds. The source is delivered with the listing, not offered as a free public download.",
+        "Not finished code. Every listed project is a project class: you get a design document and a starter repository (setup, folder structure, login and one worked example module) with a local setup guide. On Starter and Guided you write the rest from the starter, with every module reviewed on Guided; on Mentored we build it together in live classes on Google Meet, one module per class, with you writing part of each module. The project pages say exactly what each tier adds.",
     },
   ],
 };
@@ -138,18 +138,22 @@ export function Body() {
         That honesty is what protects you.
       </p>
 
-      <h2>MCA projects with source code on DefendIt</h2>
+      <h2>MCA projects we can build together on DefendIt</h2>
       <p>
-        These {mca.length} listed projects suit MCA. Each includes its full source
-        code with a local setup guide. The source is delivered with the listing,
-        and is not published as a free download, and each page spells out what
-        every tier adds: the report, diagrams and presentation deck on the higher
-        tiers, and live sessions that walk through the code on the top tier. The
-        Mentored tier also includes one module varied for you, such as a dataset
-        or domain change, which is a legitimate way to start from working code
-        and end with something that is yours. Prices shown are the starting
-        tier. Check your university&apos;s rules on externally built work before
-        you decide; they differ.
+        These {mca.length} listed projects suit MCA. Each is a project class
+        rather than finished source code: a design document, a starter repository
+        with a local setup guide, login and one worked example module, and a
+        module-by-module plan. Each page spells out what every tier adds: on
+        Starter you write the rest from the starter; Guided adds review of every
+        module, report chapter and diagram you write; Mentored adds live classes
+        on Google Meet where we build the project together, one module per class,
+        with me writing and explaining part of each module and you writing part
+        of it yourself, plus debugging help and a mock viva. Either way, the
+        &ldquo;Base work and my contribution&rdquo; section above should say
+        honestly what came from the starter repository and the classes, and what
+        you wrote. Prices shown are the starting tier.
+        Check your university&apos;s rules on outside help before you decide;
+        they differ.
       </p>
       <BuiltProjectList projects={mca} />
       <p>
@@ -232,8 +236,8 @@ export function Body() {
         <Link href="/guides/mca-final-year-project-report-format/">
           MCA project report format guide
         </Link>
-        . If you would rather have a project built to your own problem statement,
-        see <Link href="/custom/">custom builds</Link>.
+        . If you want to build your own problem statement together, see{" "}
+        <Link href="/custom/">custom project classes</Link>.
       </p>
       <p>
         Looking for a smaller starting point? See <Link href="/guides/mini-project-ideas/">mini project ideas</Link>, or <Link href="/guides/bca-final-year-project/">choosing a BCA final year project</Link> if you are comparing degree levels.

@@ -186,12 +186,14 @@ export function Body() {
       <p>
         The reason vivas go wrong is rarely a hard question — it is a project the
         student did not fully build or fully understand, defended on nerve. If that
-        is where you are, the honest fix is a project built and documented for you
-        and then walked through line by line in daily live sessions, until the
-        overview, the diagrams and the justifications are genuinely yours to give.
-        Every tier ships with the full source code, and seats are capped per
-        college so no two students defend the same submission.{" "}
-        <Link href="/custom/">Start a custom build</Link>, see{" "}
+        is where you are, the honest fix is to take part in building it: a design
+        document and a starter repository, review of every module you write on
+        Guided, and on Mentored live classes where we build it together, one
+        module per class, with you writing part of each module, then a mock viva,
+        until the overview, the diagrams and the justifications are genuinely
+        yours to give. Check your college&rsquo;s rules on outside help first; you
+        take part in every module and write the report yourself, and I review it.{" "}
+        <Link href="/custom/">Start a project class</Link>, see{" "}
         <Link href="/ai-college-assistant/">
           the AI college assistant
         </Link>{" "}

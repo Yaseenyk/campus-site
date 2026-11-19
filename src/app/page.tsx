@@ -7,6 +7,7 @@ import {
   CAMPUS_PROJECTS,
   CUSTOM_BUILD_RANGE,
   DEGREE_SLUGS,
+  INTEGRITY_NOTE,
   SESSION_POLICY,
   allDegrees,
   allDomains,
@@ -35,13 +36,13 @@ import StickyActionBar from "@/components/campus/StickyActionBar";
 import TrustStrip from "@/components/campus/TrustStrip";
 
 const DESCRIPTION =
-  "Final year projects for BCA, MCA and B.Tech students, built for you end to end — code, report, diagrams and deployment — or your own idea built from scratch. Daily live Google Meet sessions explain the code line by line so you can defend it in your viva. Direct payment in monthly installments.";
+  "Final year projects for BCA, MCA and B.Tech students, built together with you in daily live Google Meet classes: one module per class, part of every module written by you, every report chapter reviewed, and a mock viva at the end. Direct payment in monthly installments.";
 
 export const metadata: Metadata = {
   // The layout template does not apply to the root page itself.
   title: {
     absolute:
-      "BCA, MCA and B.Tech Final Year Projects, Built and Explained | DefendIt",
+      "BCA, MCA and B.Tech Final Year Projects, Built Together in Live Classes | DefendIt",
   },
   description: seoDescription(DESCRIPTION),
   alternates: { canonical: `${SITE_URL}/` },
@@ -58,8 +59,8 @@ export const metadata: Metadata = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Final Year Project Build & Mentorship",
-  serviceType: "Academic project development and code mentorship",
+  name: "Final Year Project Mentorship",
+  serviceType: "Academic project mentoring and code review",
   description: seoDescription(DESCRIPTION),
   provider: personRef,
   areaServed: { "@type": "Country", name: "India" },
@@ -110,21 +111,23 @@ export default function FinalYearProjectsPage() {
           ~/
         </span>
         <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-zinc-50 sm:text-6xl">
-          I build it.
+          We build it together.
           <br />
           You learn it.
           <br />
           <span className="text-gradient">You defend it.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-300">
-          Pick a project below or tell me the one you want — either way I build the
-          whole thing. Code, database, report, diagrams, deck, deployment.{" "}
-          <span className="text-zinc-50">You do not write a line of it.</span>
+          Pick a project below or bring the one you want. We build it together in
+          live classes, one module per class: I write and explain part of it on
+          screen, you write the next part yourself, and every report chapter you
+          write is reviewed.{" "}
+          <span className="text-zinc-50">You take part in every line you submit.</span>
         </p>
         <p className="mt-4 max-w-2xl leading-relaxed text-zinc-400">
           Then, {SESSION_POLICY.cadence.toLowerCase()} after{" "}
-          {SESSION_POLICY.startsAfter}, we sit on a call and I walk you through the
-          code I wrote — line by line — until you can explain it without me. A
+          {SESSION_POLICY.startsAfter}, we sit on a call and build the next module
+          together — until you can explain every part without me. A
           working project is half the marks. The viva is the other half, so start
           with the{" "}
           <Link href="/guides/final-year-project-viva-questions/" className="text-cyan underline-offset-4 hover:underline">
@@ -132,12 +135,15 @@ export default function FinalYearProjectsPage() {
           </Link>{" "}
           panels actually ask.
         </p>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-500">
+          {INTEGRITY_NOTE}
+        </p>
 
         {/* Price anchor — students filter on price before anything else. */}
         <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-5 border-y border-white/10 py-6">
           <div>
             <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600">
-              Ready projects from
+              Guided projects from
             </dt>
             <dd className="mt-1.5 font-mono text-2xl tabular-nums text-zinc-50">
               {formatInr(cheapest)}
@@ -188,7 +194,7 @@ export default function FinalYearProjectsPage() {
             href="/custom/"
             className="rounded-xl bg-gradient-to-r from-cyan to-purple px-6 py-3.5 text-sm font-medium text-ink shadow-[0_0_24px_-4px_rgba(34,211,238,0.5)] transition-shadow duration-300 hover:shadow-[0_0_32px_0_rgba(168,85,247,0.5)]"
           >
-            Get your own idea built
+            Build your own idea
           </Link>
           <a
             href="#how-it-works"
@@ -279,10 +285,10 @@ export default function FinalYearProjectsPage() {
           Want something that is not on this page?
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          Then describe it and it gets built. The problem statement your guide
-          approved, an idea you saw somewhere, a stack your department insists on —
-          any of it. Same sessions, same installments, still nothing for you to
-          build. Custom work is quoted between {formatInr(CUSTOM_BUILD_RANGE.min)}{" "}
+          Then describe it and I will turn it into a design and a build plan. The
+          problem statement your guide approved, an idea you saw somewhere, a stack
+          your department insists on — any of it. Same sessions, same reviews, same
+          installments. Custom work is quoted between {formatInr(CUSTOM_BUILD_RANGE.min)}{" "}
           and {formatInr(CUSTOM_BUILD_RANGE.max)} depending on scope.
         </p>
         <Link
@@ -302,8 +308,8 @@ export default function FinalYearProjectsPage() {
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
           HODs and placement cells: batch mentoring, a free workshop for your final
-          year students, or distinct projects across a cohort so no two submissions
-          collide.
+          year students, or help choosing a distinct topic for every student in a
+          cohort.
         </p>
         <Link
           href="/colleges/"

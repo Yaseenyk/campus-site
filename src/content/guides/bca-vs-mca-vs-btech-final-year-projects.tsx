@@ -203,9 +203,10 @@ export function Body() {
       <hr />
 
       <p>
-        Every project on this site is scoped to the degree it is built for — the
-        same domain shipped at BCA depth or B.Tech depth, with the report,
-        diagrams and deploy done to match. Start with your degree&rsquo;s hub:{" "}
+        Every project on this site is scoped to the degree it is meant for — the
+        same domain planned at BCA depth or B.Tech depth, and on the Guided and
+        Mentored tiers the report chapters and diagrams you write are reviewed to
+        match. Start with your degree&rsquo;s hub:{" "}
         <Link href="/for/bca/">BCA</Link>,{" "}
         <Link href="/for/mca/">MCA</Link> or{" "}
         <Link href="/for/btech/">B.Tech</Link>. If you are still
@@ -214,9 +215,10 @@ export function Body() {
           how to choose a project you will not regret in March
         </Link>
         , or tell us your degree and timeline on the{" "}
-        <Link href="/custom/">custom build</Link> page and we
-        will scope it to your level — built, documented, deployed, and walked
-        through with you in live sessions.
+        <Link href="/custom/">custom project class</Link> page and
+        we will scope it to your level &mdash; a design document and starter
+        repository, review of what you write on Guided, and on Mentored live
+        classes where we build it together, one module per class.
       </p>
     </>
   );

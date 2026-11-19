@@ -7,8 +7,8 @@ export const meta: GuideMeta = {
   title: "B.Sc IT Final Year Project Topics 2026 With Code",
   h1: "B.Sc IT final year project topics with source code",
   description:
-    "Practical B.Sc IT final year project ideas across web, data and mobile, each with the stack it needs and the viva question it attracts. Full source code included on every tier.",
-  tldr: "The best B.Sc IT final year projects are complete full-stack web or data applications with a clean database and one real feature you can defend, rather than a half-built AI idea. Good directions span web, data and mobile, and full source code is included on every tier.",
+    "Practical B.Sc IT final year project ideas across web, data and mobile, each with the stack it needs and the viva question it attracts. Project classes start from a starter repository and are built together.",
+  tldr: "The best B.Sc IT final year projects are complete full-stack web or data applications with a clean database and one real feature you can defend, rather than a half-built AI idea. Good directions span web, data and mobile, and each listed project can be built together from a starter repository.",
   category: "Project ideas",
   publishedAt: "2026-07-27",
   readingMinutes: 9,
@@ -23,7 +23,7 @@ export const meta: GuideMeta = {
     {
       question: "Do B.Sc IT final year projects come with source code?",
       answer:
-        "The ones on this site do — full source code is included on every tier, not just an explanation. The Mentored tier adds live sessions where the code is walked through line by line so you can answer for any part of it in the viva.",
+        "The project classes on this site come with a starter repository (setup, folder structure, login and one worked example module), not a finished project. On Starter and Guided you write the rest from the starter, with every module reviewed on Guided. On Mentored we build it together in live classes on Google Meet, one module per class, with you writing part of each module, then viva prep and a mock viva, so you can answer for any part of it.",
     },
     {
       question: "Does a B.Sc IT project need machine learning?",
@@ -191,9 +191,10 @@ export function Body() {
       <hr />
 
       <p>
-        Several of these are already built and come with the full source code, the
-        report, the diagrams and daily sessions that walk through the code line by
-        line so you can defend it &mdash;{" "}
+        Several of these are available as project classes, built together: a
+        design document, a starter repository and a module-by-module plan, review
+        of every module and chapter you write on Guided, and live build-together
+        classes on Mentored, so you can defend it &mdash;{" "}
         <Link href="/for/bsc-it/">
           see the B.Sc IT projects
         </Link>
@@ -210,9 +211,10 @@ export function Body() {
         <Link href="/blood-bank-management/">
           blood bank portal
         </Link>
-        . Each listing is capped per college so no two students at the same college
-        submit the same build. If your topic is on this list but not in the catalog,{" "}
-        <Link href="/custom/">have it built for you</Link>.
+        . Check your college&rsquo;s rules on outside help first; you take part
+        in every module and write the report yourself, and I review it. If your
+        topic is on this list but not in the catalog,{" "}
+        <Link href="/custom/">bring it and we build it together</Link>.
       </p>
       <p>
         Before you commit, read{" "}

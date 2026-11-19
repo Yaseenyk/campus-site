@@ -118,7 +118,7 @@ export default function DeadlinePlanner() {
     },
     critical: {
       tone: "text-purple-400",
-      text: "This is not enough time to build something ambitious from scratch alongside classes. Either reduce the scope hard, or get the build done for you and spend your weeks understanding it instead.",
+      text: "This is not enough time to build something ambitious from scratch alongside classes. Reduce the scope hard, and get help early: a design and a starter save the first two weeks, and reviews stop you losing days to one bug.",
     },
     past: {
       tone: "text-red-400",

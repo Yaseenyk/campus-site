@@ -44,7 +44,7 @@ export const meta: GuideMeta = {
     {
       question: "What should I do if I have less than two weeks left?",
       answer:
-        "Be honest with yourself about the arithmetic. Under two weeks you cannot both build and document a project from zero and understand it well enough to defend it. At that point the safe route is a project that is already built and documented, walked through with you session by session so you can actually explain it — which is the whole point of the done-for-you option.",
+        "Be honest with yourself about the arithmetic. Under two weeks you cannot both build and document a project from zero and understand it well enough to defend it. At that point cut the scope to one flow you can finish, talk to your guide about the deadline, and do not start from a blank page: a design document and a starter repository, with help while you build the rest, saves the days lost to setup and being stuck. You still take part in every module, which is what lets you explain it.",
     },
     {
       question: "Is it better to submit a small finished project or a big unfinished one?",
@@ -176,14 +176,16 @@ export function Body() {
         broken.
       </p>
       <p>
-        When the timeline is genuinely gone, the safe route is a project that is
-        already built and documented, then walked through with you in daily live
-        sessions until you can explain every part of it yourself. That is not a
-        shortcut around understanding the work — it is the fastest honest path
-        <em> to</em> understanding it when there is no time left to build from
-        zero. Every tier ships with the full source code, the report, and
-        line-by-line viva preparation, and seats are capped per college so two
-        students never walk in with the same submission.
+        When the timeline is genuinely short, the safe route is to cut the scope
+        hard and stop starting from zero: a design document that settles the scope
+        and the database on day one, a starter repository with setup, login and
+        one worked example module, and help while you build the rest. A project
+        class removes the blank page and the days lost to being stuck, not the
+        work: on Starter and Guided you write the rest from the starter, and on
+        Mentored we build it together in live classes on Google Meet, one module
+        per class, with you writing part of each module, then viva preparation.
+        Check your college&rsquo;s rules on outside help first; you take part in
+        every module and write the report yourself, and I review it.
       </p>
 
       <hr />
@@ -192,9 +194,9 @@ export function Body() {
         If a month is what you have, this plan uses it well —{" "}
         <Link href="/">start from a project close to your idea</Link>{" "}
         so week one is a head start rather than a blank page. If the month is
-        already gone, the honest option is a{" "}
-        <Link href="/custom/">build to your problem statement</Link>{" "}
-        with the documentation and viva prep done alongside it. Two projects that
+        mostly gone, the honest option is a smaller scope and a{" "}
+        <Link href="/custom/">project class built together on your own problem statement</Link>{" "}
+        with report review and viva prep alongside it. Two projects that
         fit a crunch well are{" "}
         <Link href="/ecommerce-mern/">the MERN e-commerce store</Link>{" "}
         and{" "}

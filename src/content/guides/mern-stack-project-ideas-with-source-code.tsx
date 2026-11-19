@@ -13,8 +13,8 @@ export const meta: GuideMeta = {
   h1: "MERN stack project ideas with source code, and what each one has to get right",
   description:
     
-    "MERN stack projects with source code for final year: e-commerce, chat, hospital and blood bank management, each with report and viva prep, plus more ideas.",
-  tldr: "A MERN stack final year project is a React front end, an Express and Node API, and MongoDB behind it. The four MERN stack projects here come with full source code, the project report, diagrams and a working deployment: an e-commerce platform with a real cart and stock, a Socket.IO chat with presence, a hospital management system with slot-conflict detection, and a blood bank system with donor matching. Source is delivered on purchase, not published on GitHub, and the reason is explained below.",
+    "MERN stack projects for final year we build together from a starter repository: e-commerce, chat, hospital and blood bank management, plus more ideas.",
+  tldr: "A MERN stack final year project is a React front end, an Express and Node API, and MongoDB behind it. The four MERN stack projects here are project classes, built together: a design document, a starter repository and a module-by-module plan, with every part you write reviewed on Guided and the project built together in live classes on Mentored. They are an e-commerce platform with a real cart and stock, a Socket.IO chat with presence, a hospital management system with slot-conflict detection, and a blood bank system with donor matching. No finished code is handed over, and the reason is explained below.",
   category: "Project ideas",
   publishedAt: "2026-10-30",
   readingMinutes: 9,
@@ -22,7 +22,7 @@ export const meta: GuideMeta = {
     {
       question: "Are these MERN stack projects available on GitHub?",
       answer:
-        "No. The source code is delivered to you on purchase — on every tier — rather than published in a public repository, because a public repo gets submitted by hundreds of students and your panel will have seen it. Each project is capped per college for the same reason. The author's own public repositories are on GitHub if you want to read his code before paying.",
+        "No, and there is no finished version to download. You get a private starter repository (setup, folder structure, login and one worked example module). On Starter and Guided you write the rest from it, with every module reviewed on Guided; on Mentored we build it together in live classes, with you writing part of each module. A finished public repo gets submitted by hundreds of students and your panel will have seen it; code you built yourself has no such problem. The author's own public repositories are on GitHub if you want to read his code before paying.",
     },
     {
       question: "Is the MERN stack a good choice for a final year project?",
@@ -30,14 +30,14 @@ export const meta: GuideMeta = {
         "Yes, and most departments accept it. It is one language end to end, it deploys free, and MongoDB's document model fits the data most student projects carry. The viva risk is not the stack — it is building a login-plus-CRUD app with nothing a panel can probe. Each project here has one piece of real logic for that reason.",
     },
     {
-      question: "What do I get with the source code?",
+      question: "What do I get, if not finished source code?",
       answer:
-        "On the Source tier: the full code, a local setup guide, sample or seed data and a handover call. The Academic tier adds the project report, presentation deck, ER, DFD and architecture diagrams and a deployment walkthrough. The Mentored tier adds live sessions walking the code line by line, viva prep, a mock viva and one module varied for you.",
+        "On the Starter tier: a project design document (scope, modules, database schema), a starter repository with setup, folder structure, login and one worked example module, a module-by-module build plan, a local setup guide, seed data and a kickoff call. The Guided tier adds written review of every module you write, a report template with review of each chapter you write, review of your ER, DFD and architecture diagrams, and a deployment walkthrough. The Mentored tier adds live classes on Google Meet where we build the project together on screen, one module per class (I write and explain part of each module and you write part of it yourself, so you end with the complete project), debugging help on WhatsApp until submission, viva prep and a mock viva.",
     },
     {
-      question: "Can I get a different MERN project built?",
+      question: "Can we build a different MERN project together?",
       answer:
-        "Yes. Any of the ideas on this page, or your guide's problem statement, can be built to spec in the MERN stack with the same source, report and sessions. Custom builds are quoted by scope.",
+        "Yes. Bring any of the ideas on this page, or your guide's problem statement, and we build it together in the MERN stack with the same design document, starter repository, reviews and classes. Custom project classes are quoted by scope.",
     },
   ],
 };
@@ -118,17 +118,22 @@ export function Body() {
       </p>
       <p>
         So every MERN stack project on this page is chosen for the one piece of
-        real logic a panel can probe. First the four that are built, with source
-        code, report, diagrams and deployment. Then more MERN stack project ideas
-        that can be built to your problem statement, and a straight answer on why
-        none of this is on GitHub.
+        real logic a panel can probe. First the four we can build together, from
+        a starter repository. Then more MERN stack
+        project ideas you can bring as your own problem statement, and a straight
+        answer on why none of this is on GitHub.
       </p>
 
-      <h2>MERN stack projects with source code</h2>
+      <h2>MERN stack projects you build from a starter repository</h2>
       <p>
-        Four complete MERN applications. Each ships with the full source code on
-        every tier, and with the project report, ER and architecture diagrams and
-        a deployment walkthrough on the Academic tier and above.
+        Four MERN applications, each as a project class. Every tier starts with a
+        design document and a starter repository; the Guided tier and above add
+        review of the code, report and ER and architecture diagrams you write, and
+        a deployment walkthrough; the Mentored tier adds live classes on Google
+        Meet where we build the project together, one module per class, with you
+        writing part of each module. Check your college&rsquo;s rules on outside
+        help first; you take part in every module and write the report yourself,
+        and I review it.
       </p>
       <BuiltProjectList projects={built} />
 
@@ -174,10 +179,10 @@ export function Body() {
         public repo is free. It is also the problem. A repository with a few
         thousand stars has been cloned and submitted by students in every batch
         your examiner has sat on, and the first question will be how your project
-        differs from the one they saw last year. The source here is delivered to
-        you on purchase &mdash; on every tier, not as an upsell &mdash; and each
-        listing is capped to a small number of students per college per academic
-        year so that does not happen.
+        differs from the one they saw last year. There is no finished repository
+        here at all: you get a private starter repository and build the rest,
+        on your own or together with me in live classes, so the project you
+        defend is one you actually built.
       </p>
       <p>
         If what you want is to read the author&rsquo;s code before paying, that is
@@ -185,16 +190,16 @@ export function Body() {
         <a href={SOCIALS.github} target="_blank" rel="noopener noreferrer">
           his repositories on GitHub
         </a>{" "}
-        are the same hands that write your project. If what you want is a free
-        starter you intend to extend yourself, a public repo is the right choice
-        and this page is not for you.
+        are the same hands that review your code. If what you want is a free
+        starter you intend to extend on your own, a public repo with a clear
+        licence is a fine choice, and the guides on this site are free either way.
       </p>
 
       <h2>More MERN stack project ideas</h2>
       <p>
-        Ideas, not built listings &mdash; any of them can be{" "}
-        <Link href="/custom/">built to your problem statement</Link> in MERN with
-        the same source, report and sessions. Each is listed with the stack it
+        Ideas, not listings &mdash; you can{" "}
+        <Link href="/custom/">bring any of them and we build it together</Link> in
+        MERN with the same design document, reviews and classes. Each is listed with the stack it
         needs beyond MERN itself, an honest difficulty, and the question a panel
         will open with.
       </p>

@@ -2,15 +2,15 @@
 type Cell = boolean | string;
 
 const ROWS: { criterion: string; zip: Cell; shop: Cell; mine: Cell }[] = [
-  { criterion: "You get working code", zip: true, shop: true, mine: true },
-  { criterion: "Someone explains it to you", zip: false, shop: false, mine: true },
-  { criterion: "Report, deck and diagrams", zip: "sometimes", shop: true, mine: true },
-  { criterion: "Limited per college", zip: false, shop: false, mine: true },
-  { criterion: "Built around your problem statement", zip: false, shop: "sometimes", mine: true },
+  { criterion: "Finished code handed to you", zip: true, shop: true, mine: false },
+  { criterion: "You take part in building it", zip: false, shop: false, mine: true },
+  { criterion: "A developer reviews what you write", zip: false, shop: false, mine: true },
+  { criterion: "Report and diagrams", zip: "written for you", shop: "written for you", mine: "you write, reviewed" },
+  { criterion: "Fits your problem statement", zip: false, shop: "sometimes", mine: true },
   { criterion: "You can answer viva questions on it", zip: false, shop: false, mine: true },
   { criterion: "Mock viva before submission", zip: false, shop: false, mine: true },
-  { criterion: "Changes your guide asks for", zip: false, shop: "extra cost", mine: true },
-  { criterion: "You know who built it", zip: false, shop: "sometimes", mine: true },
+  { criterion: "Help with changes your guide asks for", zip: false, shop: "extra cost", mine: true },
+  { criterion: "You know who is guiding you", zip: false, shop: "sometimes", mine: true },
 ];
 
 function Mark({ value }: { value: Cell }) {
@@ -34,7 +34,7 @@ function Mark({ value }: { value: Cell }) {
 /**
  * The objection that loses the most students is "I can get this for ₹2,000".
  * It is answered head-on rather than avoided — including conceding the row
- * where the cheap option genuinely wins.
+ * where the cheap option is genuinely quicker: it hands over finished code.
  */
 export default function PriceComparison() {
   return (
@@ -43,10 +43,11 @@ export default function PriceComparison() {
         &ldquo;I can get a project for ₹2,000&rdquo;
       </h2>
       <p className="mt-4 max-w-2xl leading-relaxed text-zinc-400">
-        You can, and sometimes that is the right call. If you already understand the
-        code and only need something to submit, buy the cheap one — genuinely. This
-        is for the situation where you have to stand in front of a panel and answer
-        for it.
+        You can. But it is someone else&rsquo;s work, the same file is sold to hundreds of
+        students, and submitting it as your own is plagiarism at most universities.
+        This is the other way: the project is built with you in live classes, and
+        you write part of every module yourself, so you can stand in front of a
+        panel and answer for it.
       </p>
 
       <div className="mt-8 overflow-x-auto">
@@ -101,9 +102,9 @@ export default function PriceComparison() {
       </div>
 
       <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
-        The cheap option is cheap because it is sold to everyone and explained to
-        nobody. Every row above is the difference between owning your project and
-        hoping the panel does not ask.
+        The cheap option is quicker because someone else did the work. Every row
+        above is the difference between owning your project and hoping the panel
+        does not ask.
       </p>
     </section>
   );

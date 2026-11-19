@@ -28,7 +28,7 @@ export default function EarlyBirdBand() {
             <span className="font-semibold text-ice">
               {EARLY_BIRD.discountPercent}% off
             </span>{" "}
-            {EARLY_BIRD.condition}. Same build, same sessions, same handover —
+            {EARLY_BIRD.condition}. Same design, same sessions, same reviews —
             the discount is the price of going first, and it is not coming back
             once those seats are gone.
           </p>

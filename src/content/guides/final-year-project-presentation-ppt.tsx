@@ -201,10 +201,11 @@ export function Body() {
       <hr />
 
       <p>
-        Every project on this site ships with the deck, the report, the diagrams and
-        the synopsis already written to match the code &mdash; and each one is
-        walked through with you in live sessions so the demo and the answers are
-        yours, not memorised.{" "}
+        The project classes on this site are built together: the Guided tier
+        includes review of each report chapter and diagram you write, and the
+        Mentored tier builds the project with you in live classes, one module per
+        class, then ends in viva prep and a mock viva, so the demo and the answers
+        are yours, not memorised.{" "}
         <Link href="/">See the projects</Link>, and prepare with{" "}
         <Link href="/guides/final-year-project-viva-questions/">
           the viva questions panels actually ask
@@ -213,8 +214,8 @@ export function Body() {
         <Link href="/guides/final-year-project-report-format/">
           report format that the deck should match
         </Link>
-        . Need one built and rehearsed end to end? Start with a{" "}
-        <Link href="/custom/">custom build</Link>.
+        . Want to build and rehearse your own idea together? Start with a{" "}
+        <Link href="/custom/">custom project class</Link>.
       </p>
     </>
   );

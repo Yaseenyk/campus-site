@@ -179,9 +179,10 @@ export function Body() {
 
       <h2>17 BCA project ideas by difficulty</h2>
       <p>
-        Projects marked <strong>DefendIt project</strong> are built, listed on this
-        site with source code, and linked. Everything marked <strong>Idea</strong>{" "}
-        is only a suggestion that is not built or listed here; the modules are a
+        Projects marked <strong>DefendIt project</strong> are listed on this site
+        as project classes, with a starter repository, and linked. Everything
+        marked <strong>Idea</strong>{" "}
+        is only a suggestion that is not listed here; the modules are a
         starting scope for you to adjust, not a finished specification. For each,
         the last line is the angle a viva tends to take, so build that part
         carefully.
@@ -312,7 +313,7 @@ export function Body() {
           (Idea). Python + a hosted language model API + a small vector index. Modules:
           ingest PDFs, chunk, retrieve, answer with the source shown, a no-answer
           path. Viva-proof: what happens when the answer is not in the documents.
-          The deeper DefendIt build,{" "}
+          The deeper DefendIt project,{" "}
           <Link href="/ai-college-assistant/">AI College Assistant</Link>, is
           listed for MCA and B.Tech, not BCA, but shows the target design.
         </li>

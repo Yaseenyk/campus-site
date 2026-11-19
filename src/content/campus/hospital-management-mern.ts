@@ -83,6 +83,5 @@ export const hospitalManagementMern: CampusProject = {
   difficulty: "Intermediate",
   sessionCount: 7,
   prices: { source: 4500, academic: 8500, mentored: 15000 },
-  seatsPerCollege: 2,
   publishedAt: "2026-07-27",
 };

@@ -5,6 +5,7 @@ import { PERSON } from "@/lib/site";
 import {
   CAMPUS_PROJECTS,
   DEGREE_SLUGS,
+  INTEGRITY_NOTE,
   PAYMENT_POLICY,
   SESSION_POLICY,
   campusImageUrl,
@@ -113,11 +114,6 @@ export default function CampusProjectPage({ params }: Params) {
       availability: "https://schema.org/InStock",
       url: `${campusUrl(project.slug)}#enquire`,
       seller: provider,
-      eligibleQuantity: {
-        "@type": "QuantitativeValue",
-        maxValue: project.seatsPerCollege,
-        unitText: "students per college per academic year",
-      },
     })),
   };
 
@@ -174,10 +170,7 @@ export default function CampusProjectPage({ params }: Params) {
           </div>
           <Meta label="Level" value={project.difficulty} />
           <Meta label="Live sessions" value={`${project.sessionCount}`} />
-          <Meta
-            label="Seats per college"
-            value={`${project.seatsPerCollege} / year`}
-          />
+          <Meta label="Who writes it" value="You, with review" />
         </dl>
 
         <div className="mt-8 flex flex-wrap gap-4">
@@ -225,7 +218,7 @@ export default function CampusProjectPage({ params }: Params) {
 
         <div>
           <h2 className="text-xl font-semibold tracking-tight text-zinc-50">
-            What the sessions cover
+            The modules you build
           </h2>
           <ol className="mt-5 space-y-3">
             {project.modules.map((m, i) => (
@@ -303,9 +296,9 @@ export default function CampusProjectPage({ params }: Params) {
           Pick what you need
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          {PAYMENT_POLICY.method} in monthly installments. Sessions start{" "}
-          {PAYMENT_POLICY.sessionsStart.toLowerCase()}; handover is{" "}
-          {PAYMENT_POLICY.handover.toLowerCase()}. Full{" "}
+          {PAYMENT_POLICY.method} in monthly installments. The design and starter
+          repository arrive {PAYMENT_POLICY.handover.toLowerCase()}, and sessions
+          and reviews start then. Full{" "}
           <Link
             href="/terms/"
             className="text-cyan underline-offset-4 hover:underline"
@@ -333,22 +326,20 @@ export default function CampusProjectPage({ params }: Params) {
         <ul className="mt-5 space-y-4">
           <li className="text-sm leading-relaxed text-zinc-400">
             <span className="text-zinc-200">
-              Only {project.seatsPerCollege} students from your college get this
-              project in an academic year.
+              We build it together, and you write part of every module.
             </span>{" "}
-            On the Mentored tier one module is varied for you — the dataset, the
-            domain, or a feature — so no two submissions read the same.
+            On the Mentored tier the project is built in the classes, one module at
+            a time, with you writing part of each. {SESSION_POLICY.cadence}{" "}
+            {SESSION_POLICY.durationMinutes}-minute sessions on{" "}
+            {SESSION_POLICY.platform} after {SESSION_POLICY.startsAfter}, a review
+            of every report chapter you write, and a mock viva at the end. Because
+            you were there for every line, you can answer anything the panel asks.
           </li>
           <li className="text-sm leading-relaxed text-zinc-400">
             <span className="text-zinc-200">
-              You build nothing. You just have to be able to explain it.
+              Nothing is handed over finished.
             </span>{" "}
-            The project is delivered finished — code, report, diagrams, deployed.
-            Then {SESSION_POLICY.cadence.toLowerCase()}{" "}
-            {SESSION_POLICY.durationMinutes}-minute sessions on{" "}
-            {SESSION_POLICY.platform} after {SESSION_POLICY.startsAfter}, walking the
-            code you are submitting, ending in a mock viva. Turn up and you will know
-            it well enough to answer anything the panel asks.
+            {INTEGRITY_NOTE}
           </li>
         </ul>
       </section>
@@ -360,7 +351,7 @@ export default function CampusProjectPage({ params }: Params) {
           heading="Enquire about this project"
           intro="Tell me your submission deadline and which tier fits. You get a session schedule and an installment split back — usually within a day."
           messageLabel="Your deadline + anything your college mandates"
-          messagePlaceholder="Submission date, any stack your department requires, and what you want varied…"
+          messagePlaceholder="Submission date, any stack your department requires, and how much you have built so far…"
         />
       </div>
 
@@ -418,7 +409,7 @@ export default function CampusProjectPage({ params }: Params) {
           href="/#faq"
           className="text-sm text-ice underline-offset-4 hover:underline"
         >
-          Source code, payment, sessions and other questions →
+          Starter code, payment, sessions and other questions →
         </Link>
       </div>
 

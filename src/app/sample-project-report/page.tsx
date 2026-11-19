@@ -198,21 +198,21 @@ export default function SampleProjectReportPage() {
             <span className="text-zinc-200">
               It carries no college name, guide name or marks.
             </span>{" "}
-            Those belong to your institution. The delivered report for a purchased
-            project carries your department&rsquo;s title page, certificate and
-            declaration in its format; this sample leaves them out rather than
-            invent them.
+            Those belong to your institution, and your own report carries your
+            department&rsquo;s title page, certificate and declaration in its
+            format; this sample leaves them out rather than invent them.
           </li>
           <li>
             <span className="text-zinc-200">It is not a report to submit.</span>{" "}
             A report only earns marks when it matches the code on your laptop and
             you can explain both. Read it for the shape and the depth, then write
-            yours — or get a project whose report is written to match its code.
+            yours — and have each chapter reviewed against your code if you want a
+            second pair of eyes.
           </li>
           <li>
             <span className="text-zinc-200">Screenshots are described, not pasted.</span>{" "}
-            The results chapter explains what each portal shows; the delivered
-            report for a purchased build carries the screenshots of that build.
+            The results chapter explains what each portal shows; your own report
+            should carry real screenshots of the system you built.
           </li>
         </ul>
       </section>

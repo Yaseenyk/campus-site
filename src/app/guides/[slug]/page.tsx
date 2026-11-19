@@ -283,9 +283,9 @@ export default function GuidePage({ params }: Params) {
 
       <div className="mt-16">
         <CampusLeadForm
-          heading="Want this built rather than explained?"
-          intro="Every project is built for you end to end — code, report, diagrams, deployment — then walked through line by line in daily sessions until you can defend it. Tell me what you need and your deadline."
-          messageLabel="What you want built + your deadline"
+          heading="Want to build it together in live classes?"
+          intro="You get a design and a module-by-module plan, then we build it together in daily live classes, with you writing part of every module and every report chapter reviewed, until you can defend it. Tell me what you need and your deadline."
+          messageLabel="What you want to build + your deadline"
           messagePlaceholder="What the project should do, any stack your college mandates, and your submission date…"
         />
       </div>

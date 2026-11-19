@@ -242,15 +242,18 @@ export function Body() {
       <hr />
 
       <p>
-        Every project on this site ships deployed on a real URL, with secrets done
-        properly and the localhost fallback ready — because getting it live is
-        exactly the step students run out of time for. See a{" "}
+        The Guided and Mentored tiers of every project class on this site include
+        a deployment walkthrough, so you
+        put your own project on a real URL with secrets done properly and the
+        localhost fallback ready — because getting it live is exactly the step
+        students run out of time for. See a{" "}
         <Link href="/ecommerce-mern/">MERN e-commerce build</Link>{" "}
         or a{" "}
         <Link href="/realtime-chat-mern/">real-time chat app</Link>
-        , or if you want it done for you — built, documented, deployed, and walked
-        through in live sessions — start on the{" "}
-        <Link href="/custom/">custom build</Link> page. Deploying
+        , or if you want to build your own idea together &mdash; a starter
+        repository, review of what you write on Guided, and live build-together
+        classes on Mentored &mdash; start on the{" "}
+        <Link href="/custom/">custom project class</Link> page. Deploying
         first? Read{" "}
         <Link href="/guides/final-year-project-report-format/">
           the report format guide

@@ -1,10 +1,10 @@
-import { PAYMENT_POLICY, SESSION_POLICY } from "@/lib/campus";
+import { SESSION_POLICY } from "@/lib/campus";
 
 interface Step {
   stage: string;
   title: string;
   body: string;
-  /** Deliberately blunt — the selling point is how little the student does. */
+  /** Plain about what the student does: they build it with me. */
   youDo: string;
   youPay: string;
 }
@@ -13,35 +13,35 @@ const STEPS: Step[] = [
   {
     stage: "Before anything",
     title: "A call that costs you nothing",
-    body: "Fifteen minutes on WhatsApp or a Meet call. We settle what you want built, when you have to submit, what it costs, and how the installments split. If it does not fit, you walk away and that is the end of it.",
+    body: "Fifteen minutes on WhatsApp or a Meet call. We settle what you want to build, when you have to submit, what it costs, and how the installments split. If it does not fit, you walk away and that is the end of it.",
     youDo: "Turn up and talk",
     youPay: "Nothing",
   },
   {
     stage: "Week 1",
-    title: "The build starts",
-    body: "First installment clears and your slot is confirmed. I start building — schema, backend, frontend, the lot. You are not asked for code, designs, or decisions you are not equipped to make.",
-    youDo: "Nothing",
+    title: "Design and starter",
+    body: "First installment clears and your slot is confirmed. You get the design document, the database schema, a module-by-module plan and a starter repository with the setup, login and one worked example already done.",
+    youDo: "Run the starter",
     youPay: "Installment 1",
   },
   {
     stage: "From day one",
     title: "Sessions, every evening",
-    body: `${SESSION_POLICY.cadence} on ${SESSION_POLICY.platform} after ${SESSION_POLICY.startsAfter}, about ${SESSION_POLICY.durationMinutes} minutes. One module per session, working through the code that is being written for you. Ask anything. Ask it twice.`,
-    youDo: "Show up and learn",
+    body: `${SESSION_POLICY.cadence} on ${SESSION_POLICY.platform} after ${SESSION_POLICY.startsAfter}, about ${SESSION_POLICY.durationMinutes} minutes. One module per class, built together on screen: I write and explain part of it, you write the next part yourself. Ask anything. Ask it twice.`,
+    youDo: "Build it with me",
     youPay: "As agreed",
   },
   {
     stage: "Review checkpoints",
     title: "Whatever your guide asks for",
-    body: "Guides always want something changed. Those changes are made at no extra cost — they are part of the build, not a new quotation. You are never stuck between your guide and an invoice.",
-    youDo: "Forward the feedback",
+    body: "Guides always want something changed. Help with those changes is included at no extra cost — it is part of the guidance, not a new quotation. You are never stuck between your guide and an invoice.",
+    youDo: "Make the changes",
     youPay: "Nothing extra",
   },
   {
     stage: "Before submission",
-    title: "Handover and mock viva",
-    body: `Everything is delivered ${PAYMENT_POLICY.handover.toLowerCase()} — source, report, deck, diagrams, deployment. Then a mock viva where I ask the questions your panel will ask, until you stop hesitating on the answers.`,
+    title: "Report review and mock viva",
+    body: "Each report chapter you write is reviewed, the deployment is walked through, and then a mock viva where I ask the questions your panel will ask, until you stop hesitating on the answers.",
     youDo: "Answer the questions",
     youPay: "Final installment",
   },
@@ -54,7 +54,7 @@ export default function ProcessTimeline() {
         What actually happens
       </h2>
       <p className="mt-4 max-w-2xl leading-relaxed text-zinc-400">
-        Start to submission. Note the middle column — it is short on purpose.
+        Start to submission. You are part of every step; the right-hand column is what you pay.
       </p>
 
       <ol className="mt-10">

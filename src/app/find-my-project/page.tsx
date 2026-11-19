@@ -37,12 +37,12 @@ const FAQ = [
   {
     question: "What if none of the suggestions feel right?",
     answer:
-      "Every listed project can be varied to your own problem statement, and anything not in the catalogue can be built from scratch through the custom-build form. The suggestions are a starting point, not a limit.",
+      "Every listed project can be shaped to your own problem statement, and you can bring an idea that is not in the catalogue through the custom project form. The suggestions are a starting point, not a limit.",
   },
   {
     question: "Is the tool free, and what do the projects cost?",
     answer:
-      "The tool is free. Each project is quoted in tiers on its own page — source code on every tier, with the mentored tier adding daily live sessions that walk the code line by line for your viva.",
+      "The tool is free. Each project is quoted in tiers on its own page — a design and starter repository on every tier, reviews of what you write on the Guided tier, and daily live classes where the project is built together with you on the Mentored tier.",
   },
 ];
 

@@ -236,9 +236,9 @@ export function Body() {
       <hr />
 
       <p>
-        Every project on this site ships with the synopsis, the report, the
-        diagrams and the deck already written to match the code &mdash; because the
-        synopsis is where the whole project is either scoped to finish or quietly
+        Every project class on this site starts with a design document that settles
+        the scope, modules and database before you write your synopsis &mdash;
+        because the synopsis is where the whole project is either scoped to finish or quietly
         set up to fail.{" "}
         <Link href="/">See the projects</Link>, then read the{" "}
         <Link href="/guides/final-year-project-report-format/">
@@ -249,8 +249,8 @@ export function Body() {
           how to choose a project worth building
         </Link>
         . If the scope in your head is bigger than your semester, a{" "}
-        <Link href="/custom/">custom build</Link> comes scoped,
-        documented and walked through in live sessions.
+        <Link href="/custom/">custom project class</Link> starts by
+        cutting it to a scope you can finish, then we build it together.
       </p>
     </>
   );

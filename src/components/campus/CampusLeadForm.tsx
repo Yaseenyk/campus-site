@@ -157,7 +157,7 @@ export default function CampusLeadForm({
       ? "Hi Yaseen, I'm from a college department and want to talk about final year project mentoring for our batch."
       : projectTitle
         ? `Hi Yaseen, I'm interested in the "${projectTitle}" final year project.`
-        : "Hi Yaseen, I want a custom final year project built.",
+        : "Hi Yaseen, I want to build my own final year project idea with you.",
   );
 
   return (

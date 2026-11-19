@@ -7,7 +7,7 @@
 
 /** Bump when clause text changes, so a stored consent is traceable to what was
  *  actually on screen when it was given. Never edit a clause without bumping. */
-export const AGREEMENT_VERSION = "1.1";
+export const AGREEMENT_VERSION = "2.0";
 
 /**
  * What Yaseen is bound to. These are stated, not ticked — the student consents,
@@ -17,13 +17,12 @@ export const AGREEMENT_VERSION = "1.1";
  * right to be wary of.
  */
 export const OWNER_COMMITMENTS = [
-  "Build the project end to end — source code, database, project report, diagrams, presentation deck and deployment. The student writes none of it.",
+  "Provide the design document, the starter repository and the build plan, build the project together with the student in the classes their tier includes, review every module and report chapter they write, and help whenever they are stuck.",
   "Deliver exactly what the project page listed for the chosen tier at the time of enrolment, and say so plainly if anything cannot be delivered.",
   "Run every session included in the tier — live, daily, after 8:00 PM IST, roughly 60 minutes each — through to the submission date.",
   "Reschedule at no cost, and without it counting against the total, whenever I am the one who cannot attend.",
-  "Make the changes a project guide asks for during review at no extra cost. They are part of the build, not a new quotation.",
+  "Help the student make the changes a project guide asks for during review, at no extra cost. That is part of the guidance, not a new quotation.",
   "Cancel all remaining installments, return the last installment paid, and leave everything already delivered with the student, if I fail to deliver what was promised.",
-  "Honour the per-college cap on this project, so the student is not competing with an identical submission from their own batch.",
   "Use the student's name, phone number and email only to run this engagement. They are never sold, shared, or added to a marketing list.",
 ] as const;
 
@@ -38,7 +37,7 @@ export const CLAUSES: Clause[] = [
     n: "01",
     title: "What is being delivered",
     body: [
-      "The project named below is built for you end to end — source code, database, project report, diagrams, presentation deck and deployment. You are not asked to write code, fix bugs, or finish anything off.",
+      "This is a project class for the project named below. On the Mentored tier it is built together in live classes, with you writing part of every module; on the Starter and Guided tiers you build it from the design document, starter repository and build plan, with every module reviewed. You write the report chapters and I review them. Nothing finished is handed over for you to submit.",
       "The tier you selected determines exactly what is included. What is written on the project page at the time of enrolment is the agreement; anything not written there is not included.",
     ],
   },
@@ -46,8 +45,8 @@ export const CLAUSES: Clause[] = [
     n: "02",
     title: "Both sides commit to finishing",
     body: [
-      "This is not a one-off sale. I commit to building the project, running every session listed for your tier, and preparing you for your viva through to your submission date.",
-      "You commit to attending the sessions, paying each installment on the agreed date, and seeing the engagement through. A project you abandon halfway helps neither of us — and the sessions only work if you turn up to them.",
+      "This is not a one-off sale. I commit to guiding the build, reviewing your work, running every session listed for your tier, and preparing you for your viva through to your submission date.",
+      "You commit to writing the project, attending the sessions, paying each installment on the agreed date, and seeing the engagement through. A project you abandon halfway helps neither of us — and the sessions only work if you turn up to them and do the work.",
     ],
   },
   {
@@ -68,11 +67,10 @@ export const CLAUSES: Clause[] = [
   },
   {
     n: "05",
-    title: "You may not resell or share the project",
+    title: "Who owns what",
     body: [
-      "On full payment you receive a perpetual licence to use, modify and submit the delivered code as your own academic project, and to show it in your portfolio or to an employer afterwards.",
-      "You may not resell it, redistribute it, publish the source publicly, or pass it to other students. This is the single clause that protects every other student who buys the same listing — duplicate submissions surfacing at one college is what ends this for everyone.",
-      "Breach of this clause ends the arrangement immediately, with no refund of anything paid.",
+      "The project built in your classes, and everything you write, is yours to submit as your academic project, change, and show in your portfolio or to an employer afterwards. You may use and build on the starter repository and design document inside your project.",
+      "You may not resell or pass the starter repository, the design document or my reviews to other students. Breach of this clause ends the arrangement immediately, with no refund of anything paid.",
     ],
   },
   {
@@ -85,10 +83,10 @@ export const CLAUSES: Clause[] = [
   },
   {
     n: "07",
-    title: "Your college's rules are yours to follow",
+    title: "Your own work, and your college's rules",
     body: [
-      "It is your responsibility to comply with your institution's rules on external assistance, and to disclose it wherever your institution requires disclosure.",
-      "I do not sit your viva, write your exam, or contact your college on your behalf. The sessions exist so that the work you submit is work you can genuinely explain.",
+      "You take part in building every module and write part of each one yourself, and you write the report. I will not build modules for you outside the classes or write a report chapter for you, and I will stop an engagement where that is what is being asked for.",
+      "It is your responsibility to follow your institution's rules on outside help, and to tell your project guide you have a mentor wherever your institution asks for that. I do not sit your viva, write your exam, or contact your college on your behalf.",
     ],
   },
   {
@@ -122,12 +120,12 @@ export const CONSENTS = [
   {
     id: "resell",
     label:
-      "I will not resell, redistribute, publish or share the source code with any other student.",
+      "I will take part in building my project and write my own report, and I will not pass the starter repository, design document or reviews to any other student.",
   },
   {
     id: "college",
     label:
-      "I understand that following my college's rules on external assistance, including any disclosure it requires, is my responsibility.",
+      "I understand that following my college's rules on outside help, including telling my guide where required, is my responsibility.",
   },
   {
     id: "accurate",

@@ -82,6 +82,5 @@ export const resumeScreeningMl: CampusProject = {
   difficulty: "Intermediate",
   sessionCount: 6,
   prices: { source: 4500, academic: 8000, mentored: 14000 },
-  seatsPerCollege: 2,
   publishedAt: "2026-07-27",
 };

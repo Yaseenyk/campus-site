@@ -35,14 +35,14 @@ interface Params {
  */
 const COPY: Record<Degree, { h1: string; intro: string; expectation: string }> = {
   BCA: {
-    h1: "BCA final year projects with source code",
+    h1: "BCA final year projects, built together in live classes",
     intro:
       "A BCA project is marked on whether it runs, whether the documentation matches the code, and whether you can walk your examiner through it. Depth of algorithm matters less than a clean, complete, working application with a sensible database behind it.",
     expectation:
       "Most BCA departments expect a working web or desktop application, an ER diagram that matches the actual schema, and a report in the college's format. The projects below are scoped to that — nothing so large that you cannot finish the documentation.",
   },
   MCA: {
-    h1: "MCA final year projects with source code and code explanation",
+    h1: "MCA final year projects, built together and explained",
     intro:
       "MCA is a postgraduate course, and the viva reflects it. Examiners push past what the application does and into why it was built that way — which algorithm, which trade-off, which alternative you rejected. A downloaded project cannot survive that conversation.",
     expectation:
@@ -56,11 +56,11 @@ const COPY: Record<Degree, { h1: string; intro: string; expectation: string }> =
       "Panels reward technical depth and a clear problem statement. The projects below are modular enough to split across a team, and the sessions cover each module separately so every member can answer for their part.",
   },
   "B.Sc IT": {
-    h1: "B.Sc IT final year projects with full source code",
+    h1: "B.Sc IT final year projects, built together in live classes",
     intro:
       "B.Sc IT projects are judged on much the same lines as BCA — a complete, working application with documentation that matches it. The trap is picking something too ambitious and submitting a half-finished demo.",
     expectation:
-      "Pick something you can finish and explain. Each project below ships with the report, diagrams, and a deployment walkthrough so the submission is complete on day one and the remaining time goes into understanding it.",
+      "Pick something you can finish and explain. Each project below comes with a design, a starter repository and a report template, so your time goes into building it and writing it up, with every module and chapter reviewed.",
   },
   "M.Tech": {
     h1: "M.Tech final year projects with implementation and code walkthrough",
@@ -70,7 +70,7 @@ const COPY: Record<Degree, { h1: string; intro: string; expectation: string }> =
       "The advanced projects below are the right starting point — they involve retrieval pipelines, model evaluation, and trade-offs worth writing up. The sessions go into why each design decision was made, which is what a thesis defence actually turns on.",
   },
   Diploma: {
-    h1: "Diploma final year projects with source code",
+    h1: "Diploma final year projects, built together in live classes",
     intro:
       "A diploma project is marked mostly on the demo. It has to run reliably in front of an examiner, on the hardware available, without a network dependency you cannot control.",
     expectation:
@@ -88,7 +88,7 @@ export function generateMetadata({ params }: Params): Metadata {
 
   const copy = COPY[degree];
   const count = projectsForDegree(degree).length;
-  const description = `${count} final year projects for ${degree} students — full source code, project report, and ${SESSION_POLICY.cadence.toLowerCase()} live sessions explaining the code for viva defence. Direct payment in monthly installments.`;
+  const description = `${count} final year projects for ${degree} students, built together in ${SESSION_POLICY.cadence.toLowerCase()} live classes with you writing part of every module, plus report review and viva prep. Direct payment in monthly installments.`;
   const url = `${SITE_URL}/for/${params.degree}/`;
 
   return {
@@ -136,8 +136,8 @@ export default function DegreePage({ params }: Params) {
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `Final Year Project Build & Mentorship for ${degree} Students`,
-    serviceType: "Academic project development and code mentorship",
+    name: `Final Year Project Mentorship for ${degree} Students`,
+    serviceType: "Academic project mentoring and code review",
     provider: personRef,
     areaServed: { "@type": "Country", name: "India" },
     audience: {
@@ -213,9 +213,10 @@ export default function DegreePage({ params }: Params) {
           Your guide approved a different topic?
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          Send the problem statement and it gets built to spec — same{" "}
+          Send the problem statement and I turn it into a design and a build plan
+          for you to build — same{" "}
           {SESSION_POLICY.cadence.toLowerCase()} sessions after{" "}
-          {SESSION_POLICY.startsAfter}, same installments. Custom builds are quoted
+          {SESSION_POLICY.startsAfter}, same installments. Custom projects are quoted
           between {formatInr(CUSTOM_BUILD_RANGE.min)} and{" "}
           {formatInr(CUSTOM_BUILD_RANGE.max)} depending on scope.
         </p>

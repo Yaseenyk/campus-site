@@ -189,8 +189,8 @@ export function Body() {
       <hr />
 
       <p>
-        If you already know what you want, it can be{" "}
-        <Link href="/custom/">built to your problem statement</Link>{" "}
+        If you already know what you want, you can{" "}
+        <Link href="/custom/">bring your problem statement and build it together</Link>{" "}
         — and if you do not, the topic lists are a reasonable place to start:{" "}
         <Link href="/guides/mca-final-year-project-topics/">
           MCA

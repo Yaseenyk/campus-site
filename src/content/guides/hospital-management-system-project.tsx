@@ -180,13 +180,17 @@ export function Body() {
       <hr />
 
       <p>
-        If you want this project built for you and walked through until you can
-        defend every table, the full listing, with stack, seven sessions and
+        If you want to build this project together as a project class (a design
+        document and a starter repository, review of every module you write on
+        Guided, and on Mentored live classes where we build it together, one
+        module per class), the full listing, with stack, seven classes and
         prices, is on the{" "}
         <Link href="/hospital-management-mern/">
           hospital management system (MERN) page
         </Link>
-        . If you would rather build it yourself, the{" "}
+        . You take part in every module and write the report yourself, and I
+        review it. If
+        you would rather go it alone, the{" "}
         <Link href="/templates/">free report and synopsis templates</Link> are
         a good place to begin.
       </p>

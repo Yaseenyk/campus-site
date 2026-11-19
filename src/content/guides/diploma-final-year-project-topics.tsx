@@ -7,8 +7,8 @@ export const meta: GuideMeta = {
   title: "Diploma Final Year Project Topics 2026 With Code",
   h1: "Diploma final year project topics you can actually finish",
   description:
-    "Simple, genuinely finishable diploma final year project ideas, each with the stack it needs and the viva question it attracts. Full source code included on every tier.",
-  tldr: "The best diploma final year projects are small, genuinely finishable CRUD applications with one real rule — a library fine, a defaulter alert, an order state — on a clean database you can fully document and explain. A completed small project beats an ambitious half-built one, and full source code is included on every tier.",
+    "Simple, genuinely finishable diploma final year project ideas, each with the stack it needs and the viva question it attracts. Project classes start from a starter repository and are built together.",
+  tldr: "The best diploma final year projects are small, genuinely finishable CRUD applications with one real rule — a library fine, a defaulter alert, an order state — on a clean database you can fully document and explain. A completed small project beats an ambitious half-built one, and each listed project can be built together from a starter repository.",
   category: "Project ideas",
   publishedAt: "2026-07-27",
   readingMinutes: 8,
@@ -23,7 +23,7 @@ export const meta: GuideMeta = {
     {
       question: "Do diploma projects come with source code?",
       answer:
-        "The ones here do — full source code is included on every tier, with a local setup guide so it runs on your machine. The Mentored tier adds live sessions where the code is walked through line by line so you can answer for it in your viva.",
+        "The project classes here come with a starter repository (setup, folder structure, login and one worked example module) and a local setup guide so it runs on your machine, not a finished project. On Starter and Guided you write the rest from the starter, with every module reviewed on Guided. On Mentored we build it together in live classes on Google Meet, one module per class, with you writing part of each module, then viva prep and a mock viva so you can answer for it in your viva.",
     },
     {
       question: "How simple should a diploma final year project be?",
@@ -160,9 +160,10 @@ export function Body() {
       <hr />
 
       <p>
-        A few of these are already built and come with the full source code, a setup
-        guide, the report and diagrams, and daily sessions that walk through the code
-        line by line so you can defend it in your viva &mdash;{" "}
+        A few of these are available as project classes, built together: a design
+        document, a starter repository and setup guide, review of the code, report
+        and diagrams you write on Guided, and live build-together classes on
+        Mentored, so you can defend it in your viva &mdash;{" "}
         <Link href="/for/diploma/">
           see the diploma projects
         </Link>
@@ -170,13 +171,13 @@ export function Body() {
         <Link href="/blood-bank-management/">
           blood bank portal
         </Link>
-        . Each listing is capped per college, so no two students at the same college
-        submit the same build.
+        . Check your college&rsquo;s rules on outside help first; you take part
+        in every module and write the report yourself, and I review it.
       </p>
       <p>
         If your idea is simpler than anything in the catalog &mdash; a smaller CRUD
         app, a single-feature tool &mdash;{" "}
-        <Link href="/custom/">have it built for you</Link> at a
+        <Link href="/custom/">bring it and we build it together</Link> at a
         scope that fits a diploma. Before you settle on a topic, read{" "}
         <Link href="/guides/how-to-choose-a-final-year-project/">
           how to choose a project you can actually finish

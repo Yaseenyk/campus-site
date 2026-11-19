@@ -69,8 +69,6 @@ export interface CampusProject {
   /** Live sessions included in the Mentored tier. */
   sessionCount: number;
   prices: CampusPrices;
-  /** How many students at one college may buy this in one academic year. */
-  seatsPerCollege: number;
   demoUrl?: string;
   /**
    * Share/rich-result image (site-relative), e.g. "/social/ai-college.jpg".
@@ -92,15 +90,21 @@ export const SESSION_POLICY = {
 
 /**
  * Payment is direct (UPI / bank transfer) and split into monthly
- * installments — no gateway, no checkout on this site. Sessions begin once
- * the first installment clears; full source, report, and deployment handover
- * happens after the final installment.
+ * installments — no gateway, no checkout on this site. The design document
+ * and starter repository arrive with the first installment, and sessions and
+ * reviews start then. The project is built together with the student in live
+ * classes, and the student writes part of every module; nothing finished is
+ * handed over (owner's decision 19 Nov 2026, "option B").
  */
 export const PAYMENT_POLICY = {
   method: "Direct UPI / bank transfer",
   sessionsStart: "After the first installment",
-  handover: "After the final installment",
+  handover: "With the first installment",
 };
+
+/** One line on academic integrity, reused wherever the service is described. */
+export const INTEGRITY_NOTE =
+  "We build it together in live classes and you write part of every module and the report yourself; I teach, review and help. Check your college's rules on outside help — most allow coaching, and your project guide should know you have a mentor.";
 
 export const CUSTOM_BUILD_RANGE = { min: 10000, max: 50000 };
 
@@ -184,26 +188,27 @@ export function getTiers(project: CampusProject): CampusTier[] {
   return [
     {
       id: "source",
-      name: "Source",
+      name: "Starter",
       price: project.prices.source,
       emiMonths: 1,
       includes: [
-        "Full source code",
-        "Local setup guide",
-        "Sample dataset / seed data",
-        "One handover call",
+        "Project design document (scope, modules, database schema)",
+        "Starter repository: setup, folder structure, login and one worked example module",
+        "Module-by-module build plan",
+        "Local setup guide and seed data",
+        "One kickoff call",
       ],
     },
     {
       id: "academic",
-      name: "Academic",
+      name: "Guided",
       price: project.prices.academic,
       emiMonths: 2,
       includes: [
-        "Everything in Source",
-        "Project report (synopsis + full document)",
-        "Presentation deck",
-        "ER / DFD / architecture diagrams",
+        "Everything in Starter",
+        "Written review of every module you write",
+        "Report template, plus review of each chapter you write",
+        "Review of your ER / DFD / architecture diagrams",
         "Deployment walkthrough",
       ],
     },
@@ -213,12 +218,11 @@ export function getTiers(project: CampusProject): CampusTier[] {
       price: project.prices.mentored,
       emiMonths: 3,
       includes: [
-        "Everything in Academic",
-        `${project.sessionCount} live sessions on ${SESSION_POLICY.platform}`,
-        "Line-by-line code walkthrough",
+        "Everything in Guided",
+        `${project.sessionCount} live classes on ${SESSION_POLICY.platform}`,
+        "The project built together on screen, one module per class — you write part of every module",
         "Viva question prep + mock viva",
-        "One module varied for you (dataset / domain)",
-        "WhatsApp support until submission",
+        "Debugging help on WhatsApp until submission",
       ],
     },
   ];
@@ -299,50 +303,50 @@ export function allDomains(): string[] {
 
 export const CAMPUS_FAQ = [
   {
-    question: "Do I have to build any of it myself?",
+    question: "Do I have to build it myself?",
     answer:
-      "No. The project is built, documented, and deployed for you — code, report, deck, diagrams, and the running application. Your only job is to turn up to the sessions and learn what you are submitting.",
+      "You build it with me. On the Mentored tier we build it together in live classes: I write and explain part of each module on screen, and you write the next part yourself in the same class, so by the end you have written part of every module and understand all of it. You write the report chapters and I review them. On the Starter and Guided tiers you build from the design and starter on your own time, with every module reviewed. Either way you can answer anything in your viva, because you were there when every line was written.",
   },
   {
-    question: "Can I get my own idea built instead of picking from the list?",
-    answer: `Yes. Send whatever your guide approved — or an idea you want built from scratch — through the custom build form. Any stack, any domain. Custom projects are quoted between ${formatInr(CUSTOM_BUILD_RANGE.min)} and ${formatInr(CUSTOM_BUILD_RANGE.max)} depending on scope, and run on the same sessions and installments.`,
+    question: "Is this allowed by my college?",
+    answer:
+      "Most colleges allow a mentor or tutor, the same way they allow coaching; what they do not allow is submitting work someone else did for you. Here you take part in building every module and write part of each one yourself. Check your own college's rules on outside help, and tell your project guide you have a mentor if the rules ask you to.",
   },
   {
-    question: "Do I get the source code, or only the explanation?",
+    question: "Can I bring my own idea instead of picking from the list?",
+    answer: `Yes. Send whatever your guide approved, or an idea of your own, through the custom form. Any stack, any domain. I turn it into a design and a build plan, and guide you through building it. Custom projects are quoted between ${formatInr(CUSTOM_BUILD_RANGE.min)} and ${formatInr(CUSTOM_BUILD_RANGE.max)} depending on scope, and run on the same sessions and installments.`,
+  },
+  {
+    question: "Do I get the source code?",
     answer:
-      "You get the full source code on every tier. The Mentored tier adds live sessions where the code is walked through line by line so you can defend it in your viva.",
+      "Not as a download. On the Mentored tier the complete code is built in the classes with you, so you end with the whole project — built together, with part of every module written by you. On the Starter and Guided tiers you get a starter repository (setup, folder structure, login and one worked example module) and write the rest following the build plan, with every module reviewed.",
   },
   {
     question: "How do the daily sessions work?",
-    answer: `Sessions are live on ${SESSION_POLICY.platform}, one per day, starting after ${SESSION_POLICY.startsAfter} so they do not clash with college hours. Each runs about ${SESSION_POLICY.durationMinutes} minutes and covers one module of the project.`,
+    answer: `Sessions are live on ${SESSION_POLICY.platform}, one per day, starting after ${SESSION_POLICY.startsAfter} so they do not clash with college hours. Each runs about ${SESSION_POLICY.durationMinutes} minutes and covers one module: we build it together on screen, I explain each step, and you write part of it yourself before the class ends.`,
   },
   {
     question: "Can I pay in installments?",
-    answer: `Yes. Payment is direct — ${PAYMENT_POLICY.method.toLowerCase()} — split into monthly installments. Sessions start after the first installment; the complete source, report, and deployment handover comes after the final one.`,
+    answer: `Yes. Payment is direct — ${PAYMENT_POLICY.method.toLowerCase()} — split into monthly installments. The design document and starter repository arrive with the first installment, and sessions and reviews start then.`,
   },
   {
     question: "I can buy a project online for ₹2,000. Why does this cost more?",
     answer:
-      "Because that ₹2,000 buys a zip file. Nobody explains it to you, the same file has been sold to hundreds of students, and it collapses the moment your examiner asks why you chose that database. What you are paying for here is a project built for you, capped per college, and the sessions that make you able to answer for it. If a zip file is all you need, buy the zip file.",
+      "Because that ₹2,000 buys a zip file someone else wrote, the same file has been sold to hundreds of students, and submitting it as your own is plagiarism at most universities. It also collapses the moment your examiner asks why you chose that database. What you are paying for here is a working developer's time: the design, the reviews and the sessions that get you to a project you built and can explain.",
   },
   {
     question: "How do I know you will not disappear after I take money?",
     answer:
-      "Payment is split across months, so you are never paying for work you have not seen — you watch the code in sessions from the first one. If I fail to deliver what the project page promised, your remaining installments are cancelled and the last one is returned. I also have a name attached to this: the same site carries my portfolio, my published work, and my public repositories. That is not something I would burn for one project.",
+      "Payment is split across months, so you are never paying far ahead — the design, the starter repository and the first sessions come with the first installment. If I fail to deliver what the project page promised, your remaining installments are cancelled and the last one is returned. I also have a name attached to this: the same site carries my portfolio, my published work, and my public repositories. That is not something I would burn for one project.",
   },
   {
     question: "What if my guide rejects the project or asks for changes?",
     answer:
-      "Changes your guide asks for during review are made at no extra cost — that is part of the build, not a new scope. If your guide rejects the topic outright before work begins, you can switch to a different project or stop with nothing further owed.",
+      "Help with changes your guide asks for during review is included at no extra cost — that is part of the guidance, not a new scope. If your guide rejects the topic outright before work begins, you can switch to a different project or stop with nothing further owed.",
   },
   {
-    question: "Will another student at my college submit the same project?",
+    question: "Who guides this?",
     answer:
-      "No. Each listing is capped to a limited number of students per college per academic year, and the Mentored tier varies one module — the dataset, the domain, or a feature — so two builds are never identical.",
-  },
-  {
-    question: "Who actually builds and teaches this?",
-    answer:
-      "Yaseen Khatib — a Full Stack AI Developer. The same person writes the code and runs the sessions, so every answer in your viva prep comes from whoever wrote the line you are asked about.",
+      "Yaseen Khatib — a Full Stack AI Developer who builds systems like these for work. The same person writes the design, reviews your code and runs the sessions.",
   },
 ];

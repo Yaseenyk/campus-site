@@ -74,6 +74,5 @@ export const faceRecognitionAttendance: CampusProject = {
   difficulty: "Intermediate",
   sessionCount: 6,
   prices: { source: 4000, academic: 7500, mentored: 13000 },
-  seatsPerCollege: 2,
   publishedAt: "2026-07-27",
 };

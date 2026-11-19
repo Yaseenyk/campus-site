@@ -33,7 +33,7 @@ const GROUPS: NavGroup[] = [
     label: "Projects",
     href: "/",
     items: [
-      { href: "/", label: "Final year projects", desc: "Built for you, then explained" },
+      { href: "/", label: "Final year projects", desc: "Built together in live classes" },
       { href: "/find-my-project/", label: "Find my project", desc: "Answer four questions" },
       { href: "/custom/", label: "Get your idea built", desc: "Any stack, any domain" },
       { divider: true },

@@ -150,9 +150,9 @@ export default function QuestionBankPage() {
           Stuck on more than a few of these?
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          That is normal, and it is fixable while there is still time. Every project
-          here is built for you and then walked through line by line in daily
-          sessions, ending in a mock viva using exactly these questions.
+          That is normal, and it is fixable while there is still time. Every
+          project here is built with you in live classes, and the
+          Mentored tier ends in a mock viva using exactly these questions.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link

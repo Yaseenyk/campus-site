@@ -7,15 +7,16 @@ export const dynamic = "force-static";
 
 /** /llms.txt (llmstxt.org): a curated markdown map of the site for LLM crawlers. */
 export function GET() {
-  const md = `# DefendIt — final year projects, built and explained, by Yaseen Khatib
+  const md = `# DefendIt — final year project classes by Yaseen Khatib
 
-> Final year projects for Indian students (BCA, MCA, B.Tech, B.Sc IT, M.Tech,
-> diploma), built end to end — code, database, report, diagrams, deck and
-> deployment — by a working Full Stack AI Developer. Any idea can be
-> commissioned, in any stack, quoted ${formatInr(CUSTOM_BUILD_RANGE.min)}–${formatInr(CUSTOM_BUILD_RANGE.max)} by scope.
-> After delivery there are ${SESSION_POLICY.cadence.toLowerCase()} live
-> ${SESSION_POLICY.platform} sessions after ${SESSION_POLICY.startsAfter} where the
-> code is explained line by line, ending in a mock viva.
+> Final year project classes for Indian students (BCA, MCA, B.Tech, B.Sc IT,
+> M.Tech, diploma), taught by a working Full Stack AI Developer. The project is
+> built together with the student in ${SESSION_POLICY.cadence.toLowerCase()} live
+> ${SESSION_POLICY.platform} classes after ${SESSION_POLICY.startsAfter}, one module
+> per class, with the student writing part of every module and the report
+> (reviewed), ending in a mock viva. Lower tiers give a design document, a
+> starter repository and reviews. Nothing finished is handed over. Students can
+> bring their own idea, in any stack, quoted ${formatInr(CUSTOM_BUILD_RANGE.min)}–${formatInr(CUSTOM_BUILD_RANGE.max)} by scope.
 > Payment is direct (UPI / bank transfer) in monthly installments.
 > The engineer behind it: ${PORTFOLIO_URL}/
 

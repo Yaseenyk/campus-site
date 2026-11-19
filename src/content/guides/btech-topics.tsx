@@ -12,8 +12,8 @@ export const meta: GuideMeta = {
   h1: "B.Tech CSE final year projects for 2026: ideas that survive a review panel",
   description:
     
-    "Ten built B.Tech CSE final year projects with source code and report, plus more ideas for CSE teams with the stack and the viva question each one attracts.",
-  tldr: "Strong B.Tech CSE final year projects survive staged review panels and split cleanly across a team — a RAG assistant, a recommender with a cold-start answer, a real-time chat with delivery guarantees, a CNN tested on real photos. Give each member a vertical slice they can defend end to end, and pick something presentable early with visible room to grow. Ten such projects are built and listed below with source code.",
+    "Ten B.Tech CSE final year projects we can build together with your team from a starter repository, plus more ideas for CSE teams with the stack and the viva question each one attracts.",
+  tldr: "Strong B.Tech CSE final year projects survive staged review panels and split cleanly across a team — a RAG assistant, a recommender with a cold-start answer, a real-time chat with delivery guarantees, a CNN tested on real photos. Give each member a vertical slice they can defend end to end, and pick something presentable early with visible room to grow. Ten such projects are listed below as project classes your team builds together with me, with every module reviewed.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
   updatedAt: "2026-10-30",
@@ -34,12 +34,12 @@ export const meta: GuideMeta = {
     {
       question: "Which CSE final year projects come with source code here?",
       answer:
-        "The ten on the built list: the e-commerce platform, real-time chat, hospital management system, recommendation system, fake news detection, plant disease detection, AI college assistant, expense tracker app, resume screening and face recognition attendance. Each ships with full source, the report, diagrams, deployment and live code-walkthrough sessions.",
+        "None ship as finished code. The ten listed projects (the e-commerce platform, real-time chat, hospital management system, recommendation system, fake news detection, plant disease detection, AI college assistant, expense tracker app, resume screening and face recognition attendance) are project classes: a design document, a starter repository with setup, login and one worked example module, and a module-by-module plan. On Starter and Guided your team writes the rest from the starter, and on Guided every module, chapter and diagram you write is reviewed. On Mentored we build it together in live classes on Google Meet, one module per class, with your team writing part of each module.",
     },
     {
       question: "Are AI projects good final year project ideas for CSE?",
       answer:
-        "Yes, if the evaluation is honest. Panels have seen many 99%-accuracy claims; a project that reports a confusion matrix, shows a failure case and explains what the model keys on outscores one that only shows a clean demo. The built AI projects here are designed around that evaluation.",
+        "Yes, if the evaluation is honest. Panels have seen many 99%-accuracy claims; a project that reports a confusion matrix, shows a failure case and explains what the model keys on outscores one that only shows a clean demo. The AI projects listed here are planned around that evaluation.",
     },
   ],
 };
@@ -154,16 +154,20 @@ export function Body() {
         A project that is either finished in week three or unshowable until week
         twelve will be marked down at some review, regardless of quality. Pick
         something with a natural staging. The list below starts with the B.Tech CSE
-        final year projects that are already built, then goes into further final
+        final year projects we can build together, then goes into further final
         year project ideas for CSE teams by category.
       </p>
 
-      <h2>B.Tech CSE final year projects already built, with source code</h2>
+      <h2>B.Tech CSE final year projects we can build together</h2>
       <p>
-        These {built.length} suit B.Tech CSE and IT. Each is modular enough to
-        split across a team, ships with the source code, the report, diagrams and a
-        working deployment, and the sessions cover each module separately so every
-        member can answer for their part. Prices shown are the starting tier.
+        These {built.length} suit B.Tech CSE and IT. Each is a project class,
+        modular enough to split across a team: a design document, a starter
+        repository and a module-by-module plan on every tier, review of every
+        module each member writes on Guided, and on Mentored live classes on
+        Google Meet where we build it together, one module per class, with each
+        member writing part of their modules, so every member can answer for
+        their part. Your team takes part in every module and writes the report,
+        and I review it. Prices shown are the starting tier.
       </p>
       <BuiltProjectList projects={built} />
 
@@ -227,11 +231,12 @@ export function Body() {
       <hr />
 
       <p>
-        Projects in several of these areas are already built, with source, report
-        and daily sessions walking through the code —{" "}
+        Projects in several of these areas are available as project classes, with
+        a starter repository and a plan, review of what you write on Guided, and
+        live build-together classes on Mentored &mdash;{" "}
         <Link href="/for/btech/">see the B.Tech projects</Link>, or{" "}
         <Link href="/custom/">
-          have your team&rsquo;s problem statement built to spec
+          bring your team&rsquo;s problem statement and build it together
         </Link>
         . Before your final review, read{" "}
         <Link href="/guides/final-year-project-viva-questions/">

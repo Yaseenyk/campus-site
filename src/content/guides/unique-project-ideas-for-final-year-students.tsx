@@ -12,7 +12,7 @@ export const meta: GuideMeta = {
   description:
     
     "Unique project ideas for final year students in BCA, MCA and B.Tech: what makes a project unique to a panel, and eighteen ideas rarely duplicated.",
-  tldr: "A final year project is unique to a panel not because of its title but because of one mechanism they have not seen handled properly: a cart that cannot oversell, a chatbot that cites its source, a classifier that admits when it is unsure. Pick a topic that is rarely duplicated in your batch, then build the one piece of logic that makes it yours. Eighteen such ideas are below, with the built projects that already carry a distinctive mechanism.",
+  tldr: "A final year project is unique to a panel not because of its title but because of one mechanism they have not seen handled properly: a cart that cannot oversell, a chatbot that cites its source, a classifier that admits when it is unsure. Pick a topic that is rarely duplicated in your batch, then build the one piece of logic that makes it yours. Eighteen such ideas are below, with the listed projects designed around a distinctive mechanism.",
   category: "Project ideas",
   publishedAt: "2026-10-30",
   updatedAt: "2026-11-15",
@@ -29,9 +29,9 @@ export const meta: GuideMeta = {
         "Sometimes. An unusual topic with no public reference material can stall, and a guide who has not seen it before may be slower to approve it. The safer route is a familiar domain with an unusual mechanism — you keep the finishability and gain the differentiation.",
     },
     {
-      question: "Can I get one of these unique project ideas built?",
+      question: "Can we build one of these unique project ideas together?",
       answer:
-        "Yes. Any idea on this page, or your own, can be built to your problem statement with the source code, report, diagrams and deployment, then explained in live sessions until you can defend it. The built list at the bottom is the set that already exists.",
+        "Yes. Any idea on this page, or your own, can be a custom project class: a design document, a starter repository and a module-by-module plan, review of every module, chapter and diagram you write on Guided, and on Mentored live classes on Google Meet where we build it together, one module per class, with you writing part of each module, then viva prep. Nothing finished is handed over, and you write the report yourself. The list at the bottom is the set already planned as project classes.",
     },
   ],
 };
@@ -232,12 +232,16 @@ export function Body() {
         </li>
       </ol>
 
-      <h2>Built projects whose distinctive mechanism is already in place</h2>
+      <h2>Project classes designed around a distinctive mechanism</h2>
       <p>
-        Each of the eleven projects below was built around one of the mechanisms
-        above &mdash; the tagline under each is the twist. All come with source
-        code, the report, diagrams, deployment and live sessions walking through
-        the code until you can defend it.
+        Each of the eleven projects below is designed around one of the
+        mechanisms above &mdash; the tagline under each is the twist. Each is a
+        project class: a design document and a starter repository on every tier,
+        review of every module, chapter and diagram you write plus a deployment
+        walkthrough on Guided, and on Mentored live classes where we build it
+        together, one module per class, then viva prep and a mock viva. You take
+        part in every module and write the report yourself, and I review it.
+        Check your college&rsquo;s rules on outside help first.
       </p>
       <BuiltProjectList projects={CAMPUS_PROJECTS} />
 

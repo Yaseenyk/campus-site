@@ -7,7 +7,7 @@ import ConsentForm from "@/components/campus/ConsentForm";
 export const metadata: Metadata = {
   title: "Student Agreement",
   description:
-    "Onboarding agreement for students enrolled on a final year project — what is delivered, what both sides commit to, and the terms around stopping, resale and disclosure.",
+    "Onboarding agreement for students enrolled on a final year project — what is delivered, what both sides commit to, and the terms around stopping, sharing and academic integrity.",
   alternates: { canonical: `${SITE_URL}/agreement/` },
   // Onboarding document, not a marketing page. Keeping it out of the index
   // avoids students landing here from search before they have spoken to anyone.

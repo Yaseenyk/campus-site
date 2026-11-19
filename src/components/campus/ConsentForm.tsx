@@ -70,7 +70,7 @@ const EMPTY: FormState = {
   tier: "",
 };
 
-const TIERS = ["Source", "Academic", "Mentored", "Custom build"];
+const TIERS = ["Starter", "Guided", "Mentored", "Custom project"];
 
 export default function ConsentForm() {
   const [form, setForm] = useState<FormState>(EMPTY);

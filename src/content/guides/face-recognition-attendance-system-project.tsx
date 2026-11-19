@@ -173,8 +173,8 @@ export function Body() {
       <hr />
 
       <p>
-        The full face recognition attendance project, with its six sessions and
-        deliverables, is listed on the{" "}
+        The face recognition attendance project class, with its six live
+        classes and what each tier includes, is listed on the{" "}
         <Link href="/face-recognition-attendance/">
           face recognition attendance page
         </Link>

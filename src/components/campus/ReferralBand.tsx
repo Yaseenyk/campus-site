@@ -24,8 +24,7 @@ export default function ReferralBand() {
         Final year projects happen in batches — half your class needs one. Refer
         a classmate and when you both book, you each get {REFERRAL.discountPercent}
         % off. No codes and no accounts: just name each other on WhatsApp and it
-        is applied to both installments. (Different projects, of course — seats
-        stay capped per college.)
+        is applied to both installments. (Each of you builds your own project.)
       </p>
       <a
         href={wa}

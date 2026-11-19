@@ -134,9 +134,10 @@ export default function PlannerPage() {
           Not enough weeks?
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          That is the situation this site exists for. The project gets built for you
-          — code, report, diagrams, deployment — and your remaining weeks go into
-          understanding it in daily sessions rather than fighting it alone.
+          Then cut the scope and get help early. A design and a starter repository
+          save the first two weeks, daily sessions keep you moving, and a review of
+          every module stops you losing days to one bug — so the weeks you have go
+          into building, not fighting it alone.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link

@@ -103,7 +103,7 @@ export default function QuoteEstimator() {
           {formatInr(lo)} <span className="text-zinc-500">–</span> {formatInr(hi)}
         </p>
         <p className="mx-auto mt-3 max-w-md text-xs leading-relaxed text-zinc-500">
-          A ballpark for a custom build — split across monthly installments. The
+          A ballpark for a custom project — split across monthly installments. The
           real quote is fixed on a free 15-minute call once we pin the scope.
         </p>
       </div>

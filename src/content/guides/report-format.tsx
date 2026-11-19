@@ -246,9 +246,11 @@ export function Body() {
       <hr />
 
       <p>
-        Every project on this site ships with the report, the synopsis, the diagrams
-        and the deck already written to match the code — because a report that
-        matches the code is exactly the thing students run out of time to do.
+        On the Guided and Mentored tiers of every project class on this site you
+        get a report template, a review of each chapter you write and a review of
+        your diagrams, checked against the code &mdash; because a report that
+        matches the code is exactly the thing students run out of time to do. You
+        write the report yourself.
         To see this structure filled in for a real project, read the{" "}
         <Link href="/sample-project-report/">sample project report PDF</Link>.{" "}
         <Link href="/">See the projects</Link>, or read{" "}

@@ -217,10 +217,10 @@ export default function FindMyProject({ projects }: { projects: QuizProject[] })
           </div>
 
           <p className="mt-6 text-xs leading-relaxed text-zinc-500">
-            None quite right? Any of these can be varied to your problem statement, or
-            built from scratch — tell me on WhatsApp or the{" "}
+            None quite right? Any of these can be shaped to your problem statement, or
+            you can bring your own idea — tell me on WhatsApp or the{" "}
             <Link href="/custom/" className="text-cyan hover:underline">
-              custom build form
+              custom project form
             </Link>
             .
           </p>

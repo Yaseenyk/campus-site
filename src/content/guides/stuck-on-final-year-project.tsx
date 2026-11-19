@@ -27,7 +27,7 @@ export const meta: GuideMeta = {
     {
       question: "Where can I get real help with a final year project?",
       answer:
-        "Match the help to the stuck point. For no idea, a topic list and your guide's input. For a build you cannot finish, someone who has built the pattern before. For a build you cannot explain, a walkthrough of your own code. The done-for-you route covers all three: a project built, documented, and walked through with you until you can defend it.",
+        "Match the help to the stuck point. For no idea, a topic list and your guide's input. For a build you cannot finish, someone who has built the pattern before. For a build you cannot explain, a walkthrough of your own code. A project class covers the last two: on the Mentored tier we build the project together in live classes, one module per class, with you writing part of each module, and you write the report yourself with each chapter reviewed.",
     },
   ],
 };
@@ -113,10 +113,12 @@ export function Body() {
           one-month plan
         </Link>{" "}
         shows what is still achievable and in what order. And when the build
-        genuinely will not come together in the time left, a project built to your
-        problem statement — with the source code included so you can read and
-        learn every part — is a defensible way out. That is what{" "}
-        <Link href="/custom/">a custom build</Link> is for. Two
+        genuinely will not come together in the time left, building your problem
+        statement together &mdash; in live classes where you write part of every
+        module yourself, so you know every part &mdash; is a defensible way out.
+        That is what{" "}
+        <Link href="/custom/">a custom project class</Link> is for. Check your
+        college&rsquo;s rules on outside help first. Two
         projects with a clean, buildable core if you want to restart on solid
         ground:{" "}
         <Link href="/blood-bank-management/">
@@ -165,9 +167,10 @@ export function Body() {
           the questions panels actually ask
         </Link>
         . If the project is not really yours to explain, the only honest fix is to
-        genuinely learn it — which is why every done-for-you project is walked
-        through with you line by line in live sessions, so the understanding is
-        real by the time you sit down.
+        genuinely learn it. That is why the project classes here have you write
+        part of every module yourself, and why the Mentored tier ends with viva
+        prep and a mock viva, so the understanding is real by the time you sit
+        down.
       </p>
 
       <h2>Name it, then move</h2>
@@ -183,11 +186,14 @@ export function Body() {
 
       <p>
         If you have run out of runway on any of the three, the honest option is a
-        project built and documented and deployed for you, then walked through in
-        daily live sessions until you can defend it yourself — full source code on
-        every tier, and seats capped per college so no two students submit the
-        same thing.{" "}
-        <Link href="/custom/">Start a custom build</Link> from
+        project class: a design document, a starter repository and a
+        module-by-module plan on every tier, with review of every module, chapter
+        and diagram you write on Guided, and on Mentored live classes on Google
+        Meet where we build the project together, one module per class, with you
+        writing part of each module, then viva prep and a mock viva. Nothing
+        finished is handed over, and you write the report yourself. Check your
+        college&rsquo;s rules on outside help first.{" "}
+        <Link href="/custom/">Start a custom project class</Link> from
         your problem statement, or{" "}
         <Link href="/">browse the catalog</Link> for a project
         close to where you are stuck.

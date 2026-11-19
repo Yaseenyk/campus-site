@@ -13,14 +13,14 @@ import CampusLeadForm from "@/components/campus/CampusLeadForm";
 import StickyActionBar from "@/components/campus/StickyActionBar";
 import TrustStrip from "@/components/campus/TrustStrip";
 
-const DESCRIPTION = `Get a custom final year project built to your approved problem statement — any stack, ${formatInr(
+const DESCRIPTION = `Build your own final year project idea together with a developer in live classes — a design and build plan for your approved problem statement, any stack, ${formatInr(
   CUSTOM_BUILD_RANGE.min
 )} to ${formatInr(
   CUSTOM_BUILD_RANGE.max
-)} depending on scope, with daily live sessions explaining the code and payment in monthly installments.`;
+)} depending on scope, built together in daily live classes, with payment in monthly installments.`;
 
 export const metadata: Metadata = {
-  title: "Custom Final Year Project, Built to Spec",
+  title: "Custom Final Year Project, Built Together",
   description: seoDescription(DESCRIPTION),
   alternates: { canonical: `${SITE_URL}/custom/` },
   openGraph: {
@@ -55,7 +55,7 @@ const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Custom Final Year Project Development",
-  serviceType: "Bespoke academic software development with code mentorship",
+  serviceType: "Academic project mentoring and code review",
   description: seoDescription(DESCRIPTION),
   provider: personRef,
   areaServed: { "@type": "Country", name: "India" },
@@ -85,17 +85,18 @@ export default function CustomBuildPage() {
           ~/custom
         </span>
         <h1 className="mt-5 text-4xl font-semibold tracking-tight text-zinc-50 sm:text-5xl">
-          Tell me what you want. I build it.
+          Bring your idea. We build it together.
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-zinc-400">
           A topic your guide approved, an idea you have been carrying around, or a
-          stack your department insists on — describe it and it gets built end to
-          end. Code, database, report, diagrams, deck, deployment. You write none of
-          it.
+          stack your department insists on — describe it and I turn it into a
+          design, a database schema, a module-by-module plan and a starter
+          repository. Then we build it together in live classes, with you writing
+          part of every module, and every report chapter you write is reviewed.
         </p>
         <p className="mt-4 leading-relaxed text-zinc-400">
           Then the same {SESSION_POLICY.cadence.toLowerCase()} sessions after{" "}
-          {SESSION_POLICY.startsAfter} to teach you every part of it, and the same
+          {SESSION_POLICY.startsAfter} to build every part of it with you, and the same
           installments — {PAYMENT_POLICY.method.toLowerCase()}, no gateway, no
           subscription.
         </p>
@@ -133,9 +134,9 @@ export default function CustomBuildPage() {
 
       <div className="mt-16">
         <CampusLeadForm
-          heading="Describe what you want built"
+          heading="Describe your project"
           intro="The approved problem statement, or your own idea in your own words — rough is fine, I will shape the scope. Add your submission deadline. You get a scope, a price, and an installment split back, usually within a day."
-          messageLabel="What you want built + your deadline"
+          messageLabel="What you want to build + your deadline"
           messagePlaceholder="What the project should do, any stack your college mandates, and your submission date…"
         />
       </div>

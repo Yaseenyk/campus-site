@@ -7,7 +7,7 @@ import { breadcrumbJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 
 const DESCRIPTION =
-  "Terms for final year projects: what you receive, how installments and delivery milestones work, session commitments, cancellation, and how the work is licensed to you.";
+  "Terms for guided final year projects: what you receive, how installments and milestones work, session commitments, cancellation, academic integrity, and who owns the work.";
 
 export const metadata: Metadata = {
   title: "Terms — Final Year Projects",
@@ -31,8 +31,8 @@ const CLAUSES: Clause[] = [
   {
     heading: "What you receive",
     paragraphs: [
-      "The project is built for you. You are not asked to write code, fix bugs, or finish anything off — it is delivered working.",
-      "Every tier includes the complete source code of the project, a setup guide, and seed data where the project needs it. The Academic tier adds the project report, the presentation deck, and the ER, DFD, and architecture diagrams. The Mentored tier adds live sessions, viva preparation, and one module varied specifically for you.",
+      "This is a project class, not a delivery service. On the Mentored tier the project is built together in live classes: I write and explain part of each module on screen and you write part of it yourself, so you take part in every module. On the Starter and Guided tiers you build it yourself from the design and starter, with reviews. You write the report chapters yourself, and I review them. Nothing finished is handed over for you to submit.",
+      "Every tier includes a project design document (scope, modules, database schema), a starter repository with the setup, folder structure, login and one worked example module, a module-by-module build plan, a setup guide and seed data where the project needs it. The Guided tier adds a written review of every module you write, a report template with a review of each chapter you write, a review of your diagrams, and a deployment walkthrough. The Mentored tier adds live classes where the project is built together, debugging help on WhatsApp, and viva preparation with a mock viva.",
       "What each tier includes is listed on the project page itself, and that listing is the agreement. If something is not written there, it is not included — ask before paying rather than after.",
     ],
   },
@@ -47,14 +47,14 @@ const CLAUSES: Clause[] = [
   {
     heading: "Delivery milestones",
     paragraphs: [
-      `Sessions begin ${PAYMENT_POLICY.sessionsStart.toLowerCase()}. Complete source, report, deck, and the deployment walkthrough are handed over ${PAYMENT_POLICY.handover.toLowerCase()}.`,
-      "Work in progress is visible throughout — you see the code during sessions from the first one, so you are never paying against something you have not seen.",
+      `The design document and starter repository are delivered ${PAYMENT_POLICY.handover.toLowerCase()}, and sessions and reviews begin then. Reviews of your modules and report chapters continue through to your submission date.`,
+      "Reviews are returned in writing. You are never paying far ahead of what you have received.",
     ],
   },
   {
     heading: "Sessions",
     paragraphs: [
-      `Sessions run live on ${SESSION_POLICY.platform}, ${SESSION_POLICY.cadence.toLowerCase()}, starting after ${SESSION_POLICY.startsAfter}, and run about ${SESSION_POLICY.durationMinutes} minutes each. The number of sessions included is stated on each project page.`,
+      `Sessions run live on ${SESSION_POLICY.platform}, ${SESSION_POLICY.cadence.toLowerCase()}, starting after ${SESSION_POLICY.startsAfter}, and run about ${SESSION_POLICY.durationMinutes} minutes each. The number of sessions included is stated on each project page. In each class we build the module of the day together on screen: I explain each step and write part of it, and you write part of it yourself before the class ends. The code is not written for you between classes.`,
       "If you cannot attend on a given day, tell me in advance and the session is rescheduled at no cost. If I cannot attend, the session is rescheduled and does not count against your total. Sessions missed without notice are counted as used.",
       "Session slots are limited by the hours available in an evening. A slot is confirmed only once the first installment clears.",
     ],
@@ -67,31 +67,24 @@ const CLAUSES: Clause[] = [
     ],
   },
   {
-    heading: "How many students get the same project",
+    heading: "Academic integrity",
     paragraphs: [
-      "Each listing states how many students from one college may buy it in one academic year. That cap is real and I hold to it — if the cap for your college is already filled, you will be told so before you pay, not after.",
-      "On the Mentored tier one module is varied for you — the dataset, the domain, or a feature — so two submissions of the same listing do not read the same.",
-    ],
-  },
-  {
-    heading: "What this is, and what it is not",
-    paragraphs: [
-      "This is a build service plus mentorship. The project is developed for you end to end — you are not expected to write any of it. What you are also buying is the understanding to defend it, which is why the sessions walk the code line by line and end in a mock viva.",
-      "It is your responsibility to comply with your college's rules on external assistance, and to disclose it where your institution requires disclosure. I do not sit your viva, write your exam, or contact your college on your behalf.",
+      "You take part in building every module and write part of each one yourself, and you write the report. I will not build modules for you outside the classes, or write a report chapter for you, and I will stop an engagement where that is what is being asked for.",
+      "It is your responsibility to follow your college's rules on outside help, and to tell your project guide you have a mentor wherever your institution asks for that. I do not sit your viva, write your exam, or contact your college on your behalf.",
     ],
   },
   {
     heading: "Licence and ownership",
     paragraphs: [
-      "On full payment you receive a perpetual licence to use, modify, and submit the delivered code as your academic project, and to show it in your portfolio or to an employer afterwards.",
-      "You may not resell, redistribute, or sublicense the source to other students. Doing so is what causes duplicate submissions to surface at a college, and it is the one thing that ends the arrangement immediately, with no refund.",
+      "The project built in your classes, and everything you write, is yours to submit as your academic project, change, and show in your portfolio or to an employer afterwards. The starter repository and design document may be used and built on inside your project.",
+      "You may not resell or redistribute the starter repository, the design document or my reviews to other students.",
     ],
   },
   {
     heading: "Support window",
     paragraphs: [
-      "WhatsApp support on the Mentored tier runs until your submission date, agreed at the start. Setup and run issues on any tier are fixed at no charge — if the code does not run on your machine, that is mine to solve.",
-      "New features requested after handover are a new scope and are quoted separately.",
+      "WhatsApp help on the Mentored tier runs until your submission date, agreed at the start. If the starter repository does not run on your machine, fixing that is mine to solve, on any tier.",
+      "Help with features you add after your submission date is a new scope and is quoted separately.",
     ],
   },
 ];
@@ -125,6 +118,12 @@ export default function TermsPage() {
           Anything agreed over email or WhatsApp that differs from this page —
           a different installment split, a different session count — holds, as long
           as it is in writing.
+        </p>
+        <p className="mt-4 leading-relaxed text-zinc-400">
+          Updated 19 November 2026: the service is now a project class, where
+          the project is built together with you in live classes and you write part
+          of every module. Agreements made before
+          that date keep the terms they were made on.
         </p>
       </header>
 

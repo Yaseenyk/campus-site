@@ -83,6 +83,5 @@ export const expenseTrackerMobile: CampusProject = {
   difficulty: "Intermediate",
   sessionCount: 7,
   prices: { source: 5000, academic: 9000, mentored: 15000 },
-  seatsPerCollege: 2,
   publishedAt: "2026-07-27",
 };

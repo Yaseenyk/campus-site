@@ -12,8 +12,8 @@ export const meta: GuideMeta = {
   h1: "MCA final year project topics for 2026, with the stack and the honest difficulty",
   description:
     
-    "MCA final year project topics for 2026: ten built MCA projects with source code and report, then twenty more ideas by domain with stack and difficulty.",
-  tldr: "Good MCA final year projects are moderately sized systems you can defend in depth — a RAG document assistant, resume screening, a recommender, or a well-architected full-stack app — each paired with a stack you actually know. MCA vivas push into design decisions, so pick by the depth of questions a project attracts, not by the title. Ten such projects are built and listed below with source code.",
+    "MCA final year project topics for 2026: ten MCA projects we can build together from a starter repository, then twenty more ideas by domain with stack and difficulty.",
+  tldr: "Good MCA final year projects are moderately sized systems you can defend in depth — a RAG document assistant, resume screening, a recommender, or a well-architected full-stack app — each paired with a stack you actually know. MCA vivas push into design decisions, so pick by the depth of questions a project attracts, not by the title. Ten such projects are listed below as project classes, built together, with every module reviewed.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
   updatedAt: "2026-11-15",
@@ -39,7 +39,7 @@ export const meta: GuideMeta = {
     {
       question: "Do MCA projects here come with source code and documentation?",
       answer:
-        "Every project on the built list ships with full source code, the project report and synopsis, diagrams, a presentation deck and a working deployment, then live sessions that walk through the code line by line. Source is included on every tier.",
+        "They come as project classes, not finished code: a design document, a starter repository (setup, folder structure, login and one worked example module) and a module-by-module plan. On Starter and Guided you write the rest from the starter; Guided reviews every module, report chapter and diagram you write. On Mentored we build it together in live classes on Google Meet, one module per class, with you writing part of each module, then viva prep and a mock viva. You write the report yourself. Check your college's rules on outside help first.",
     },
   ],
 };
@@ -212,13 +212,16 @@ export function Body() {
         pick a different topic — that is the entire point of this list.
       </p>
 
-      <h2>MCA final year projects already built, with source code</h2>
+      <h2>MCA final year projects we can build together</h2>
       <p>
-        These {built.length} suit MCA. Each is a complete system with the source
-        code, the full project report, diagrams and a working deployment, and each
-        comes with live sessions that go into the design decisions an MCA panel
-        asks about — schema, auth boundary, the metric, the failure case. Prices
-        shown are the starting tier.
+        These {built.length} suit MCA. Each is a project class: a design
+        document, a starter repository and a module-by-module plan on every tier,
+        reviews of what you write on Guided, and on Mentored live classes on
+        Google Meet where we build it together, one module per class, with you
+        writing part of each module. The reviews and classes go into the design
+        decisions an MCA panel asks about &mdash; schema, auth boundary, the
+        metric, the failure case. You take part in every module and write the
+        report yourself, and I review it. Prices shown are the starting tier.
       </p>
       <BuiltProjectList projects={built} />
 
@@ -266,7 +269,7 @@ export function Body() {
       <p>
         An MCA report is expected to justify its design, not just describe it. The{" "}
         <Link href="/sample-project-report/">sample project report</Link> is a
-        complete report for the Hospital Management System on the built list —
+        complete report for the Hospital Management System on the project list —
         abstract, requirements specification, architecture and data model with
         diagrams, implementation with the conflict-detection code, test cases,
         conclusion — as a free PDF. Read it before you write, and read the{" "}
@@ -317,11 +320,12 @@ export function Body() {
       <hr />
 
       <p>
-        Everything on the built list comes with the source, the report, and daily
-        sessions that walk you through the code —{" "}
-        <Link href="/for/mca/">see the MCA projects</Link>. Anything on this list
-        that is not there can be{" "}
-        <Link href="/custom/">built to your problem statement</Link>. And before
+        Every listed project comes with a design document and a starter
+        repository, review of what you write on Guided, and live build-together
+        classes on Mentored &mdash;{" "}
+        <Link href="/for/mca/">see the MCA projects</Link>. For anything on this
+        list that is not there, you can{" "}
+        <Link href="/custom/">bring it as your problem statement and build it together</Link>. And before
         your viva, read{" "}
         <Link href="/guides/final-year-project-viva-questions/">
           the questions panels actually ask

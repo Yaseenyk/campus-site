@@ -118,15 +118,15 @@ export default function TemplatesPage() {
           straight into Word or Docs.
         </p>
         <p className="mt-4 leading-relaxed text-zinc-400">
-          Prefer to skip the writing entirely? Every{" "}
+          Want someone to check your writing? On every{" "}
           <Link
             href="/"
             className="text-cyan underline-offset-4 hover:underline"
           >
             project here
           </Link>{" "}
-          ships with the report, synopsis, diagrams and deck already written to
-          match the code — then walked through line by line so you can defend it.
+          you get a report template, and each chapter you write is reviewed against
+          your code so the two match when the panel reads them.
         </p>
         <p className="mt-4 leading-relaxed text-zinc-400">
           Want to see the template filled in? The{" "}

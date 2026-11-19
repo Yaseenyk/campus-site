@@ -12,8 +12,8 @@ export const meta: GuideMeta = {
   h1: "BCA final year project topics for 2026: a list you can actually finish",
   description:
     
-    "BCA final year project topics for 2026 with source code and report, plus more ideas with stack, honest difficulty and the viva question each attracts.",
-  tldr: "The best BCA final year project is one you can finish and fully document in the time you have — a hospital, blood bank or e-commerce system, an expense tracker, a chat app — built as a clean full-stack application with a database design that matches the code. A complete moderate project scores better than a half-built ambitious one. Seven such projects are already built and listed below, with source code.",
+    "BCA final year project topics for 2026 we can build together from a starter repository, plus more ideas with stack, honest difficulty and the viva question each attracts.",
+  tldr: "The best BCA final year project is one you can finish and fully document in the time you have — a hospital, blood bank or e-commerce system, an expense tracker, a chat app — built as a clean full-stack application with a database design that matches the code. A complete moderate project scores better than a half-built ambitious one. Seven such projects are listed below as project classes, built together, with every module reviewed.",
   category: "Topic lists",
   publishedAt: "2026-07-27",
   updatedAt: "2026-11-15",
@@ -34,7 +34,7 @@ export const meta: GuideMeta = {
     {
       question: "Where can I get a BCA final year project with source code?",
       answer:
-        "The projects listed on this page are built end to end — source code, report, diagrams, deployment — and come with daily live sessions that walk through the code so you can defend it. Source code is included on every tier; the sessions are what make it yours to explain.",
+        "The projects listed on this page are project classes: every tier gets a design document, a starter repository (setup, folder structure, login and one worked example module) and a module-by-module plan. On Starter and Guided you write the rest from the starter, with every module reviewed on Guided; on Mentored we build it together in live classes on Google Meet, one module per class, with you writing part of each module, so you end with the complete project. You write the report yourself, and I review it. Finished code is not handed over. Check your college's rules on outside help first.",
     },
     {
       question: "Is there a BCA final year project PDF I can download?",
@@ -241,20 +241,23 @@ export function Body() {
       </p>
       <p>
         So this list is filtered for finishable. It comes in two parts: the BCA
-        final year projects that are already built, with source code, report and
-        sessions, and then a longer BCA project topics list for 2026 with the stack
+        final year projects we can build together as project classes, from a
+        starter repository with code review, and then a longer BCA project topics list for 2026 with the stack
         each needs, an honest difficulty rating, and the question a panel will open
         with — because choosing a topic is really choosing which question you will
         have to answer.
       </p>
 
-      <h2>BCA final year projects already built, with source code</h2>
+      <h2>BCA final year projects we can build together</h2>
       <p>
-        These {built.length} suit BCA. Each one is a complete application with the
-        source code, the project report, ER and architecture diagrams and a working
-        deployment, and each comes with live sessions that walk through the code
-        until you can explain it. Prices are the starting tier; the project page
-        has the full breakdown.
+        These {built.length} suit BCA. Each is a project class: a design
+        document, a starter repository and a module-by-module plan on every tier,
+        review of every module, report chapter and diagram you write on Guided,
+        and on Mentored live classes on Google Meet where we build the project
+        together, one module per class, with you writing part of each module.
+        You take part in every module and write the report yourself, and I review
+        it. Prices are the starting tier; the project page has
+        the full breakdown.
       </p>
       <BuiltProjectList projects={built} />
 
@@ -331,9 +334,9 @@ export function Body() {
         Not sure which of these you can finish? The{" "}
         <Link href="/find-my-project/">find my project quiz</Link> asks four
         questions (your degree, the area you enjoy, the time you have and your
-        goal) and suggests the built projects that fit, and the{" "}
-        <Link href="/cost-estimator/">cost estimator</Link> prices a build if you
-        would rather have one done properly.
+        goal) and suggests the listed projects that fit, and the{" "}
+        <Link href="/cost-estimator/">cost estimator</Link> prices a project class if
+        you want to build one together properly.
       </p>
 
       <h2>Work backwards from the submission date</h2>
@@ -451,11 +454,12 @@ export function Body() {
       <hr />
 
       <p>
-        Everything on the built list ships with the source, the report, the
-        diagrams and daily sessions walking through the code —{" "}
+        Every listed project comes with a design document and a starter
+        repository, review of every module and chapter you write on Guided, and
+        live build-together classes on Mentored &mdash;{" "}
         <Link href="/for/bca/">see the BCA projects</Link>, or{" "}
         <Link href="/custom/">
-          have something on this list built for you
+          bring an idea from this list and build it together
         </Link>
         . Before your viva, read{" "}
         <Link href="/guides/final-year-project-viva-questions/">

@@ -9,7 +9,7 @@ import CampusLeadForm from "@/components/campus/CampusLeadForm";
 import TrustStrip from "@/components/campus/TrustStrip";
 
 const DESCRIPTION =
-  "For HODs and placement cells: a free workshop for your final year students, batch mentoring, and distinct projects across a cohort so no two submissions collide. Run by a working Full Stack AI Developer.";
+  "For HODs and placement cells: a free workshop for your final year students, batch mentoring, and a distinct topic for every student in a cohort, each built by the student. Run by a working Full Stack AI Developer.";
 
 export const metadata: Metadata = {
   title: "Final Year Project Mentoring for Colleges",
@@ -40,7 +40,7 @@ const OFFERS = [
   {
     n: "02",
     title: "Distinct projects across a cohort",
-    body: "The problem every department has: fifteen students submit variations of the same library management system. Projects are allocated so that no two students in a batch build the same thing, and each one is scoped to the student's actual ability.",
+    body: "The problem every department has: fifteen students submit variations of the same library management system. Topics are allocated so that no two students in a batch build the same thing, and each one is scoped to the student's actual ability. Every student writes their own project.",
     detail: "Allocation planned with the department",
   },
   {
@@ -52,7 +52,7 @@ const OFFERS = [
   {
     n: "04",
     title: "Guide and panel support",
-    body: "Documentation in your college's format, review-ready checkpoints aligned to your internal review dates, and a written scope per student so guides know exactly what was external and what was not.",
+    body: "Report templates in your college's format, review-ready checkpoints aligned to your internal review dates, and a written scope per student so guides know exactly what was external and what was not.",
     detail: "Full transparency to the department",
   },
 ];
@@ -106,9 +106,9 @@ export default function CollegesPage() {
           establishing that nobody built anything.
         </p>
         <p className="mt-4 max-w-2xl leading-relaxed text-zinc-400">
-          I work the other way round. Projects are allocated so no two students in a
-          cohort build the same system, every student is taken through their own code
-          until they can defend it, and the department gets a written scope of what
+          I work the other way round. Topics are allocated so no two students in a
+          cohort build the same system, every student writes their own code with
+          review and help until they can defend it, and the department gets a written scope of what
           was external. Openness is the point — this only works if guides know
           exactly what happened.
         </p>
@@ -153,10 +153,10 @@ export default function CollegesPage() {
           Where the catalog stands today
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          {CAMPUS_PROJECTS.length} ready projects spanning AI and machine learning,
-          full-stack web, computer vision and mobile — plus anything built to a
-          problem statement your department sets. Each listed project is capped per
-          college precisely so a cohort does not end up duplicating.
+          {CAMPUS_PROJECTS.length} designed projects spanning AI and machine learning,
+          full-stack web, computer vision and mobile — plus any problem statement your
+          department sets. Each comes with a design and a starter; the students
+          build them.
         </p>
         <Link
           href="/"

@@ -166,8 +166,8 @@ export function Body() {
       <hr />
 
       <p>
-        The full project, with the training notebook, the FastAPI service and
-        the React interface, is on the{" "}
+        The project class for it, covering the training notebook, the FastAPI
+        service and the React interface, built together, is on the{" "}
         <Link href="/plant-disease-detection/">
           plant disease detection page
         </Link>

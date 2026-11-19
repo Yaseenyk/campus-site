@@ -12,7 +12,7 @@ export const meta: GuideMeta = {
   description:
     
     "A list of projects for computer science students, BCA to B.Tech CSE, by domain with stack and honest difficulty. Top 10 first, then the full list.",
-  tldr: "The best projects for computer science students are complete systems with one piece of logic a panel can probe: a web app that handles two users at once, an ML model that reports where it fails, a mobile app that works offline, a systems project that survives a crash. This page lists the top 10 projects in computer science for a final year, then more ideas by domain, then the eleven projects already built with source code.",
+  tldr: "The best projects for computer science students are complete systems with one piece of logic a panel can probe: a web app that handles two users at once, an ML model that reports where it fails, a mobile app that works offline, a systems project that survives a crash. This page lists the top 10 projects in computer science for a final year, then more ideas by domain, then the eleven projects we can build together from a starter repository.",
   category: "Project ideas",
   publishedAt: "2026-10-30",
   updatedAt: "2026-11-15",
@@ -31,7 +31,7 @@ export const meta: GuideMeta = {
     {
       question: "Do these computer science projects come with source code?",
       answer:
-        "The eleven on the built list do — full source on every tier, with the report, diagrams and deployment on the Academic tier and live code-walkthrough sessions on the Mentored tier. The rest of the page is ideas that can be built to your problem statement.",
+        "No finished code is handed over. The eleven listed projects are project classes: every tier starts with a design document and a starter repository (setup, folder structure, login and one worked example module), the Guided tier adds review of every module, report chapter and diagram you write plus a deployment walkthrough, and the Mentored tier adds live classes on Google Meet where we build the project together, one module per class, with you writing part of each module, plus viva prep and a mock viva. The rest of the page is ideas you can bring as your own problem statement.",
     },
   ],
 };
@@ -222,7 +222,7 @@ export function Body() {
         panel will ask about it. This one is shorter and organised by what
         matters: a top ten for a final year, then ideas by domain with the stack,
         an honest difficulty and the question each attracts, then the eleven
-        projects that are already built with source code.
+        projects we can build together.
       </p>
       <p>
         The difficulty ratings are written from the other side of the table &mdash;
@@ -234,7 +234,7 @@ export function Body() {
       <p>
         Ranked by how reliably they earn marks across BCA, MCA and B.Tech panels:
         each is a complete system with one mechanism the examiner can probe. All
-        ten are built and linked.
+        ten have their own listing page.
       </p>
       <ol>
         {TOP_TEN.map((t) => (
@@ -273,12 +273,15 @@ export function Body() {
         knowing what a complete project feels like.
       </p>
 
-      <h2>The eleven projects already built, with source code</h2>
+      <h2>The eleven projects we can build together</h2>
       <p>
-        Every project below is complete &mdash; source code, project report,
-        diagrams, presentation deck, working deployment &mdash; and comes with
-        live sessions that walk through the code until you can defend it. The
-        line under each is the mechanism a panel will ask about.
+        Every project below is a project class &mdash; a design document, a
+        starter repository and a module-by-module plan on every tier, review of
+        the code, report and diagrams you write on Guided, and on Mentored live
+        classes on Google Meet where we build it together, one module per class,
+        with you writing part of each module. You take part in every module and
+        write the report yourself, and I review it. The line
+        under each is the mechanism a panel will ask about.
       </p>
       <BuiltProjectList projects={CAMPUS_PROJECTS} />
 
