@@ -31,8 +31,12 @@ const CLAUSES: { heading: string; paragraphs: string[] }[] = [
   {
     heading: "Analytics",
     paragraphs: [
-      "The site uses Google Analytics and GoatCounter to see which pages are read and how visitors arrive. Google Analytics sets first-party cookies and sends usage data, such as pages viewed, approximate location and the source of the visit, to Google. It also keeps your first source in your browser so a later enquiry can be tied to where you first came from. The site also uses Microsoft Clarity, a free tool that records anonymised heatmaps and session replays so I can see where visitors get stuck. Text typed into forms is masked and is not recorded. None of it is used for advertising, and you can block it with a browser extension or by disabling cookies. A small counter run by me on my own server also records page views, the page you came from and link clicks, and whether the visit looks like a person or a bot. It sets no cookies and stores no IP address, name or anything you type. Records are deleted after 90 days, and it switches itself off if your browser sends Do Not Track or Global Privacy Control.",
-      "Cookies and similar storage on this site come from Google Analytics, Microsoft Clarity and GoatCounter as described above, and from WhatsApp or EmailJS only when you use them. The site itself keeps one note in your browser, the first site that sent you, so an enquiry can be tied to it. Clearing your browser data removes it.",
+      "Four measuring tools load on this site. None of them is used for advertising, and the site works the same if you block all of them with a browser extension.",
+      "Google Analytics (googletagmanager.com) shows which pages are read and how visitors arrive. It sets first-party cookies (_ga and _ga_*) and sends usage data, such as pages viewed, approximate location and the source of the visit, to Google. You can opt out with Google's browser add-on at tools.google.com/dlpage/gaoptout.",
+      "Microsoft Clarity (clarity.ms) records session replays and heatmaps: mouse movement, clicks and scrolling, so I can see where visitors get stuck. Text typed into forms is masked and never recorded. It sets its own cookies (_clck, _clsk) and Microsoft cookies on clarity.ms and bing.com (such as MUID). Microsoft explains its use at privacy.microsoft.com/privacystatement.",
+      "Pulse is my own visit counter, a script from pulse.yaseenyk.workers.dev (a Cloudflare Worker I run). It records the page (without the query string), the referring site and campaign tags, country, device type, browser and system name, screen size, language, the name of your network provider, scroll depth, time on the page, page speed, which links and buttons were clicked, and, when a form is sent, the form's name only, never what was typed in it. It sets no cookies and stores no IP address or browser string. The IP address is used in memory only, to limit abuse and to make a visitor code that changes every day (a one-way hash with a random salt that is deleted the next day), so visits cannot be linked across days. Rows are deleted after 90 days, and it does nothing if your browser sends Do Not Track or Global Privacy Control.",
+      "GoatCounter (gc.zgo.at) is a cookie-free page counter. It records the page, referrer, browser, screen size and country, and does not store your IP address.",
+      "Cookies on this site come only from Google Analytics and Microsoft Clarity as described above. The site itself keeps one note in your browser's local storage, the first site that sent you, so an enquiry can be tied to it. Clearing your browser data removes it.",
     ],
   },
   {
@@ -51,14 +55,14 @@ const CLAUSES: { heading: string; paragraphs: string[] }[] = [
   {
     heading: "How long I keep it",
     paragraphs: [
-      "Enquiries and signed agreements are kept as long as the project needs them, and enquiries are deleted when you ask. Analytics data is kept by Google for 14 months at most.",
+      "Enquiries and signed agreements are kept as long as the project needs them, and enquiries are deleted when you ask. Analytics data is kept by Google for 14 months at most, and Pulse rows are deleted after 90 days. Clarity and GoatCounter keep data under their own retention rules.",
     ],
   },
   {
     heading: "Your choices",
     paragraphs: [
       "To see, correct or delete what you sent, email contact@streamerosai.com. This site is run by Yaseen Khatib, Hyderabad, India. See also the contact page, the about page and the terms.",
-      "Last updated 16 November 2026.",
+      "Last updated 19 November 2026.",
     ],
   },
 ];
