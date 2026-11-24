@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 
 const DESCRIPTION =
-  "What the DefendIt website collects when you browse it, send an enquiry or download a template, how long it is kept, and how to ask for it to be deleted.";
+  "What the DefendIt website collects when you browse it, send an enquiry or sign the agreement, how long it is kept, and how to ask for it to be deleted.";
 
 export const metadata: Metadata = {
   title: "Privacy notice",
@@ -24,7 +24,7 @@ const CLAUSES: { heading: string; paragraphs: string[] }[] = [
   {
     heading: "What the forms collect",
     paragraphs: [
-      "When you send an enquiry, download a template or sign the agreement, I receive what you type: your name, email, phone number, college and course, and your message, plus the page you sent it from.",
+      "When you send an enquiry or sign the agreement, I receive what you type (downloading a template sends nothing): your name, email, phone number, college and course, and your message, plus the page you sent it from.",
       "The form sends it by email using EmailJS, and a second copy is stored by a Cloudflare Worker so an enquiry is not lost if the email fails. WhatsApp messages you start yourself go through WhatsApp, under its own terms.",
       "Messages sent through the forms are also saved in my own database: a Cloudflare Worker and D1 database I run (pulse.yaseenyk.workers.dev), together with where the visit came from (the page you sent it from and the referring site or campaign Pulse noted for that browser tab). Only I can read them. They are kept for up to 24 months (spam for 30 days) and deleted sooner if you ask at contact@streamerosai.com. EmailJS then sends me an email as a notification.",
     ],
