@@ -6,6 +6,7 @@ import { EMAILJS, OWNER_NAME } from "@/lib/emailjs";
 import type { CampusTier, Degree } from "@/lib/campus";
 import { formatInr, whatsappHref } from "@/lib/campus";
 import { recordLead } from "@/lib/leads";
+import { sendToInbox } from "@/lib/inbox";
 import { track } from "@/lib/analytics";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -101,6 +102,25 @@ export default function CampusLeadForm({
       message: form.message,
     });
 
+    // The owner's form inbox is the record. Started now, in parallel with the
+    // email; the enquiry counts as sent when the inbox or EmailJS took it.
+    const extra: Record<string, string> = {
+      kind: collegeSide ? "college" : projectTitle ? "project" : "custom-build",
+      [collegeSide ? "institution" : "college"]: form.college,
+      [collegeSide ? "role" : "degree"]: form.degree,
+    };
+    if (projectTitle) extra.project = projectTitle;
+    if (form.year) extra.year = form.year;
+    if (form.tier) extra.tier = form.tier;
+    const saved = sendToInbox({
+      form: collegeSide ? "college-enquiry" : "enquiry",
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      message: form.message,
+      extra,
+    });
+
     try {
       // The shared EmailJS template only renders {name, email, message}, so the
       // campus-specific fields are folded into the message body rather than
@@ -137,15 +157,23 @@ export default function CampusLeadForm({
         },
         EMAILJS_PUBLIC_KEY
       );
+      await saved;
       setStatus("sent");
       setForm(EMPTY_FORM);
       track(collegeSide ? "fyp-college-lead-submit" : "fyp-lead-submit");
     } catch (err) {
+      console.error("EmailJS send failed:", err);
+      if (await saved) {
+        // Stored in the inbox; the email is only a notification.
+        setStatus("sent");
+        setForm(EMPTY_FORM);
+        track(collegeSide ? "fyp-college-lead-submit" : "fyp-lead-submit");
+        return;
+      }
       const detail =
         err && typeof err === "object" && "text" in err
           ? `${(err as { status?: number }).status ?? ""} ${(err as { text?: string }).text ?? ""}`.trim()
           : String(err);
-      console.error("EmailJS send failed:", err);
       setErrorDetail(detail || null);
       setStatus("error");
     }

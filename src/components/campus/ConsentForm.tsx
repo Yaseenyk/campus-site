@@ -5,6 +5,7 @@ import { m } from "framer-motion";
 import { AGREEMENT_VERSION, CONSENTS, OWNER_COMMITMENTS } from "@/lib/agreement";
 import { track } from "@/lib/analytics";
 import { recordLead } from "@/lib/leads";
+import { sendToInbox } from "@/lib/inbox";
 import { EMAILJS, OWNER_NAME } from "@/lib/emailjs";
 import {
   agreementFilename,
@@ -145,6 +146,24 @@ export default function ConsentForm() {
       message: body,
     });
 
+    // The owner's form inbox keeps a copy too (it never stores the user agent,
+    // so that line is left out). Consent counts as recorded when the inbox or
+    // the owner's email got it.
+    const saved = sendToInbox({
+      form: "agreement",
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      message: body.split("\n").filter((l) => !l.startsWith("User agent:")).join("\n").trim(),
+      extra: {
+        college: form.college,
+        project: form.project,
+        tier: form.tier,
+        agreement_version: String(AGREEMENT_VERSION),
+        consented_at: stamp,
+      },
+    });
+
     // Build the document once. The same bytes are stored, linked in both
     // emails, and offered to the student — so there is exactly one canonical
     // copy of the agreement rather than several that merely resemble one
@@ -230,11 +249,18 @@ export default function ConsentForm() {
       setStatus("signed");
       track("agreement-signed");
     } catch (err) {
+      console.error("Agreement send failed:", err);
+      if (await saved) {
+        // Stored in the owner's inbox; the email was only the notification.
+        setSignedAt(stamp);
+        setStatus("signed");
+        track("agreement-signed");
+        return;
+      }
       const detail =
         err && typeof err === "object" && "text" in err
           ? `${(err as { status?: number }).status ?? ""} ${(err as { text?: string }).text ?? ""}`.trim()
           : String(err);
-      console.error("Agreement send failed:", err);
       track("agreement-failed");
       setErrorDetail(detail || null);
       setStatus("error");

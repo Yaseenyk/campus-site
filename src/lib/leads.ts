@@ -6,6 +6,10 @@
  * origin, or a broken template does not silently destroy an enquiry that may
  * be worth six figures.
  *
+ * Since 24 Nov 2026 the forms also send each enquiry to the owner's form inbox
+ * (lib/inbox.ts, the pulse Worker), which is the record the owner reads; this
+ * worker copy stays because it also stores signed agreements.
+ *
  * Every failure mode here is swallowed on purpose. A lead must never fail to
  * submit because the record-keeping endpoint was unreachable.
  */
