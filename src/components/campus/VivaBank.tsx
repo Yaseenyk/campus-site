@@ -93,7 +93,7 @@ export default function VivaBank() {
           />
         </div>
         <span className="shrink-0 font-mono text-xs tabular-nums text-zinc-400">
-          {doneHere}/{visible.length} ready
+          {`${doneHere}/${visible.length} ready`}
         </span>
       </div>
 

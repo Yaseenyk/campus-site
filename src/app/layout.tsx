@@ -51,10 +51,17 @@ export const metadata: Metadata = {
   },
 };
 
+// Keeps React working when a visitor reads the page through Google Translate (see the <head> comment).
+const TRANSLATE_GUARD =
+  "(function(){if(typeof Node!=='function'||!Node.prototype)return;var r=Node.prototype.removeChild;Node.prototype.removeChild=function(c){if(c.parentNode!==this){return c;}return r.apply(this,arguments);};var i=Node.prototype.insertBefore;Node.prototype.insertBefore=function(n,ref){if(ref&&ref.parentNode!==this){return i.call(this,n,null);}return i.apply(this,arguments);};})();";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${firaCode.variable}`}>
       <head>
+        {/* Translate guard: Chrome's Google Translate swaps text nodes for <font> elements, and React then throws
+            removeChild/insertBefore errors. Runs first, before hydration. */}
+        <script dangerouslySetInnerHTML={{ __html: TRANSLATE_GUARD }} />
         {/* Google tag (GA4). A plain tag in the server-rendered head so Google's tag checker finds it
             in the HTML; next/script would inject it client-side and the checker misses it. */}
         <script

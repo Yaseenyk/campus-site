@@ -100,7 +100,8 @@ export default function QuoteEstimator() {
           Estimated range
         </p>
         <p className="mt-2 font-mono text-3xl tabular-nums text-zinc-50 sm:text-4xl">
-          {formatInr(lo)} <span className="text-zinc-500">–</span> {formatInr(hi)}
+          {/* Each figure in its own element, so both still update when the page is machine-translated. */}
+          <span>{formatInr(lo)}</span> <span className="text-zinc-500">–</span> <span>{formatInr(hi)}</span>
         </p>
         <p className="mx-auto mt-3 max-w-md text-xs leading-relaxed text-zinc-500">
           A ballpark for a custom project — split across monthly installments. The

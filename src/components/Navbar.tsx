@@ -83,6 +83,7 @@ function MenuToggle({ open, onClick }: { open: boolean; onClick: () => void }) {
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
         <m.path
+          d="M3 6 L17 6"
           stroke="currentColor"
           strokeWidth="1.7"
           strokeLinecap="round"
@@ -98,6 +99,7 @@ function MenuToggle({ open, onClick }: { open: boolean; onClick: () => void }) {
           transition={{ duration: 0.2 }}
         />
         <m.path
+          d="M3 14 L17 14"
           stroke="currentColor"
           strokeWidth="1.7"
           strokeLinecap="round"
